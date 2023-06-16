@@ -8,5 +8,5 @@
 ## El equipo
 ### `Ezequiel Gomez`, 33 años, San miguel - experto en composición musical
 ### `Luigi Navaro`, 29, CABA - experto en diseño
-### `Matias Caceres`, 29, CABA - experto en Photoshop
+### `Matias Caceres`, 25, CABA - experto en Photoshop
 ### `Israel Tineo`, 38, CABA - experto en Finansas
