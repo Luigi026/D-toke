@@ -1,0 +1,23 @@
+{
+  "name": "grupo_4_d-toke",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luigi026/Grupo_4_D-toke.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luigi026/Grupo_4_D-toke/issues"
+  },
+  "homepage": "https://github.com/Luigi026/Grupo_4_D-toke#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
