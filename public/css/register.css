@@ -2,9 +2,10 @@
   background-color: #d6ccf6;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 .register {
-  height: 100vh;
   padding: 20px;
   max-width: 400px;
 }
@@ -121,15 +122,133 @@ a {
   cursor: pointer;
 }
 
-.register__tableAndDesktop{
-    display: none;
+.register__tableAndDesktop {
+  display: none;
 }
+@media (min-width: 767px) {
+  .body__register {
+    background: linear-gradient(to right, #ffffff 70%, #3506cd 30%);
+  }
+  .register {
+    display: none;
+  }
+  .register__tableAndDesktop {
+    display: block;
+    height: 80%;
+    width: 90%;
+  }
+  .register__tableAndDesktop h2 {
+    margin-left: 2.5%;
+    font-size: 24px;
+  }
+  .register__tableAndDesktop-content {
+    display: flex;
+    height: 70%;
+    
+  }
+  /* formulario tablet and desktop */
+  .register__tableAndDesktop-contain-1 {
+    width: 45%;
+  }
+  .register__tableAndDesktop-contain-2 {
+    /* border: 1px solid green; */
+    width: 55%;
+    height: 100%;
+    position: relative;
+  }
+  .register__tableAndDesktop-contain-1 form {
+    width: 65%;
+    height: 100%;
+    margin-left: 5%;
+  }
+  .registertableAndDesktop__input-item {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .registertableAndDesktop__input-item label {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .registertableAndDesktop__input-item input {
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    padding: 13px;
+  }
+  .registertabletAndDesktop__sesion {
+    display: flex;
+    margin: 10px 0;
+    gap: 5px;
+    justify-content: center;
+  }
 
-@media (min-width:767px){
-    .register{
-        display: none;
-    }
-    .register__tableAndDesktop{
-        display: block;
-    }
+  .registertabletAndDesktop__sesion h3,
+  a {
+    font-size: 13px;
+  }
+  .registertabletAndDesktop__sesion a {
+    color: #3506cd;
+    border-bottom: 1px solid #3506cd;
+    cursor: pointer;
+  }
+  .registertableAndDesktop__button button {
+    width: 100%;
+    background-color: #3506cd;
+    color: #ffff;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 5% 0;
+    border: none;
+  }
+  .register__tableAndDesktop-contain-2 .imageRegister {
+    width: 100%;
+    height: 100%;
+  }
+  .register__tableAndDesktop-contain-2 .logoRegister {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 991px) {
+
+    .register__tableAndDesktop-content {
+    display: flex;
+    height: 85%;
+    
+  } 
+  .register__tableAndDesktop {
+    display: block;
+    height: 85%;
+    width: 90%;
+  }
+  .register__tableAndDesktop h2 {
+    margin-left: 2.3%;
+    font-size: 35px;
+  }
+  .registertableAndDesktop__input-item input {
+    padding: 20px 15px;
+    margin-bottom: 10px;
+  }
+  .registertableAndDesktop__input-item input:focus {
+    outline: none;
+  }
+  .registertableAndDesktop__button button {
+    padding: 20px 0;
+  }
+  .registertableAndDesktop__input-item label {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .registertabletAndDesktop__sesion h3,
+  a {
+    font-size: 18px;
+  }
+  .register__tableAndDesktop-contain-2 .logoRegister {
+    width: 300px;
+    height: 300px;
+  }
 }
