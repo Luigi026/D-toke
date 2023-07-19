@@ -10,6 +10,8 @@ li {
     list-style: none;
     display:none
 }
+    /* M O B I L E */
+
    /* H E A D E R */
    
 .home {
@@ -35,7 +37,7 @@ li {
 .home__header__div1--bars-logo {
     display: flex;
     justify-content: space-between;
-    width: 56%;
+    width: 64%;
 }
 .home__header__div1--glass-truck {
     width: 44%;
@@ -53,20 +55,10 @@ li {
     font-size: 20px;
 }
 
-
-/* T A B L E T */
-
 @media(min-width:481px) {
 
     /* H E A D E R */
-   
-    .home__header {
-        background-color: #ffffff;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-    }    
+      
     .home__header__div1--glass-truck {
         display: none;
     }
@@ -75,14 +67,12 @@ li {
         width: 30%;  
     }
     .home__header__div1 {
-        width: 55%;
-        display: flex;
-        justify-content: space-between;
+        width: 55%;   
     }
     .home__header__div2 {
         display: flex;
-        width: 50%;
-        justify-content: space-between;
+        width: 45%;
+        justify-content: space-evenly;
     }
     .home__header__div2--heartru {
         display: flex;
@@ -90,10 +80,11 @@ li {
         justify-content: center;
     }
     .home__header__div2 input {
-        width: 88%;
+        width: 90%;
         border: 1px solid #ebebeb;
         border-radius: 20px;
         padding: 5px 10px; 
+        margin-right: 6px;
     }
     .home__header__div2 button {
         display: flex;
@@ -111,58 +102,105 @@ li {
     .home__header__div2--box i{
         padding:0; 
         color: #b1acac;
-        margin-left: -75%;
+        margin-left: -90%;
     }
     .home__header__div1--bars-logo {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
+        width: 98%;
+        align-items: center;
     }
    
+    /* T A B L E T */
+
+    /* H E A D E R */
+
 }
 @media(min-width:769px) {
+    
     .home__header__div2--heartru {
-        display: flex;
-        width: 30%;
+        width: 25%;
         justify-content: space-around;
     }
-
-
+    .home__header__div2 input {
+        width: 60%;
+    }
+    .home__header__div1--bars-logo {
+        width: 95%;
+    }
+    .home__header__div2 {
+        width: 40%;
+    }
 }
 
-/* E S C R I T O R I O */
-/* 
-@media(min-width: 1025px) {
-    .home__header a:hover {
-        text-decoration-line: asdasdunderline;
-        text-decoration-color:asdasd #3506cd;   
+    /* E S C R I T O R I O */
+
+@media(min-width:1024px) {
+    
+    .fa-solid, .fa-sharp {
+        padding: 4px;
+        font-size: 22px;
+    }
+    .home__header__div1{
+        display: none;
+    }
+    .home__header__div2 {
+        display: none;
+    }
+    .home__header__nav__div {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .home__header__nav--logo {
+        display: flex;
+        width: 15%;
+        justify-content: center;
+    }
+    .home__header__nav {
+        display: flex;
+        width: 100%;
+    }
+    .home__header__nav__div {
+        display: flex;
+        width: 100%;
+    }
+    .home__header__nav__div1 { 
+        display: flex;
+        width: 55%;
+        justify-content: space-between;
+        align-items: center;
+    } 
+    .home__header__nav__div2 {
+        display: flex;
+        width: 65%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .home__header__nav__div2 i {
+        padding: 5px;
+    }
+    .home__header__nav__div1 a {
+        text-transform: capitalize;
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+    .home__header__nav__div1 a:hover {
+        text-decoration-line: underline;
+        text-decoration-color: #3506cd;   
     }
     .home__header--button {
-        padding: 3px 10px;
-        background-colorasd:#3506cd;
+        padding: 6px 15px;
+        background-color:#3506cd;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
     }
     .home__header--button a {
-        text-transform: capitalize;
         color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
     }
-    .home__header__div2--box i{
-        padding:0; 
-        color: #b1acac;
-        margin-left: -170%;
-    }.home__header__div2 {
-        display: flex;
-        width: 40%;
-        justify-content: space-between;
-    }
-    .home__header__div2--heartru {
-        display: flex;
-        width: 30%;
-        justify-content: space-evenly;
-    }
-    
-}         */
+}   
+       
         
         
         
