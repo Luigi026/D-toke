@@ -48,7 +48,7 @@
 }
 .footer .footer-section__2 .footer-section__2-redes i {
   font-size: 12px;
-  background-color: #808080;
+  background: none;
   padding: 5px;
   border-radius: 50%;
   cursor: pointer;
