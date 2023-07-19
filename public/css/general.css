@@ -1,5 +1,22 @@
-*{
-    margin: 0;
+:root {
+    /* home-mobile */
+    --colorBanner: #3506CD;
+    --colorPopular: rgb(215, 205, 245);
+}
+* {
+    box-sizing: border-box;
     padding: 0;
-    box-sizing: content-box;
+    margin: 0;
+    font-family: 'Roboto';
+}
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
 }

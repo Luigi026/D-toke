@@ -1,0 +1,229 @@
+/* -------------||||| MAIN |||||--------------- */
+.home {
+
+}
+
+.home__main-cajaBanner {
+    display: flex;
+    width: 100vw;
+    height: 162px;
+    flex-direction: row;
+    justify-content: center;
+    margin: 40px 0px 14px 0px;
+}
+    .home__main-cajaBanner2 {
+        display: flex;
+        margin: 10px;
+        width: 90%;
+        background-color: var(--colorBanner);
+        border-radius: 16px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+        .home__main-cajaImg {
+            display: flex;
+            order: 1;
+            width: 40%;
+            align-items: center;
+            flex-direction: row;
+        }
+        .home__main-cajaImg img {
+            width: 120%;
+            margin: 40px 0px 0px -13px;
+        }
+    .home__main-cajaTxt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+        align-items: flex-start;
+        padding-left: 10%;
+    }
+        .home__main__cajaTxt-justdoit {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 0px;
+        }
+            .home__main__cajaTxt-justdoit p {
+                display: flex;
+                color: #949393;
+                font-size: 1rem;
+                
+            }
+            .home__main__cajaTxt-whitnike {
+                display: flex;
+                color: #949393;
+                font-size: 1rem;
+                 
+            }
+                .nike {
+                    font-size: 1rem;
+                    color: #ffffff;
+                    padding-left: 10px;
+                }
+        .home__main__cajaTxt-explore {
+            display: flex;
+            padding-left: 0px;
+        }
+        .home__main__cajaTxt-explore a{
+            display: flex;
+            font-family: 'Montserrat';
+            color: #ffffff;
+            padding-top: 10px;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+        .home__main__cajaTxt-explore i{
+            padding-left: 5px;
+        }
+        
+.home__main__seeMore {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+    .home__main__seeMore-title {
+        display: flex;
+    }
+    .home__main__seeMore-title h2{
+        display: flex;
+        font-size: 1.3rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .home__main__seeMore-link {
+        display: flex;
+    }
+    .home__main__seeMore-link a {
+        color: #949393;
+        font-size: 1rem;
+    }
+    /* POPULAR SECTION */
+    
+    .home__main-Popular {
+        display: flex;
+        width: 100vw;
+        height: 159px;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px 0px 14px 0px;
+    }
+        .home__main-cajaPopular {
+            display: flex;
+            margin: 10px;
+            width: 90%;
+            background-color: var(--colorPopular);
+            border-radius: 16px;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    .home__main__popular-cajaImg {
+        display: flex;
+        order: 1;
+        width: 40%;
+        align-items: center;
+        flex-direction: row;
+    }
+    .home__main__popular-cajaImg img {
+        width: 120%;
+        margin: 40px 0px 0px -13px;
+    }
+    .home__main__popular-cajaTxt {
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+        width: 50%;
+        justify-content: space-around;
+    }
+    .home__main__popular-cajaTxt-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin: 0px 0px 0px 39px;
+    }
+    .home__main__popular-cajaTxt-nike {
+        display: flex;
+        font-weight: 600;
+        font-size: 1.2rem;
+        
+    }
+    .home__main__popular-cajaTxt-model {
+        display: flex;
+        color: #949393;
+        font-weight: 600;
+        font-size: 1.2rem;
+        
+    }
+    .home__main__popular-cajaTxt-price {
+        display: flex;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-top: 12px;
+    }
+    
+    /* ||||||||||| products section |||||||||| */
+    
+    .home__main__section-cards {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0px 43px 0px;
+    }
+        .home__main__section__cards-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+            .home__main__section__cards-product {
+                display: flex;
+                width: 44%;
+                flex-direction: column;
+                align-items: center;
+                margin: 17px 9px;
+            }
+                .home__main__section__cards-img {
+                    display: flex;
+                    position: relative;
+                    background-color: var(--colorPopular);
+                    border-radius: 16px;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .home__main__section__cards-img img {
+                    width: 80%;
+                    margin: 19px 0px -15px 0px;
+                }
+            .home__main__section__cards-description {
+                font-weight: 400;
+                font-size: 0.6rem;
+            }
+            .home__main__section__cards-price {
+                font-weight: 600;
+            }
+            .home__main__section__card-product-heart {
+            position: absolute;
+            text-align: end;
+            width: 40%;
+            }
+            .home__main__section__card-product-heart i{
+                font-size: 1.6rem;
+                color: #949393;
+            }
+            .home__main__section__card-product-heart i:hover {
+                color: red;
+            }
+
+
+
+
+        @media (min-width: 481px) {
+        }
+        @media (min-width: 600px) {
+        }
+        @media (min-width: 1180px) {
+        }
