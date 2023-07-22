@@ -1,0 +1,325 @@
+.body__login {
+  background-color: #d6ccf6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login {
+  padding: 20px 8px;
+  max-width: 400px;
+}
+
+.login .login__header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+.login .login__header .login__header-back img {
+  width: 30px;
+  position: absolute;
+  left: 0;
+}
+.login .login__header .login__header-logo img {
+  width: 42px;
+}
+
+.login h1 {
+  font-size: 24px;
+  margin: 40px 0 0 0;
+}
+
+.login form .login__input {
+  padding: 0 10px;
+}
+.login form .login__input .login__input-item {
+  margin: 30px 0;
+  display: flex;
+}
+.login form .login__input .login__input-item input {
+  width: 100%;
+  border: none;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+.login form .login__input .login__input-item input:focus {
+  outline: none;
+}
+.login form .login__input .login__input-item input::placeholder {
+  color: #8391a1;
+}
+.login .login__text-recuperar {
+  font-size: 12px;
+  color: #6a707c;
+  text-align: end;
+  margin: 20px 0;
+}
+.login form .login__button {
+  display: flex;
+}
+.login form .login__button button {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #3506cd;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.login .login__footer {
+  overflow: hidden;
+}
+.login .login__footer h4 {
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+.login .login__footer h4 span {
+  overflow: hidden;
+  z-index: 6;
+  position: relative;
+}
+.login .login__footer h4 span::after {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #e8ecf4;
+  right: 105%;
+  top: 8px;
+  width: 100%;
+}
+.login .login__footer h4 span::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #e8ecf4;
+  left: 105%;
+  top: 8px;
+  width: 100%;
+}
+
+.login .login__footer .login__footer-redes {
+  display: flex;
+  justify-content: space-between;
+}
+.login .login__footer .login__footer-redes span {
+  background-color: #e8ecf4;
+  padding: 10px 35px;
+  border-radius: 5px;
+  display: flex;
+  cursor: pointer;
+}
+.login .login__footer .login__footer-redes span img {
+  width: 20px;
+}
+.login .login__sesion {
+  display: flex;
+  margin-top: 50px;
+  gap: 5px;
+  justify-content: center;
+}
+
+.login .login__sesion h3,
+a {
+  font-size: 15px;
+}
+.login .login__sesion a {
+  color: #3506cd;
+  border-bottom: 1px solid #3506cd;
+  cursor: pointer;
+}
+
+.login__tableAndDesktop {
+  display: none;
+}
+@media (min-width: 767px) {
+  .body__login {
+    background: linear-gradient(to right, #ffffff 70%, #3506cd 30%);
+  }
+  .login {
+    display: none;
+  }
+  .login__tableAndDesktop {
+    display: block;
+    height: 70%;
+    width: 90%;
+  }
+  .login__tableAndDesktop h2 {
+    margin-left: 0;
+    font-size: 20px;
+  }
+
+  .login__tableAndDesktop-content {
+    display: flex;
+    height: 70%;
+  }
+  /* formulario tablet and desktop */
+  .login__tableAndDesktop-contain-1 {
+    width: 57%;
+  }
+  .login__tableAndDesktop-contain-2 {
+    width: 43%;
+    height: 100%;
+    position: relative;
+  }
+  .login__tableAndDesktop-contain-1 form {
+    width: 60%;
+    height: 100%;
+  }
+  .login__tableAndDesktop-contain-1 form p {
+    margin: 20px 0;
+    font-size: 10px;
+    color: #b9b8b8;
+  }
+  .logintableAndDesktop__input-item {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .logintableAndDesktop__input-checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #b9b8b8;
+    font-size: 10px;
+  }
+  .logintableAndDesktop__input-checkbox-input {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  /* .logintableAndDesktop__input-checkbox-input
+    input[type="checkbox"].custom-checkbox {
+    background-color: #b9b8b8;
+  } */
+  .logintableAndDesktop__input-item label {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .logintableAndDesktop__input-item input {
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .logintabletAndDesktop__sesion {
+    display: flex;
+    margin: 20px 0;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  .logintabletAndDesktop__sesion h3,
+  a {
+    font-size: 12px;
+  }
+  .logintabletAndDesktop__sesion a {
+    color: #3506cd;
+    border-bottom: 1px solid #3506cd;
+    cursor: pointer;
+  }
+  .logintableAndDesktop__button button {
+    width: 100%;
+    background-color: #3506cd;
+    color: #ffff;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 5% 0;
+    border: none;
+  }
+  .login__tableAndDesktop-contain-2 .imagelogin {
+    width: 100%;
+    height: 100%;
+  }
+  .login__tableAndDesktop-contain-2 .logologin {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 991px) {
+  .login__tableAndDesktop-content {
+    display: flex;
+    height: 100%;
+  }
+  .login__tableAndDesktop {
+    display: block;
+    height: 60%;
+    width: 90%;
+  }
+  .login__tableAndDesktop h2 {
+    margin-left: 1%;
+    font-size: 35px;
+  }
+  .login__tableAndDesktop-contain-1 form {
+    width: 60%;
+    height: 100%;
+    margin-left: 2.3%;
+  }
+  .login__tableAndDesktop-contain-1 form p {
+    margin: 20px 0;
+    font-size: 12px;
+    color: #b9b8b8;
+  }
+  .logintableAndDesktop__input-item input {
+    padding: 20px 15px;
+    margin-bottom: 10px;
+  }
+  .logintableAndDesktop__input-item input:focus {
+    outline: none;
+  }
+  .logintableAndDesktop__button button {
+    padding: 20px 0;
+  }
+  .logintableAndDesktop__input-item label {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .logintableAndDesktop__input-checkbox {
+    font-size: 12px;
+  }
+  .logintabletAndDesktop__sesion h3,
+  a {
+    font-size: 18px;
+  }
+  .login__tableAndDesktop-contain-2 .logologin {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .login__tableAndDesktop h2 {
+    margin-left: 20px;
+  }
+  .login__tableAndDesktop {
+    height: 80%;
+  }
+  .login__tableAndDesktop-contain-1 {
+    padding-left: 50px;
+  }
+  .login__tableAndDesktop-contain-1 form {
+    width: 45%;
+    height: 100%;
+    margin-left: 2.3%;
+  }
+  .login__tableAndDesktop-contain-1 form p {
+    margin: 30px 0;
+    font-size: 16px;
+  }
+  .logintableAndDesktop__input-checkbox {
+    font-size: 16px;
+  }
+  .logintabletAndDesktop__sesion h3,
+  a {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  .logintableAndDesktop__input-item {
+    margin: 30px 0;
+  }
+  .logintableAndDesktop__input-item input {
+    padding: 25px 10px;
+    font-size: 16px;
+  }
+}

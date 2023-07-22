@@ -2,6 +2,7 @@
     /* home-mobile */
     --colorBanner: #3506CD;
     --colorPopular: rgb(215, 205, 245);
+    --colorIsra: rgb(213, 203, 246); 
 }
 * {
     box-sizing: border-box;

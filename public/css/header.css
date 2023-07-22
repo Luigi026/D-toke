@@ -1,14 +1,10 @@
-* {
-    margin: 0;
-    font-family: 'Roboto';
-    box-sizing: border-box;
-}
-i {
+
+.home__header i {
     color: #000;
+    padding: 5px;
 }
 li {
     list-style: none;
-    display:none
 }
     /* M O B I L E */
 
@@ -51,7 +47,7 @@ li {
 .home__header__div2 {
     display: none;
 }
-.fa-solid, .fa-sharp {
+.fa-solid .fa-sharp {
     padding: 5px;
     font-size: 20px;
 }
@@ -78,14 +74,15 @@ li {
     .home__header__div2--heartru {
         display: flex;
         width: 33%;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
     }
     .home__header__div2 input {
         width: 90%;
         border: 1px solid #ebebeb;
         border-radius: 20px;
         padding: 5px 10px; 
-        margin-right: 6px;
+        margin-right: 12px;
     }
     .home__header__div2 button {
         display: flex;
@@ -119,7 +116,7 @@ li {
     
     .home__header__div2--heartru {
         width: 25%;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .home__header__div2 input {
         width: 60%;
@@ -136,7 +133,7 @@ li {
 
 @media(min-width:1024px) {
     
-    .fa-solid, .fa-sharp {
+    .fa-solid .fa-sharp {
         padding: 4px;
         font-size: 22px;
     }
