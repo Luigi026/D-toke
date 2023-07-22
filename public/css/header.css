@@ -10,10 +10,6 @@ li {
 
    /* H E A D E R */
    
-.home {
-    display: flex;
-    width: 100%;
-}
 .home__header {
     background-color: #ffffff;
     display: flex;
