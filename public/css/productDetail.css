@@ -151,6 +151,10 @@ body.productDetail {
     
     /* MAIN */
 
+    .productDetail__main__section__article-img {
+        height: 100%;
+    }
+
     .productDetail__main__section__article--box-img {
         display: flex;
         justify-content: space-between;
