@@ -26,6 +26,10 @@ body.productDetail {
     border-radius: 5px;
 }
 
+.productDetail__main__section__article-img2 {
+    display: none;
+}
+
 .productDetail__main__section__article--datos-producto {
     margin-top: 20px;
     display: flex;
@@ -109,7 +113,7 @@ body.productDetail {
 }
 
 .productDetail__main__section__article-description {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--grisOscuro);
     padding: 5px 0;
     color: var(--grisOscuro);
 }
@@ -132,7 +136,7 @@ body.productDetail {
 .productDetail__main__section__article-description-others {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--grisOscuro);
     padding: 5px 0;
     color: var(--grisOscuro);
 }
@@ -141,4 +145,31 @@ body.productDetail {
    color: var(--grisOscuro);
 }
 
+/* MEDIAQ */
 
+@media (min-width: 481px) {
+    
+    /* MAIN */
+
+    .productDetail__main__section__article--box-img {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .productDetail__main__section__article-container--image1 {
+        width: 29%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .productDetail__main__section__article-container--image2 {
+        width: 69%;
+    }
+
+    .productDetail__main__section__article-img2 {
+        width: 100%;
+        display: inline;
+        border-radius: 5px;
+    }
+}
