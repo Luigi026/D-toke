@@ -79,6 +79,7 @@ li {
         border-radius: 20px;
         padding: 5px 10px; 
         margin-right: 12px;
+        outline: none;
     }
     .home__header__div2 button {
         display: flex;
@@ -116,6 +117,7 @@ li {
     }
     .home__header__div2 input {
         width: 60%;
+        outline: none;
     }
     .home__header__div1--bars-logo {
         width: 95%;
