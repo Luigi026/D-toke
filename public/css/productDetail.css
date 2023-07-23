@@ -145,7 +145,7 @@ body.productDetail {
    color: var(--grisOscuro);
 }
 
-/* MEDIAQ */
+/**************************************** MEDIAQ ****************************************/
 
 @media (min-width: 481px) {
     
