@@ -1,4 +1,8 @@
 /* -------------||||| MAIN |||||--------------- */
+.home {
+    width: 100vw;
+}
+
 .home__main-cajaBanner {
     display: flex;
     width: 100vw;
