@@ -16,12 +16,14 @@
   position: relative;
 }
 .register .register__header .register__header-back img {
-  width: 30px;
+  width: 40px;
   position: absolute;
   left: 0;
+  cursor: pointer;
 }
 .register .register__header .register__header-logo img {
-  width: 42px;
+  width: 60px;
+  cursor: pointer;
 }
 
 .register h1 {
@@ -31,9 +33,9 @@
 
 .register form .register__input {
   padding: 0 10px;
-}
+  }
 .register form .register__input .register__input-item {
-  margin: 15px 0;
+  margin: 30px 0;
   display: flex;
 }
 .register form .register__input .register__input-item input {
