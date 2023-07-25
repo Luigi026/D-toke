@@ -626,6 +626,69 @@
                 height: 125.5px;
                 margin: 10px;
             }
+            .home__main__section__desktop__mnh-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                /* height: 377px; */
+            }
+            .home__main__section__desktop__mnh-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+            }
+            .home__main__section__desktop__mnh-container-div1{
+                background-image: url("/img/home-main/mnh-container-div1.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 320px;
+                margin: 10px;
+            }
+            .home__main__section__desktop__mnh-container-div2{
+                background-image: url("/img/home-main/mnh-container-div2.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 320px;
+                margin: 10px;
+            }
+            .home__main__section__desktop__mnh-container-div3{
+                background-image: url("/img/home-main/mnh-container-div3.jpg");
+                background-size: contain;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 400px;
+                height: 320px;
+                margin: 10px;
+            }
+
+
+            .home__main__special-offers {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding-top: 20px;
+            }
+            .home__main__special-offers-button {
+                display: flex;
+                background-color: var(--colorBanner);
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                height: 34px;
+                justify-content: center;
+                align-items: center;
+            }
+            .home__main__special-offers-button a{
+                color: #ffffff;
+                width: 80%;
+                font-family: 'Montserrat';
+                font-size: 1.2rem;
+                font-weight: 700;
+                font-stretch: 200%;
+            }
 
         }
         
