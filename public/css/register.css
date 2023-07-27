@@ -41,8 +41,9 @@
 .register form .register__input .register__input-item input {
   width: 100%;
   border: none;
-  padding: 15px 10px;
+  padding: 20px 10px;
   border-radius: 5px;
+  font-size: 16px;
 }
 .register form .register__input .register__input-item input:focus {
   outline: none;
@@ -56,11 +57,13 @@
 }
 .register form .register__button button {
   width: 100%;
-  padding: 15px 0;
+  padding: 20px 0;
   background-color: #3506cd;
   border: none;
   color: #ffffff;
   border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 .register .register__footer {
   overflow: hidden;

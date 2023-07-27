@@ -8,20 +8,19 @@
   padding: 15px;
 }
 .footer .footer-section__1 h3 {
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
   margin: 5px 0;
 }
 
 .footer .footer-section__1 ul li {
   list-style: none;
-  font-size: 10px;
   text-align: center;
   line-height: 2;
   cursor: pointer;
 }
 .footer .footer-section__1 ul li a{
-  
+  font-size: 12px;
 }
 
 .footer .footer-section__1 .footer-section__1-google {

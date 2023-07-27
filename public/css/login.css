@@ -27,7 +27,7 @@
 
 .login h1 {
   font-size: 24px;
-  margin: 40px 0 0 0;
+  margin: 50px 0 0 0;
 }
 
 .login form .login__input {
@@ -40,8 +40,9 @@
 .login form .login__input .login__input-item input {
   width: 100%;
   border: none;
-  padding: 15px 10px;
+  padding: 20px 10px;
   border-radius: 5px;
+  font-size: 16px;
 }
 .login form .login__input .login__input-item input:focus {
   outline: none;
@@ -50,7 +51,7 @@
   color: #8391a1;
 }
 .login .login__text-recuperar {
-  font-size: 12px;
+  font-size: 14px;
   color: #6a707c;
   text-align: end;
   margin: 20px 0;
@@ -60,11 +61,12 @@
 }
 .login form .login__button button {
   width: 100%;
-  padding: 15px 0;
+  padding: 20px 0;
   background-color: #3506cd;
   border: none;
   color: #ffffff;
   border-radius: 5px;
+  font-size: 16px;
 }
 .login .login__footer {
   overflow: hidden;
@@ -86,7 +88,7 @@
   border-bottom: 1px solid #e8ecf4;
   right: 105%;
   top: 8px;
-  width: 100%;
+  width: 130%;
 }
 .login .login__footer h4 span::before {
   content: "";
@@ -94,7 +96,7 @@
   border-bottom: 1px solid #e8ecf4;
   left: 105%;
   top: 8px;
-  width: 100%;
+  width: 130%;
 }
 
 .login .login__footer .login__footer-redes {
