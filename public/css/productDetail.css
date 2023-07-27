@@ -98,6 +98,7 @@ body.productDetail {
     color: #fff;
     border-radius: 8px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .productDetail__main__section__article--button-add {
@@ -145,6 +146,10 @@ body.productDetail {
    color: var(--grisOscuro);
 }
 
+.productDetail__main__section__article2-adds {
+    display: none;
+}
+
 /**************************************** MEDIAQ ****************************************/
 
 @media (min-width: 481px) {
@@ -173,7 +178,104 @@ body.productDetail {
 
     .productDetail__main__section__article-img2 {
         width: 100%;
-        display: inline;
+        display: inline-block;
         border-radius: 5px;
     }
+}
+
+@media (min-width:769px) {
+    .productDetail__main__section--main-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .productDetail__main__section__article-container--image1 {
+        width:32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .productDetail__main__section__article-container--image2 {
+        width: 65%;
+    }
+
+    .productDetail__main__section__article--box-img {
+        display: flex;
+        width: 59%;
+    }
+    
+    .productDetail__main__section--data-container {
+        display: flex;
+        flex-direction: column;
+        width: 39%;
+    }
+
+
+    .productDetail__main__section__article-buttons {
+        margin: 20px auto 0;
+        width: 100%;
+    }
+
+    .productDetail__main__section__article2-adds {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .productDetail__main__section__article2-box-img {
+        width: 49%;
+    }
+
+    .nike-add {
+        width: 100%;
+    }
+
+    .productDetail__main__section__article2-contact {
+        width: 49%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    .productDetail__main__section__article2-contact input{
+        width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid var(--grisOscuro);
+        outline: none;
+
+    }
+
+    .productDetail__main__section__article2-contact button{
+        position: absolute;
+        right: 10px;
+        cursor: pointer;
+        border: none;
+        background: none;
+        
+    }
+
+}
+
+@media (min-width:1024px) {
+    .productDetail__main__section__article--box-img {
+        display: flex;
+        width: 55%;
+    }
+
+    .productDetail__main__section--data-container {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        margin: 0 auto;
+    }
+
+    
+
+    
 }
