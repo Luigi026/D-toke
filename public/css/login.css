@@ -281,7 +281,7 @@ a {
   .logintableAndDesktop__input-checkbox {
     font-size: 12px;
   }
-  .logintabletAndDesktop__sesion h3,
+  .logintabletAndDesktop__sesion h3, .logintabletAndDesktop__sesion
   a {
     font-size: 18px;
   }
@@ -312,11 +312,11 @@ a {
   .logintableAndDesktop__input-checkbox {
     font-size: 16px;
   }
-  .logintabletAndDesktop__sesion h3
-  a {
+  .logintabletAndDesktop__sesion h3, .logintabletAndDesktop__sesion a {
     font-size: 18px;
     margin: 20px 0;
   }
+
   .logintableAndDesktop__input-item {
     margin: 30px 0;
   }
