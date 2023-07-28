@@ -191,8 +191,7 @@
         margin: 0;
     }
     .main__section__article2__div1 p {
-        font-size: 12px;
-        
+        font-size: 12px; 
     }
     .main__section__article2__div2 input {
         font-size: 12px;
@@ -208,6 +207,7 @@
         margin-top: 0px;
     }
 }
+
 @media(min-width:769px) {
 
     .mainCart h1 {
@@ -309,4 +309,7 @@
     }
  
 }
+@media(min-width:1200px) {
 
+
+}
