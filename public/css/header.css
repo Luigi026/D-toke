@@ -172,6 +172,7 @@ li {
     }
     .home__header__nav__div2 i {
         padding: 5px;
+        font-size: 23px;
     }
     .home__header__nav__div1 a {
         text-transform: capitalize;
