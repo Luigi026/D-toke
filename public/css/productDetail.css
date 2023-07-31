@@ -146,6 +146,10 @@ body.productDetail {
    color: var(--grisOscuro);
 }
 
+.productDetail__main__section__article-recomendation {
+    display: none;
+}
+
 .productDetail__main__section__article2-adds {
     display: none;
 }
@@ -273,9 +277,73 @@ body.productDetail {
         flex-direction: column;
         width: 35%;
         margin: 0 auto;
+        gap: 10px;
     }
 
-    
+    .productDetail__main__section__article--datos-producto h3{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+     }    
 
+     .productDetail__main__section__article--datos-producto {
+        gap: 15px;
+     }
+
+     .productDetail__main__section__article--datos-producto p{
+        font-size: 1.1rem;
+     }
+
+     .productDetail__main__section__article--datos-producto h2 {
+        font-size: 2.3rem;
+     }
+
+     .productDetail__main__section__article--select-talles-row li a {
+        font-size: 1rem;
+     }
+
+     .productDetail__main__section__article--title-talles p {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+     }
     
+     .productDetail__main__section__article-container1-description {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+     }
+
+     .productDetail__main__section__article-description {
+        width: 55%;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+     }
+
+     .productDetail__main__section__article-description p,
+     .productDetail__main__section__article-description a,
+     .productDetail__main__section__article-description ul li{
+        font-size: 1.1rem;
+        font-weight: 300;
+     }
+
+     .productDetail__main__section__article-description-others {
+        border: none;
+     }
+
+     .productDetail__main__section__article-container1-description h4{
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: 500;
+
+     }
+
+     .productDetail__main__section__article-container2-description {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-right: 50px;
+        gap: 8px;
+     }
 }
