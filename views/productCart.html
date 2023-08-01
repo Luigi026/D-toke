@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/e4646141a1.js" crossorigin="anonymous"></script>
+    <!-- Animated -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/productCart.css">
 
@@ -13,7 +19,7 @@
     <header class="home__header">
         <div class="home__header__div1">
             <div class="home__header__div1--bars-logo">
-                <a href=""><i class="fa-sharp fa-solid fa-bars"></i></a>
+                <a><i class="fa-sharp fa-solid fa-bars"></i></a>
                 <div class="home__header--logo rotate-in-center">
                     <a href="/"><img src="/images/logoIsra.png" alt=""></a>
                 </div>
@@ -48,7 +54,7 @@
                 <div class="home__header__nav__div2">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href=""><i class="fa-solid fa-heart heartbeat"></i></a>
-                    <a href=""><i class="fa-solid fa-truck-fast slide-in-blurred-left""></i></a>
+                    <a href="/productCart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
                     <button class="home__header--button"><a href="">ingresar</a></button>
                 </div> 
             </div> 
@@ -58,10 +64,10 @@
       <h1>mi carrito</h1>
       <p>1 productos</p>
       <section class="main__section">
-        <article class="main__section__article1">
+        <article class="main__section__article1" data-aos="zoom-in-right">
           <div class="main__section__article1__div1">
-            <div class="main__section__article1__div1--box1">
-              <img src="/images/zapanike.jpg" alt="images zapanike">
+            <div class="main__section__article1__div1--box1" >
+              <a href="productDetail"><img src="/images/zapanike.jpg" alt="images zapanike"></a>
             </div>
             <div class="main__section__article1__div1--box2">
               <p>zapatilla Nike Air Max Excee</p>
@@ -80,7 +86,7 @@
             </div>
           </div>
         </article>
-        <article class="main__section__article2">
+        <article class="main__section__article2" data-aos="zoom-in-left">
           <p>¿tenés un código de promoción?</p>
           <div class="main__section__article2__div1">
             <input type="text" placeholder="Ingresá tu Código"></input>
@@ -200,5 +206,9 @@
           </div>
         </section>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
