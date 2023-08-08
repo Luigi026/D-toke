@@ -5,5 +5,6 @@ const router = express.Router();
 /* GET users listing. */
 
 router.get('/cart', productsController.cart);
+router.get('/detail', productsController.detail);
 
 module.exports = router;
