@@ -3,6 +3,24 @@
     --colorBanner: #3506CD;
     --colorPopular: rgb(215, 205, 245);
     --colorIsra: rgb(213, 203, 246); 
+
+
+     /* Tamaños de fuentes de Isra*/
+
+  --font-heading-mobile: 20px;
+  --font-heading-tablet: 28px;
+  --font-heading-desktop: 36px;
+  --font-heading-desktop-xl: 48px;
+
+  --font-subtitle-mobile: 18px;
+  --font-subtitle-tablet: 20px;
+  --font-subtitle-desktop: 24px;
+  --font-subtitle-desktop-xl: 28px;
+
+  --font-paragraph-mobile: 12px;
+  --font-paragraph-tablet: 14px;
+  --font-paragraph-desktop: 16px;
+  --font-paragraph-desktop-xl: 18px;
 }
 * {
     box-sizing: border-box;
@@ -10,6 +28,9 @@
     margin: 0;
     font-family: 'Roboto';
 }
+/* html, body{
+    height: 100%;
+} */
 a {
     text-decoration: none;
 }

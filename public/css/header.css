@@ -10,13 +10,19 @@ li {
 
    /* H E A D E R */
 
+/* .home__header
+   width de 95 al 100, 
+   padding por margin
+*/
 .home__header {
     background-color: #ffffff;
     display: flex;
-    width: 95%;
+    /* width: 95%; */
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
+    /* margin: 10px; */
+    padding: 10px;
 }
 .home__header__nav {
     display: none;
