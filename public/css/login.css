@@ -153,6 +153,7 @@ a {
     max-height: 500px;
     align-items: center;
     justify-content: center;
+    padding: 50px 0;
   }
 
   .login__tableAndDesktop-contain-1 {
@@ -241,7 +242,7 @@ a {
     transform: translate(-50%, -50%);
   }
 }
-@media (min-width: 991px) {
+@media (min-width: 1024px) {
   .login__tableAndDesktop {
     max-height: 550px;
   }
@@ -271,7 +272,7 @@ a {
     padding: 10px 0;
   }
 }
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .login__tableAndDesktop {
     max-height: 550px;
   }
@@ -300,4 +301,4 @@ a {
     margin: 5% 0;
     padding: 10px 0;
   }
-}
+} */
