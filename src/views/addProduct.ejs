@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: 'Form'}) %>
+<body>
+  <%- include('partials/header')%>
+  <div class="container">
+    <h1>Formulario de Productos</h1>
+    <form class="product-form">
+      <div class="form-group">
+        <label for="name">Nombre del producto:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="description">Descripción:</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="image">Imagen (URL):</label>
+        <input type="url" id="image" name="image" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="category">Categoría:</label>
+        <input type="text" id="category" name="category" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="talles">Talles:</label>
+        <input type="text" id="talles" name="talles" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price" step="0.01" required>
+      </div>
+      
+      <button type="submit">Guardar Producto</button>
+    </form>
+  </div>
+  <%- include('partials/footer')%>
+</body>
+</html>
