@@ -1,14 +1,14 @@
-.container-product {
+.editProduct__container-product {
     height: 100vh;
-    background-color: #000c19;
+    background-color: #111421;
   }
-  .container-product-content {
+  .editProduct__container-product-content {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-  .container {
+  .editProduct__container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -16,30 +16,30 @@
     width: 100%;
   }
   
-  .container-title {
+  .editProduct__container-title {
     margin-bottom: 20px;
     font-size: var(--font-heading-mobile);
     color: #ffffff;
   }
-  .product-form-contentNamePrice {
+  .editProduct__product-form-contentNamePrice {
     width: 100%;
   }
   
-  .product-form {
+  .editProduct__product-form {
     background-color: #8080801d;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  .form-group {
+  .editProduct__form-group {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     width: 100%;
   }
   
-  .form-group__label {
+  .editProduct__form-group__label {
     display: block;
     font-size: var(--font-paragraph-mobile);
     text-align: start;
@@ -47,21 +47,22 @@
     color: #ffffff;
   }
   
-  .form-group__input {
+  .editProduct__form-group__input {
     padding: 5px 10px;
     border: none;
     color: #8e8e8e;
   }
   
-  .form-group__input:focus {
+  .editProduct__form-group__input:focus {
     outline-color: #0056b3;
   }
-  .content-checkbox {
+  .editProduct__content-checkbox {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    color: #ffffff;
   }
-  .form-button {
+  .editProduct__form-button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
@@ -76,52 +77,52 @@
     background-color: #0056b3;
   }
   @media (min-width: 768px) {
-    .container-title {
+    .editProduct__container-title {
       font-size: var(--font-heading-tablet);
     }
-    .product-form-contentNamePrice {
+    .editProduct__product-form-contentNamePrice {
       display: flex;
       gap: 20px;
     }
   
-    .product-form {
+    .editProduct__product-form {
       padding: 40px;
     }
-    .form-group__label {
+    .editProduct__form-group__label {
       font-size: var(--font-paragraph-tablet);
     }
   
-    .form-button {
+    .editProduct__form-button {
       font-size: var(--font-paragraph-tablet);
     }
   
     button:hover {
       background-color: #0056b3;
     }
-    .content-checkbox {
+    .editProduct__content-checkbox {
       gap: 20px;
       justify-content: flex-start;
       margin-bottom: 0;
     }
   }
   @media (min-width: 1024px) {
-    .container-title {
+    .editProduct__container-title {
       font-size: var(--font-heading-desktop-xl);
       margin-top: 30px;
     }
   
-    .product-form {
+    .editProduct__product-form {
       margin-bottom: 30px;
     }
-    .form-group__label {
+    .editProduct__form-group__label {
       font-size: var(--font-paragraph-desktop-xl);
     }
   
-    .form-button {
+    .editProduct__form-button {
       margin-top: 20px;
       font-size: var(--font-paragraph-desktop-xl);
     }
-    .form-group__input {
+    .editProduct__form-group__input {
       padding: 10px 20px;
       font-size: var(--font-paragraph-desktop-xl);
     }
