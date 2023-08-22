@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Zapatillas Air Max",
+    "description": "Zapatillas deportivas con tecnología de amortiguación Air Max.",
+    "image": "zapanike.jpg",
+    "category": "Nike",
+    "colors": ["Rojo", "Negro", "Blanco"],
+    "price": 150.0,
+    "tallas": ["US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 2,
+    "name": "Zapatillas React Infinity Run",
+    "description": "Zapatillas de running con amortiguación React para una experiencia suave.",
+    "image": "zapanegra.webp",
+    "category": "Nike",
+    "colors": ["Azul", "Gris", "Negro"],
+    "price": 130.0,
+    "tallas": ["US 8", "US 9", "US 10"]
+  },
+  {
+    "id": 3,
+    "name": "Zapatillas Air Zoom",
+    "description": "Zapatillas ligeras con tecnología Air Zoom para una mayor respuesta en la pisada.",
+    "image": "zapatillaNegra.webp",
+    "category": "Nike",
+    "colors": ["Blanco", "Azul", "Verde"],
+    "price": 140.0,
+    "tallas": ["US 8", "US 9", "US 10"]
+  },
+  {
+    "id": 4,
+    "name": "Zapatillas Joyride Run",
+    "description": "Zapatillas con sistema de amortiguación Joyride para una pisada suave y cómoda.",
+    "image": "nike.jpg",
+    "category": "Nike",
+    "colors": ["Negro", "Gris", "Rojo"],
+    "price": 160.0,
+    "tallas": ["US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 5,
+    "name": "Zapatillas Ultraboost",
+    "description": "Zapatillas de running con tecnología Ultraboost para mayor comodidad y retorno de energía.",
+    "image": "adidas1.jpg",
+    "category": "Adidas",
+    "colors": ["Blanco", "Negro", "Verde"],
+    "price": 160.0,
+    "tallas": ["US 8", "US 9", "US 10"]
+  },
+  {
+    "id": 6,
+    "name": "Zapatillas Superstar",
+    "description": "Zapatillas clásicas con el icónico diseño de las tres rayas.",
+    "image": "adidas2.jpg",
+    "category": "Adidas",
+    "colors": ["Blanco", "Negro", "Azul"],
+    "price": 100.0,
+    "tallas": ["US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 7,
+    "name": "Zapatillas Stan Smith",
+    "description": "Zapatillas de estilo retro con diseño icónico y suela de goma.",
+    "image": "adidas3.jpg",
+    "category": "Adidas",
+    "colors": ["Blanco", "Verde", "Azul"],
+    "price": 110.0,
+    "tallas": ["US 6", "US 7", "US 8"]
+  },
+  {
+    "id": 8,
+    "name": "Zapatillas Gazelle",
+    "description": "Zapatillas clásicas de ante con detalles en contraste.",
+    "image": "adidas4.jpg",
+    "category": "Adidas",
+    "colors": ["Negro", "Gris", "Rojo"],
+    "price": 90.0,
+    "tallas": ["US 8", "US 9", "US 10"]
+  },
+  {
+    "id": 9,
+    "name": "Zapatillas Classic Leather",
+    "description": "Zapatillas de cuero clásicas con diseño retro.",
+    "image": "reebook1.jpg",
+    "category": "Reebok",
+    "colors": ["Blanco", "Azul", "Gris"],
+    "price": 90.0,
+    "tallas": ["US 6", "US 7", "US 8"]
+  },
+  {
+    "id": 10,
+    "name": "Zapatillas Nano X",
+    "description": "Zapatillas de entrenamiento versátiles y resistentes para cualquier actividad.",
+    "image": "reebook2.jpg",
+    "category": "Reebok",
+    "colors": ["Negro", "Gris", "Rojo"],
+    "price": 110.0,
+    "tallas": ["US 8", "US 9", "US 10"]
+  },
+  {
+    "id": 11,
+    "name": "Zapatillas Club C",
+    "description": "Zapatillas de estilo clásico con diseño limpio y detalles en contraste.",
+    "image": "reebook3.jpg",
+    "category": "Reebok",
+    "colors": ["Blanco", "Negro", "Verde"],
+    "price": 95.0,
+    "tallas": ["US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 12,
+    "name": "Zapatillas Flexagon",
+    "description": "Zapatillas versátiles ideales para entrenamiento con un diseño ligero y cómodo.",
+    "image": "reebook4.jpg",
+    "category": "Reebok",
+    "colors": ["Negro", "Azul", "Gris"],
+    "price": 75.0,
+    "tallas": ["US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 13,
+    "name": "Zapatillas RS-X",
+    "description": "Zapatillas de estilo retro con tecnología de amortiguación RS.",
+    "image": "puma1.jpg",
+    "category": "Puma",
+    "colors": ["Negro", "Rojo", "Blanco"],
+    "price": 120.0,
+    "tallas": ["US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 14,
+    "name": "Zapatillas Future Rider",
+    "description": "Zapatillas inspiradas en los estilos de los años 80 con un toque moderno.",
+    "image": "puma2.jpg",
+    "category": "Puma",
+    "colors": ["Azul", "Negro", "Blanco"],
+    "price": 95.0,
+    "tallas": ["US 8", "US 9", "US 10"]
+  },
+  {
+    "id": 15,
+    "name": "Zapatillas Cali",
+    "description": "Zapatillas con estilo vintage y suela gruesa.",
+    "image": "puma3.jpg",
+    "category": "Puma",
+    "colors": ["Blanco", "Rosa", "Negro"],
+    "price": 85.0,
+    "tallas": ["US 7", "US 8", "US 9"]
+  },
+  {
+    "id": 16,
+    "name": "Zapatillas RS-2K",
+    "description": "Zapatillas con diseño futurista y detalles audaces.",
+    "image": "puma4.jpg",
+    "category": "Puma",
+    "colors": ["Negro", "Verde", "Gris"],
+    "price": 110.0,
+    "tallas": ["US 8", "US 9", "US 10"]
+  }
+]
