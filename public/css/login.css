@@ -1,3 +1,10 @@
+.admin{
+  padding: 4px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6a707c;
+  color:#d6ccf6
+}
 .login-container {
   height: 100vh;
 }
