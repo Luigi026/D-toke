@@ -6,7 +6,7 @@
       <%- include('partials/header')%>
       <div class="container">
         <h1 class="container-title">Ingresar un Producto</h1>
-        <form class="product-form">
+        <form class="product-form" action="/products/addProduct" method="POST" enctype="multipart/form-data" >
           <div class="product-form-contentNamePrice">
             <div class="form-group">
               <label class="form-group__label" for="name"

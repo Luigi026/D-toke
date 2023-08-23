@@ -6,7 +6,7 @@
     "image": "zapanike.jpg",
     "category": "Nike",
     "colors": ["Rojo", "Negro", "Blanco"],
-    "price": 150.0,
+    "price": 150,
     "tallas": ["US 7", "US 8", "US 9"]
   },
   {
@@ -16,7 +16,7 @@
     "image": "zapanegra.webp",
     "category": "Nike",
     "colors": ["Azul", "Gris", "Negro"],
-    "price": 130.0,
+    "price": 130,
     "tallas": ["US 8", "US 9", "US 10"]
   },
   {
@@ -26,7 +26,7 @@
     "image": "zapatillaNegra.webp",
     "category": "Nike",
     "colors": ["Blanco", "Azul", "Verde"],
-    "price": 140.0,
+    "price": 140,
     "tallas": ["US 8", "US 9", "US 10"]
   },
   {
@@ -36,7 +36,7 @@
     "image": "nike.jpg",
     "category": "Nike",
     "colors": ["Negro", "Gris", "Rojo"],
-    "price": 160.0,
+    "price": 160,
     "tallas": ["US 7", "US 8", "US 9"]
   },
   {
@@ -46,7 +46,7 @@
     "image": "adidas1.jpg",
     "category": "Adidas",
     "colors": ["Blanco", "Negro", "Verde"],
-    "price": 160.0,
+    "price": 160,
     "tallas": ["US 8", "US 9", "US 10"]
   },
   {
@@ -56,7 +56,7 @@
     "image": "adidas2.jpg",
     "category": "Adidas",
     "colors": ["Blanco", "Negro", "Azul"],
-    "price": 100.0,
+    "price": 100,
     "tallas": ["US 7", "US 8", "US 9"]
   },
   {
@@ -66,7 +66,7 @@
     "image": "adidas3.jpg",
     "category": "Adidas",
     "colors": ["Blanco", "Verde", "Azul"],
-    "price": 110.0,
+    "price": 110,
     "tallas": ["US 6", "US 7", "US 8"]
   },
   {
@@ -76,7 +76,7 @@
     "image": "adidas4.jpg",
     "category": "Adidas",
     "colors": ["Negro", "Gris", "Rojo"],
-    "price": 90.0,
+    "price": 90,
     "tallas": ["US 8", "US 9", "US 10"]
   },
   {
@@ -86,7 +86,7 @@
     "image": "reebok1.jpg",
     "category": "Reebok",
     "colors": ["Blanco", "Azul", "Gris"],
-    "price": 90.0,
+    "price": 90,
     "tallas": ["US 6", "US 7", "US 8"]
   },
   {
@@ -96,7 +96,7 @@
     "image": "reebok2.jpg",
     "category": "Reebok",
     "colors": ["Negro", "Gris", "Rojo"],
-    "price": 110.0,
+    "price": 110,
     "tallas": ["US 8", "US 9", "US 10"]
   },
   {
@@ -106,7 +106,7 @@
     "image": "reebok3.jpg",
     "category": "Reebok",
     "colors": ["Blanco", "Negro", "Verde"],
-    "price": 95.0,
+    "price": 95,
     "tallas": ["US 7", "US 8", "US 9"]
   },
   {
@@ -116,7 +116,7 @@
     "image": "reebok4.jpg",
     "category": "Reebok",
     "colors": ["Negro", "Azul", "Gris"],
-    "price": 75.0,
+    "price": 75,
     "tallas": ["US 7", "US 8", "US 9"]
   },
   {
@@ -126,7 +126,7 @@
     "image": "puma1.jpg",
     "category": "Puma",
     "colors": ["Negro", "Rojo", "Blanco"],
-    "price": 120.0,
+    "price": 120,
     "tallas": ["US 7", "US 8", "US 9"]
   },
   {
@@ -136,7 +136,7 @@
     "image": "puma2.jpg",
     "category": "Puma",
     "colors": ["Azul", "Negro", "Blanco"],
-    "price": 95.0,
+    "price": 95,
     "tallas": ["US 8", "US 9", "US 10"]
   },
   {
@@ -146,7 +146,7 @@
     "image": "puma3.jpg",
     "category": "Puma",
     "colors": ["Blanco", "Rosa", "Negro"],
-    "price": 85.0,
+    "price": 85,
     "tallas": ["US 7", "US 8", "US 9"]
   },
   {
@@ -156,7 +156,7 @@
     "image": "puma4.jpg",
     "category": "Puma",
     "colors": ["Negro", "Verde", "Gris"],
-    "price": 110.0,
+    "price": 110,
     "tallas": ["US 8", "US 9", "US 10"]
   }
 ]
