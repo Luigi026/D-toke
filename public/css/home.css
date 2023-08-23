@@ -737,6 +737,7 @@ article.tablet2 {
     flex-direction: row;
     justify-content: center;
     padding-top: 20px;
+    width: 100%;
   }
   .home__main__special-offers-button {
     display: flex;
