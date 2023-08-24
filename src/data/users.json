@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "firstName": "id",
+        "lastName": "maecenas rhoncus",
+        "email": "tcolquite0@ezinearticles.com",
+        "password": "uR3.H7.I*Un@Nv",
+        "category": "user",
+        "image": "/images/avatars/kipa.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "justo sit",
+        "lastName": "enim leo",
+        "email": "oharden1@scribd.com",
+        "password": "fB9({HdC>",
+        "category": "user",
+        "image": "/images/avatars/pletzale.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "in faucibus",
+        "lastName": "iaculis congue",
+        "email": "jshergill2@jigsy.com",
+        "password": "dL3>WG!HkVEN'",
+        "category": "user",
+        "image": "/images/avatars/tostada.jpg"
+    },
+    {
+        "id": 4,
+        "firstName": "neque",
+        "lastName": "nunc",
+        "email": "jlimpricht3@facebook.com",
+        "password": "qY1\\m8mJ",
+        "category": "user",
+        "image": "/images/avatars/pretzel.jpg"
+    },
+    {
+        "id": 5,
+        "firstName": "consequat dui",
+        "lastName": "nisi",
+        "email": "aoxer4@wordpress.org",
+        "password": "xX3|cN%P",
+        "category": "user",
+        "image": "/images/avatars/kipa.jpg"
+    },
+    {
+        "id": 6,
+        "firstName": "luctus nec",
+        "lastName": "porttitor pede",
+        "email": "woliva5@goodreads.com",
+        "password": "sC1~J%Y(f6>Ol=",
+        "category": "user",
+        "image": "/images/avatars/kipa.jpg"
+    },
+    {
+        "id": 7,
+        "firstName": "malesuada in",
+        "lastName": "pellentesque at",
+        "email": "rkyteley6@slideshare.net",
+        "password": "xJ6*RapzD",
+        "category": "user",
+        "image": "/images/avatars/polloCorazon.jpg"
+    },
+    {
+        "id": 8,
+        "firstName": "metus aenean",
+        "lastName": "ipsum",
+        "email": "mbracken7@walmart.com",
+        "password": "hI1%EI_DQ(&Ep6u$",
+        "category": "user",
+        "image": "/images/avatars/tostada.jpg"
+    },
+    {
+        "id": 9,
+        "firstName": "mauris viverra",
+        "lastName": "nibh in",
+        "email": "mlambal8@netvibes.com",
+        "password": "zI7,ME64b4e",
+        "category": "user",
+        "image": "/images/avatars/jala.jpg"
+    },
+    {
+        "id": 10,
+        "firstName": "vivamus metus",
+        "lastName": "platea",
+        "email": "vkleinhandler9@washingtonpost.com",
+        "password": "aX5*T3VH\"",
+        "category": "user",
+        "image": "/images/avatars/polloCorazon.jpg"
+    }
+]
