@@ -1,7 +1,7 @@
 const { readJSON, writeJSON } = require("../data");
 
 let products = readJSON("./products.json");
-console.log(products);
+
 module.exports = {
   cart: (req, res) => {
     return res.render("productCart");
