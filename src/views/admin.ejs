@@ -4,17 +4,76 @@
 
     <body>
         <%- include('partials/header') %>
-
-            <!-- <div class="container d-flex gap-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="/images/puma3.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+            <main class="container">
+                <div class="row">
+                    <div class="col-12 col-lg10 mx-auto mt-5">
+                        <div class="card shadow">
+                            <div class="card-header">
+                                <a href="/products/addProduct" class="btn btn-outline-dark my-3">Nuevo Producto</a>
+                            </div>
+                            <div class="card-body">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#home-tab-pane" type="button" role="tab"
+                                            aria-controls="home-tab-pane" aria-selected="true">Productos</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                            data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                            aria-controls="profile-tab-pane" aria-selected="false">Categorias</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                            aria-controls="contact-tab-pane" aria-selected="false">Usuarios</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
+                                        <div>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Producto</th>
+                                                        <th scope="col">Categoria</th>
+                                                        <th scope="col">Precio</th>
+                                                        <th scope="col">Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% products.forEach(({id,name, price, category}, index) => { %>
+                                                        <tr>
+                                                            <th scope="row"><%= index + 1 %></th>
+                                                            <td><%= name %></td>
+                                                            <td><%= category %></td>
+                                                            <td><%= price %></td>
+                                                            <td>
+                                                                <div class="d-flex gap-1 justify-content-center">
+                                                                    <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
+                                                                    <a href="/products/editProduct" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                                    <a href="#" class="btn btn-sm   btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    <% }) %>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                        aria-labelledby="profile-tab" tabindex="0">Categorias!!</div>
+                                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                        aria-labelledby="contact-tab" tabindex="0">Usuarios</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> -->
+            </main>
 
     </body>
 
