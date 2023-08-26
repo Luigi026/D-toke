@@ -6,7 +6,7 @@
       <%- include('partials/header')%>
       <div class="editProduct__container">
         <h1 class="editProduct__container-title">Editar un Producto</h1>
-        <form class="editProduct__product-form">
+        <form class="editProduct__product-form" action="/products/editProduct" method="POST" enctype="multipart/form-data" >
           <div class="editProduct__product-form-contentNamePrice">
             <div class="editProduct__form-group">
               <label class="editProduct__form-group__label" for="name"
@@ -52,9 +52,11 @@
                 id="gender"
                 selected
               >
-                <option value="Hombres">Hombres</option>
-                <option value="Mujeres">Mujeres</option>
-                <option value="Niños">Niños</option>
+              <option value="Nike">Nike</option>
+              <option value="Adidas">Adidas</option>
+              <option value="Puma">Puma</option>
+              <option value="Reebok">Reebok</option>
+
               </select>
             </div>
           </div>

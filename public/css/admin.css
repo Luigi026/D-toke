@@ -1,0 +1,86 @@
+.admin__main__containerTable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admin__table {
+  width: 80%;
+  border: solid 1px white;
+  margin: 38px;
+}
+.btn__newProduct {
+  margin: 36px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  align-items: center;
+}
+.btn__newProduct__a {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  border: solid 1px darkgreen;
+}
+.admin__modalContainer {
+}
+.admin__modal__container {
+  display: flex;
+  flex-direction: column;
+}
+.admin__modalbody {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+.admin__modalbody__card {
+  padding: 0px;
+  margin: 19px;
+  border: none;
+}
+.admin__btn__close {
+    user-select:none;
+}
+.admin__btn__close i{
+    /* background: #ffffff; */
+    font-size: 35px;
+    margin: -7px -31px 0px -30px;
+    color: #26ac0c;
+    /* user-select:none; */
+}
+.admin__modalbody__card__container {
+  padding: 0px;
+  margin: 0px;
+}
+.admin__modalbody__card__containerImagen {
+  border-radius: 0px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.admin__modalbody__card__containerImagen img {
+  /* height: 100%; */
+  border-radius: 5%;
+
+}
+.admin__modal__container__header {
+    border: none;
+}
+.admin__modal__container__header h5 {
+    font-size: 2rem;
+    width: 100%;
+}
+.admin__modal__container__footer {
+    border: none;
+}
+.admin__modalbody__card__container__card {
+}
+.admin__modalbody__card__container__card__txt {
+}
+.admin__modalbody__card__container__card__txt h5 {
+
+}
+.admin__modalbody__card__container__card__txt p {
+  font-size: 35px;
+  font-weight: 600;
+}
