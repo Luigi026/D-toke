@@ -34,7 +34,11 @@
                 <a class="nav-item" href="">tendencia</a>   
             </div>
             <div class="home__header__nav__div2">
-                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                <form class="d-flex" role="search" action="/search" method="GET">
+                    <input class="form-control me-2" type="text" name="keywords" placeholder="Buscar zapatilla..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
+                </form>
+                
                 <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
                 <a href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
                 <button class="home__header--button"><a href="/users/login">ingresar</a></button>
