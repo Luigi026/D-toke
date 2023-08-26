@@ -117,17 +117,23 @@
                                                             ADVERTENCIA</h1>
                                                     </div>
                                                     <div class="modal-body bg-dark text-white">
-                                                        <p>Estás seguro que querés eliminar el producto
+                                                        <p>Esta seguro que desea eliminar el siguiente producto?
                                                             <hr>
                                                             <b>
                                                                 <%= category %> | <%= name %> | $<%= price %>
                                                             </b>
                                                         </p>
+                                                        <div
+                                                                    class="col-md-6 admin__modalbody__card__containerImagen">
+                                                                    <img class="card-img-top"
+                                                                        src="/images/products/<%= image || 'image-default.png'%>"
+                                                                        class="img-fluid rounded-start" alt="...">
+                                                        </div>
                                                     </div>
                                                     <div class="modal-footer bg-dark text-white">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Cancelar</button>
-                                                        <form action="/products/removeProduct/<%= id %>?_method=DELETE"
+                                                        <form action="/products/delete/<%= id %>?_method=DELETE"
                                                             method="POST">
                                                             <button type="submit"
                                                                 class="btn btn-danger">Eliminalo</button>
