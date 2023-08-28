@@ -56,27 +56,27 @@
             <div class="home__main__section__desktopage-marcas-box">
                 <div class="home__main__section__desktopage-marcasContainer">
                     <div class="home__main__section__desktopage-marcas-img1">
-                        <a href="">
+                        <a href="/products/detail">
                             <img src="/img/home-main/Marca-transparente-.png" alt="">
                         </a>
                     </div>
                     <div class="home__main__section__desktopage-marcas-img2">
-                        <a href="">
+                        <a href="/products/detail">
                             <img src="/img/home-main/Marca-transparente-.png" alt="">
                         </a>
                     </div>
                     <div class="home__main__section__desktopage-marcas-img3">
-                        <a href="">
+                        <a href="/products/detail">
                             <img src="/img/home-main/Marca-transparente-.png" alt="">
                         </a>
                     </div>
                     <div class="home__main__section__desktopage-marcas-img4">
-                        <a href="">
+                        <a href="/products/detail">
                             <img src="/img/home-main/Marca-transparente-.png" alt="">
                         </a>
                     </div>
                     <div class="home__main__section__desktopage-marcas-img5">
-                        <a href="">
+                        <a href="/products/detail">
                             <img src="/img/home-main/Marca-transparente-.png" alt="">
                         </a>
                     </div>
@@ -123,98 +123,19 @@
 
             <div class="home__main__special-offers">
                 <div class="home__main__special-offers-button">
-                    <a href="/productDetail">No te pierdas las ofertas especiales que hay cada fin de semana!!!</a>
+                    <a href="/products/detail">No te pierdas las ofertas especiales que hay cada fin de semana!!!</a>
                 </div>
             </div>
             <section class="home__main__section-cards">
 
-                <div class="home__main__angle-L">
-                    <i class="fa-regular fa-angle-left"></i>
-                </div>
-
-
                 <div class="home__main__section__cards-container-desktop">
-                    <article class="home__main__section__cards-product">
-                        <div class="home__main__section__cards-img">
-                            <a href="/productDetail">
-                                <img src="/img/home-main/product1.png" alt="">
-                            </a>
-                            <div class="home__main__section__card-product-heart">
-                                <i class="fa-regular fa-heart"></i>
-
-                            </div>
-                        </div>
-                        <div class="home__main__section__cards-text">
-                            <h5 class="home__main__section__cards-description">
-                                Adidas Yung-1
-                            </h5>
-                            <p class="home__main__section__cards-price">
-                                $32.000
-                            </p>
-                        </div>
-
-                    </article>
-                    <article class="home__main__section__cards-product">
-                        <div class="home__main__section__cards-img">
-                            <a href="/productDetail">
-                                <img src="/img/home-main/product2.png" alt="">
-                            </a>
-                            <div class="home__main__section__card-product-heart">
-                                <i class="fa-regular fa-heart"></i>
-
-                            </div>
-                        </div>
-                        <div class="home__main__section__cards-text">
-                            <h5 class="home__main__section__cards-description">
-                                Adidas Yung-1
-                            </h5>
-                            <p class="home__main__section__cards-price">
-                                $32.000
-                            </p>
-                        </div>
-                    </article>
-                    <article class="home__main__section__cards-product">
-                        <div class="home__main__section__cards-img">
-                            <a href="/productDetail">
-                                <img src="/img/home-main/product3.png" alt="">
-                            </a>
-                            <div class="home__main__section__card-product-heart">
-                                <i class="fa-regular fa-heart"></i>
-
-                            </div>
-                        </div>
-                        <div class="home__main__section__cards-text">
-                            <h5 class="home__main__section__cards-description">
-                                Adidas Yung-1
-                            </h5>
-                            <p class="home__main__section__cards-price">
-                                $32.000
-                            </p>
-                        </div>
-                    </article>
-                    <article class="home__main__section__cards-product">
-                        <div class="home__main__section__cards-img">
-                            <a href="/productDetail">
-                                <img src="/img/home-main/product4.png" alt="">
-                            </a>
-                            <div class="home__main__section__card-product-heart">
-                                <i class="fa-regular fa-heart"></i>
-
-                            </div>
-                        </div>
-                        <div class="home__main__section__cards-text">
-                            <h5 class="home__main__section__cards-description">
-                                Adidas Yung-1
-                            </h5>
-                            <p class="home__main__section__cards-price">
-                                $32.000
-                            </p>
-                        </div>
-                    </article>
+                    <% products.forEach(product => { %>
+                        <%- include('partials/productCardHome',{
+                            ...product
+                        }) %>
+                    <% }) %>
                 </div>
-                <div class="home__main__angle-R">
-                    <i class="fa-solid fa-angle-right"></i>
-                </div>
+          
 
             </section>
             <div class="home__main__section__bottomBanner">
@@ -262,29 +183,29 @@
                             accusamus.</p>
                         <div class="buy-container">
                             <div class="buy-container-violeta">
-                                <a href="/productDetail">Comprar ahora</a>
+                                <a href="/products/detail">Comprar ahora</a>
                             </div>
                         </div>
                     </div>
                     <div class="home__main__section__tabletBanner-container-box-img">
                         <div class="box-imgBig">
-                            <a href="/productDetail">
+                            <a href="/products/detail">
                                 <img src="/img/home-main/bannerTablet.png" alt="">
                             </a>
                         </div>
                         <div class="home__main__section__tabletBanner-container-box-img-rigth">
                             <div>
-                                <a href="/productDetail">
+                                <a href="/products/detail">
                                     <img src="/img/home-main/imgRigth1.png" alt="">
                                 </a>
                             </div>
                             <div>
-                                <a href="/productDetail">
+                                <a href="/products/detail">
                                     <img src="/img/home-main/imgRigth1.png" alt="">
                                 </a>
                             </div>
                             <div>
-                                <a href="/productDetail">
+                                <a href="/products/detail">
                                     <img src="/img/home-main/imgRigth1.png" alt="">
                                 </a>
                             </div>
@@ -299,7 +220,7 @@
             <section class="home__main-cajaBanner">
                 <div class="home__main-cajaBanner2">
                     <div class="home__main-cajaImg">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/banner-mobile.png" alt="">
                         </a>
                     </div>
@@ -311,7 +232,7 @@
                             </div>
                         </div>
                         <div class="home__main__cajaTxt-explore">
-                            <a href="/productDetail">Explorar ahora <i class="fa-solid fa-angle-right"></i></a>
+                            <a href="/products/detail">Explorar ahora <i class="fa-solid fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -321,13 +242,13 @@
                     <h2>Popular</h2>
                 </div>
                 <div class="home__main__seeMore-link">
-                    <a href="/productDetail">ver más <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/products/detail">ver más <i class="fa-solid fa-angle-right"></i></a>
                 </div>
             </div>
             <section class="home__main-Popular">
                 <div class="home__main-cajaPopular">
                     <div class="home__main__popular-cajaImg">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/Popular.png" alt="">
                         </a>
                     </div>
@@ -341,12 +262,11 @@
                 </div>
             </section>
         </section>
-
         <section class="home__main__section-cards">
             <div class="home__main__section__cards-container">
                 <article class="home__main__section__cards-product">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product1.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -366,7 +286,7 @@
                 </article>
                 <article class="home__main__section__cards-product">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product2.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -385,7 +305,7 @@
                 </article>
                 <article class="home__main__section__cards-product">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product3.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -404,7 +324,7 @@
                 </article>
                 <article class="home__main__section__cards-product">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product4.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -423,7 +343,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet1">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product1.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -442,7 +362,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet1">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product2.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -461,7 +381,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet1">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product3.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -480,7 +400,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet1">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product4.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -499,7 +419,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet1">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product1.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -518,7 +438,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet2">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product2.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -537,7 +457,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet2">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product3.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">
@@ -556,7 +476,7 @@
                 </article>
                 <article class="home__main__section__cards-product tablet2">
                     <div class="home__main__section__cards-img">
-                        <a href="/productDetail">
+                        <a href="/products/detail">
                             <img src="/img/home-main/product4.png" alt="">
                         </a>
                         <div class="home__main__section__card-product-heart">

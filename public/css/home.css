@@ -112,7 +112,7 @@
 }
 .home__main-cajaPopular {
   display: flex;
-  margin: 11px;
+  margin: -14px;
   width: 90%;
   background-color: var(--colorPopular);
   border-radius: 16px;
@@ -141,8 +141,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
-  margin: 0px 0px 0px 39px;
+  margin: 4px 0px 0px 39px;
 }
 .home__main__popular-cajaTxt-nike {
   display: flex;
@@ -773,21 +772,23 @@ article.tablet2 {
     flex-direction: row;
     justify-content: center;
     gap: 39px;
+    flex-wrap: wrap;
   }
   .home__main__section__cards-product {
     display: flex;
-    width: 211px;
+    width: 300px;
     border: solid 1px;
     border-radius: 5px;
+    position: relative;
   }
   .home__main__section__cards-img {
-    display: flex;
-    position: relative;
+    /* display: flex; */
+    /* position: relative; */
     background: none;
-    border-radius: 16px;
-    flex-direction: column;
+    /* border-radius: 51px; */
+    /* flex-direction: column; */
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 14px;
   }
   .home__main__section__card-product-heart i {
     font-size: 2rem;
@@ -811,13 +812,16 @@ article.tablet2 {
 
   .home__main__section__cards-img img {
     width: 100%;
-    margin: 13px 63px 0px -12px;
+    height: 156px;
+    /* margin: 13px 63px 0px -12px; */
+    object-fit: cover;
   }
 
   .home__main__section__card-product-heart {
     position: absolute;
     text-align: end;
-    width: 100%;
+    /* width: 100%; */
+    /* left: 70%; */
   }
   .home__main__angle-L {
     display: flex;

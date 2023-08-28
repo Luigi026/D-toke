@@ -4,6 +4,7 @@
       "name": "Air Max 97",
       "description": "Zapatillas deportivas con tecnología de amortiguación Air Max.",
       "image": "Nike_AirMax_97.jpg",
+
       "category": "Nike",
       "colors": [
          "Rojo",
@@ -75,7 +76,7 @@
       "id": 5,
       "name": "Ultraboost",
       "description": "Zapatillas de running con tecnología Ultraboost para mayor comodidad y retorno de energía.",
-      "image": "Adidas_Ultraboost.webp",
+      "image": "Adidas_Ultraboost.jpg",
       "category": "Adidas",
       "colors": [
          "Blanco",
@@ -286,15 +287,5 @@
          "US 9",
          "US 10"
       ]
-   },
-   {
-      "id": 17,
-      "name": "zazaazazaza",
-      "description": "123123123",
-      "image": "1693073367635_products_.jpeg",
-      "category": "Nike",
-      "colors": null,
-      "price": 123123123,
-      "tallas": "38"
    }
 ]

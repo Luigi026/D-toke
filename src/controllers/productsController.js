@@ -8,7 +8,8 @@ module.exports = {
     return res.render("productCart");
   },
   detail: (req, res) => {
-    return res.render("productDetail");
+ 
+    return res.render("productDetail", products);
   },
   addProduct: (req, res) => {
     return res.render("addProduct");

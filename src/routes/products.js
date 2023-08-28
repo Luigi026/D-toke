@@ -6,7 +6,7 @@ const upload = require('../middlewares/upload')
 /* GET users listing. */
 
 router.get('/cart', productsController.cart);
-router.get('/detail', productsController.detail);
+router.get('/detail/:id', productsController.detail);
 
 router.get('/addProduct', productsController.addProduct);
 router.post('/addProduct', upload.single('image'),productsController.store)
