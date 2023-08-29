@@ -782,7 +782,7 @@ article.tablet2 {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   .home__main__section__cards-product {
     display: flex;

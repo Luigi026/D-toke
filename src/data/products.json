@@ -288,5 +288,32 @@
          "US 9",
          "US 10"
       ]
+   },
+   {
+      "id": 17,
+      "name": "360",
+      "description": "coral",
+      "image": "1693316851877_products_.jpg",
+      "category": "Nike",
+      "colors": null,
+      "price": 48000
+   },
+   {
+      "id": 18,
+      "name": "vapormax",
+      "description": "negra pipa dorada",
+      "image": "1693323639833_products_.jpg",
+      "category": "Nike",
+      "colors": null,
+      "price": 47000
+   },
+   {
+      "id": 19,
+      "name": "vapormax",
+      "description": "celeste pipa rosa",
+      "image": "1693323664323_products_.jpg",
+      "category": "Nike",
+      "colors": null,
+      "price": 47000
    }
 ]
