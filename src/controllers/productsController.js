@@ -3,13 +3,22 @@ const {existsSync, unlinkSync} = require('fs')
 
 let products = readJSON("./products.json");
 
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
 module.exports = {
   cart: (req, res) => {
     return res.render("productCart");
   },
   detail: (req, res) => {
- 
-    return res.render("productDetail", products);
+
+		const product = products.find(product => product.id === +req.params.id)
+		
+		return res.render('productDetail',{
+			product,
+			toThousand
+			
+		})
   },
   addProduct: (req, res) => {
     return res.render("addProduct");

@@ -126,17 +126,49 @@
                     <a href="/products/detail">No te pierdas las ofertas especiales que hay cada fin de semana!!!</a>
                 </div>
             </div>
+            <h3 class="text-center text-uppercase fs-3 text-black mt-3" >NIKE</h3>
             <section class="home__main__section-cards">
-
                 <div class="home__main__section__cards-container-desktop">
-                    <% products.forEach(product => { %>
+                    <% productsNike.forEach(product => { %>
                         <%- include('partials/productCardHome',{
-                            ...product
+                            ...product,
+                            toThousand
                         }) %>
                     <% }) %>
                 </div>
-          
-
+            </section>
+            <h3 class="text-center text-uppercase fs-3 text-black mt-3" >ADIDAS</h3>
+            <section class="home__main__section-cards">
+                <div class="home__main__section__cards-container-desktop">
+                    <% productsAdidas.forEach(product => { %>
+                        <%- include('partials/productCardHome',{
+                            ...product,
+                            toThousand
+                        }) %>
+                    <% }) %>
+                </div>
+            </section>
+            <h3 class="text-center text-uppercase fs-3 text-black mt-3" >REEBOK</h3>
+            <section class="home__main__section-cards">
+                <div class="home__main__section__cards-container-desktop">
+                    <% productsReebok.forEach(product => { %>
+                        <%- include('partials/productCardHome',{
+                            ...product,
+                            toThousand
+                        }) %>
+                    <% }) %>
+                </div>
+            </section>
+            <h3 class="text-center text-uppercase fs-3 text-black mt-3" >PUMA</h3>
+            <section class="home__main__section-cards">
+                <div class="home__main__section__cards-container-desktop">
+                    <% productsPuma.forEach(product => { %>
+                        <%- include('partials/productCardHome',{
+                            ...product,
+                            toThousand
+                        }) %>
+                    <% }) %>
+                </div>
             </section>
             <div class="home__main__section__bottomBanner">
                 <div class="home__main__section__bottomBanner-box1">

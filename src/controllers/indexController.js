@@ -9,7 +9,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
   index: (req, res) => {
     return res.render('index', {
-      products
+			productsNike : products.filter(product => product.category === "Nike"),
+			productsAdidas : products.filter(product => product.category === "Adidas"),
+      productsReebok : products.filter(product => product.category === "Reebok"),
+			productsPuma : products.filter(product => product.category === "Puma"),
+			toThousand
     });
   },
   admin: (req, res) => {

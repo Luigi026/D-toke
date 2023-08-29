@@ -820,8 +820,7 @@ article.tablet2 {
   .home__main__section__card-product-heart {
     position: absolute;
     text-align: end;
-    /* width: 100%; */
-    /* left: 70%; */
+    z-index: 1;
   }
   .home__main__angle-L {
     display: flex;

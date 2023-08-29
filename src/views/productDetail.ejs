@@ -12,8 +12,10 @@
 
         <main class="productDetail__main">
         
-                <%- include('partials/productCard') %>
-                
+            <%- include('partials/productCard',{
+                ...product
+            }) %>
+
                 <article class="productDetail__main__section__article-recomendation">
                     <div>
                         <h4>Tambien podria interesarte</h4>
