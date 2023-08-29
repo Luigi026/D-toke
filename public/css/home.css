@@ -165,23 +165,24 @@
 
 .home__main__section-cards {
   display: flex;
-  flex-direction: row;
-  margin: 30px 0px 43px 0px;
-  justify-content: center;
+  flex-direction: column;
+  margin: 30px 0px 44px 0px;
+  align-items: stretch;
 }
 .home__main__section__cards-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 .home__main__section__cards-product {
   display: flex;
-  width: 44%;
+  width: 40%;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 6px;
+  position: relative;
 }
 .home__main__section__cards-img {
   display: flex;
@@ -191,23 +192,29 @@
   border-radius: 16px;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 .home__main__section__cards-img img {
-  width: 90%;
-  margin: 15px 0px 0px 1px;
+  width: 100%;
+  /* margin: 21px 0px 0px 1px; */
+  height: 89px;
+  object-fit: cover;
+  border-radius: 5%;
 }
 .home__main__section__cards-description {
   font-weight: 400;
   font-size: 0.6rem;
+  text-align: center;
 }
 .home__main__section__cards-price {
   font-weight: 600;
+  text-align: center;
 }
 .home__main__section__card-product-heart {
   position: absolute;
   text-align: end;
-  width: 90%;
+  width: 100%;
+  z-index: 1;
 }
 .home__main__section__card-product-heart i {
   font-size: 1.6rem;
@@ -237,8 +244,9 @@ article.tablet2 {
     display: none;
   }
   .home__main__section__cards-container {
-    display: block;
+    /* display: block; */
     display: flex;
+    flex-wrap: nowrap;
   }
 
   .home__main__section__tabletBanner {
@@ -352,11 +360,13 @@ article.tablet2 {
   }
 
   .tablet1 {
-    display: block;
+    /* display: block; */
   }
   .home__main__section__cards-product {
     display: flex;
     width: 30%;
+    position: relative;
+    padding: 5px;
   }
   .home__main__section__card-product-heart i {
     font-size: 1.2rem;
@@ -436,7 +446,7 @@ article.tablet2 {
   }
   .home__main__section__cards-product {
     display: flex;
-    width: 13%;
+    width: 25%;
   }
   .home__main__section__cards-container {
     padding: 0px;
@@ -763,23 +773,20 @@ article.tablet2 {
   .home__main__section-cards {
     display: flex;
     flex-direction: row;
-    margin: 30px 0px 43px 0px;
-    justify-content: center;
+    margin: 30px 0px;
     position: relative;
   }
   .home__main__section__cards-container-desktop {
-    padding: 0px;
-    margin: 0px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 39px;
-    flex-wrap: wrap;
+    gap: 20px;
+    flex-wrap: nowrap;
   }
   .home__main__section__cards-product {
     display: flex;
-    width: 300px;
+    width: 270px;
     border: solid 1px;
     border-radius: 5px;
     position: relative;

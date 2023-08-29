@@ -183,7 +183,7 @@ hacer click en el button hamburguesa */
   /* H E A D E R */
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   /* vuelve a la normalidad el menu inicio*/
   .home__header__nav__div1 {
     position: static;
