@@ -18,6 +18,24 @@
       ]
    },
    {
+      "id": 2,
+      "name": "React Infinity Run",
+      "description": "Zapatillas de running con amortiguación React para una experiencia suave.",
+      "image": "Nike_React-Infinity-Run.jpeg",
+      "category": "Nike",
+      "colors": [
+         "Azul",
+         "Gris",
+         "Negro"
+      ],
+      "price": 45000,
+      "tallas": [
+         "US 8",
+         "US 9",
+         "US 10"
+      ]
+   },
+   {
       "id": 3,
       "name": "Air Zoom",
       "description": "Zapatillas ligeras con tecnología Air Zoom para una mayor respuesta en la pisada.",
