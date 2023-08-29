@@ -1,7 +1,7 @@
 const express = require('express');
 const productsController = require('../controllers/productsController');
 const router = express.Router();
-const upload = require('../middlewares/upload')
+const upload = require('../middlewares/upload');
 
 /* GET users listing. */
 
@@ -11,7 +11,8 @@ router.get('/detail', productsController.detail);
 router.get('/addProduct', productsController.addProduct);
 router.post('/addProduct', upload.single('image'),productsController.store)
 
-router.get('/editProduct', productsController.editProduct);
+router.get('/editProduct/:id', productsController.editProduct);
+router.put('/editProduct/:id', upload.single('image'), productsController.update);
 
 router.delete('/delete/:id',productsController.remove)  
 
