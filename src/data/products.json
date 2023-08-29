@@ -22,7 +22,7 @@
       "id": 2,
       "name": "React Infinity Run",
       "description": "Zapatillas de running con amortiguación React para una experiencia suave.",
-      "image": "Nike_React-Infinity-Run.jpeg",
+      "image": "1693268282924_products_.jpg",
       "category": "Nike",
       "colors": [
          "Azul",
@@ -34,7 +34,8 @@
          "US 8",
          "US 9",
          "US 10"
-      ]
+      ],
+      "gender": "Nike"
    },
    {
       "id": 3,
@@ -52,7 +53,8 @@
          "US 8",
          "US 9",
          "US 10"
-      ]
+      ],
+      "gender": "Nike"
    },
    {
       "id": 4,
@@ -142,7 +144,8 @@
          "US 8",
          "US 9",
          "US 10"
-      ]
+      ],
+      "gender": "Adidas"
    },
    {
       "id": 9,
