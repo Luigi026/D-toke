@@ -24,7 +24,7 @@ module.exports = {
   },
   search: (req, res) => {
 
-    const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()))
+    const results = products.filter(product => product.name.toLowerCase().includes(req.query.keywords.toLowerCase()) || product.category.toLowerCase().includes(req.query.keywords.toLowerCase()))
 
 
     return res.render('results', {

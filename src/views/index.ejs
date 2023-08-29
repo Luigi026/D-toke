@@ -11,9 +11,33 @@
     </div>
     <main class="home__main">
         <section class="home__main__section__desktopage">
+           
+
 
             <div class="desktopage__carouselBox">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="desktopage__carouselBox__title">
+                        <div class="desktopage__carouselBox__title__container">
+                            <h4>
+                                Style
+                            </h4>
+                            <h4>
+                                in
+                            </h4>
+                            <h4>
+                                Motion
+                            </h4>
+                        </div>
+        
+                        <p>
+                            Hasta 20% OFF
+                        </p>
+                        <div class="buy-container">
+                            <div class="buy-container-violeta">
+                                <a href="/products/detail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -29,29 +53,7 @@
                     </div>
                 </div>
             </div>
-                <div class="desktopage__carouselBox__title">
-                    <div class="desktopage__carouselBox__title__container">
-                        <h4>
-                            Style
-                        </h4>
-                        <h4>
-                            in
-                        </h4>
-                        <h4>
-                            Motion
-                        </h4>
-                    </div>
-
-                    <p>
-                        Hasta 20% OFF
-                    </p>
-                    <div class="buy-container">
-                        <div class="buy-container-violeta">
-                            <a href="/products/detail">Ver más</a>
-                        </div>
-                    </div>
-                </div>
-
+                
             </div>
             <div class="home__main__section__desktopage-marcas-box">
                 <div class="home__main__section__desktopage-marcasContainer">
@@ -200,6 +202,8 @@
 
 
         </section>
+        <!-- ******************* tablet section *********************** -->
+        
         <section class="home__main__section__tabletBanner">
 
             <div class="home__main__section__tabletBanner-container">
@@ -296,83 +300,13 @@
         </section>
         <section class="home__main__section-cards">
             <div class="home__main__section__cards-container">
-                <article class="home__main__section__cards-product">
-                    <div class="home__main__section__cards-img">
-                        <a href="/products/detail">
-                            <img src="/img/home-main/product1.png" alt="">
-                        </a>
-                        <div class="home__main__section__card-product-heart">
-                            <i class="fa-regular fa-heart"></i>
+                <% productsNike.forEach(product => { %>
+                    <%- include('partials/productCardHome',{
+                        ...product,
+                        toThousand
+                    }) %>
+                <% }) %>
 
-                        </div>
-                    </div>
-                    <div class="home__main__section__cards-text">
-                        <h5 class="home__main__section__cards-description">
-                            Adidas Yung-1
-                        </h5>
-                        <p class="home__main__section__cards-price">
-                            $32.000
-                        </p>
-                    </div>
-
-                </article>
-                <article class="home__main__section__cards-product">
-                    <div class="home__main__section__cards-img">
-                        <a href="/products/detail">
-                            <img src="/img/home-main/product2.png" alt="">
-                        </a>
-                        <div class="home__main__section__card-product-heart">
-                            <i class="fa-regular fa-heart"></i>
-
-                        </div>
-                    </div>
-                    <div class="home__main__section__cards-text">
-                        <h5 class="home__main__section__cards-description">
-                            Adidas Yung-1
-                        </h5>
-                        <p class="home__main__section__cards-price">
-                            $32.000
-                        </p>
-                    </div>
-                </article>
-                <article class="home__main__section__cards-product">
-                    <div class="home__main__section__cards-img">
-                        <a href="/products/detail">
-                            <img src="/img/home-main/product3.png" alt="">
-                        </a>
-                        <div class="home__main__section__card-product-heart">
-                            <i class="fa-regular fa-heart"></i>
-
-                        </div>
-                    </div>
-                    <div class="home__main__section__cards-text">
-                        <h5 class="home__main__section__cards-description">
-                            Adidas Yung-1
-                        </h5>
-                        <p class="home__main__section__cards-price">
-                            $32.000
-                        </p>
-                    </div>
-                </article>
-                <article class="home__main__section__cards-product">
-                    <div class="home__main__section__cards-img">
-                        <a href="/products/detail">
-                            <img src="/img/home-main/product4.png" alt="">
-                        </a>
-                        <div class="home__main__section__card-product-heart">
-                            <i class="fa-regular fa-heart"></i>
-
-                        </div>
-                    </div>
-                    <div class="home__main__section__cards-text">
-                        <h5 class="home__main__section__cards-description">
-                            Adidas Yung-1
-                        </h5>
-                        <p class="home__main__section__cards-price">
-                            $32.000
-                        </p>
-                    </div>
-                </article>
                 <article class="home__main__section__cards-product tablet1">
                     <div class="home__main__section__cards-img">
                         <a href="/products/detail">

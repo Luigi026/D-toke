@@ -9,7 +9,7 @@
             <%- include('partials/header') %>
 
         </div>
-        <h2 class="text-white">Resultados de la búsqueda: <%= keywords %></h2>
+        <h2>Resultados de la búsqueda: <%= keywords %></h2>
         </div>
         <% if (results.length) { %>
             <% results.forEach(product=> { %>
@@ -20,7 +20,7 @@
                     </div>
                     <% }) %>
                         <% }else{ %>
-                            <div class="col-12 text-white">
+                            <div class="col-12">
                                 <h2 class="products-title">No hay productos que coincidan con
                                     esa
                                     búsqueda</h2>

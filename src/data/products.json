@@ -288,14 +288,5 @@
          "US 9",
          "US 10"
       ]
-   },
-   {
-      "id": 17,
-      "name": "asd",
-      "description": "qwe",
-      "image": "1693269048742_products_.jpg",
-      "category": "Nike",
-      "colors": null,
-      "price": 2
    }
 ]

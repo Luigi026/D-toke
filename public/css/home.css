@@ -181,11 +181,12 @@
   width: 44%;
   flex-direction: column;
   align-items: center;
-  margin: 17px 9px;
+  gap: 15px;
 }
 .home__main__section__cards-img {
   display: flex;
   position: relative;
+  /* height: 250px; */
   background-color: var(--colorPopular);
   border-radius: 16px;
   flex-direction: column;
@@ -495,13 +496,13 @@ article.tablet2 {
   .desktopage__carouselBox__title {
     display: flex;
     position: absolute;
-    top: 161px;
-    left: 50px;
-    height: 100%;
+    top: 20%;
+    left: 4%;
     width: 35%;
     height: 50%;
     flex-direction: column;
     justify-content: center;
+    z-index: 1;
   }
   .desktopage__carouselBox__title p {
     color: #ffffff;
@@ -572,7 +573,7 @@ article.tablet2 {
     width: 100vw;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 280px -15px;
+    background-position: 50%;
     background-color: rgb(201, 5, 27);
   }
   .home__main__carousel-img2 {
@@ -581,7 +582,7 @@ article.tablet2 {
     width: 100vw;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 280px -15px;
+    background-position: 50%;
     background-color:#079c39;
   }
   .home__main__carousel-img3 {
@@ -590,7 +591,7 @@ article.tablet2 {
     width: 100vw;
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 400px -15px;
+    background-position: 50%;
     background-color: #01aed9;
   }
   
@@ -666,16 +667,17 @@ article.tablet2 {
   }
   .home__main__section__desktop__mnh-box {
     display: flex;
+    height: 100%;
     flex-direction: row;
-    justify-content: space-around;
-    /* height: 377px; */
+    align-items: center;
   }
   .home__main__section__desktop__mnh-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
+    flex-wrap: nowrap;
   }
   .home__main__section__desktop__mnh-container-link {
     display: flex;
@@ -686,9 +688,10 @@ article.tablet2 {
     background-image: url("/img/home-main/mnh-container-div1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 400px;
-    height: 400px;
-    margin: 10px;
+    display: flex;
+    width: 33%;
+    height: 395px;
+    margin: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -698,9 +701,9 @@ article.tablet2 {
     background-image: url("/img/home-main/mnh-container-div2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 400px;
+    width: 33%;
     height: 400px;
-    margin: 10px;
+    margin: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -710,9 +713,9 @@ article.tablet2 {
     background-image: url("/img/home-main/mnh-container-div3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 400px;
+    width: 33%;
     height: 400px;
-    margin: 10px;
+    margin: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
