@@ -123,7 +123,6 @@
 .login .login__sesion h3,
 a {
   font-size: var(--font-paragraph-mobile);
-  margin-bottom: 0px;
 }
 .login .login__sesion a {
   color: #3506cd;
