@@ -6,3 +6,6 @@
 
 # Retrospectiva sprint 3
 ![RetroSprint3](https://github.com/Luigi026/Grupo_4_D-toke/assets/114932602/b4175ff7-5637-42a3-a33c-2fbccf24fa42)
+
+# Retrospectiva sprint 4
+![retroSprint4](https://github.com/Luigi026/Grupo_4_D-toke/assets/116822917/0077849e-15fd-4925-ad17-e5dc803eb077)
