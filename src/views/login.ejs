@@ -1,87 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head', {title: 'Login'}) %>
+<%- include('partials/head', {title: 'Login' }) %>
+
   <body class="login-container">
     <div class="conten-login">
       <%- include('partials/header')%>
-      <div class="body__login">
-         <div class="login">
-        <form>
-          <h1>¡Bienvenido de nuevo! ¡Inicia sesión!</h1>
-          <div class="login__input">
-            <div class="login__input-item">
-              <input type="text" placeholder="Ingresa tu correo electrónico" />
-            </div>
-            <div class="login__input-item">
-              <input type="password" placeholder="Ingresa tu contraseña" />
-            </div>
-          </div>
-          <h5 class="login__text-recuperar">¿Olvidaste tu contraseña?</h5>
-          <div class="login__button">
-            <button>Iniciar sesión</button>
-          </div>
-        </form>
-        <div class="login__footer">
-          <h4>
-            <span> inicia sesión con</span>
-          </h4>
-          <div class="login__footer-redes">
-            <span>
-              <img src="/images/facebook_ic.svg" />
-            </span>
-            <span>
-              <img src="/images/google_ic.svg" />
-            </span>
-            <span>
-              <img src="/images/Vector.png" />
-            </span>
-          </div>
-        </div>
-        <div class="login__sesion">
-          <h3>¿No tienes una cuenta?</h3>
-          <a>Iniciar sesión </a>
-        </div>
-       
-         </div>
-         <div class="login__tableAndDesktop">
-           
-               <div class="login__tableAndDesktop-contain-1">
-                <h2>Iniciar sesión</h2>
-                <form>
-                <p>Lorem Ipsum is simply dummy text of the printing and</br> typesetting industry.</p>
-              <div class="logintableAndDesktop__input">
-                <div class="logintableAndDesktop__input-item">
-                  <label for="">Ingresa tu correo electrónico</label>
-                  <input type="password" placeholder="Contraseña" />
+        <div class="body__login">
+          <div class="login">
+            <form>
+              <h1>¡Bienvenido de nuevo! ¡Inicia sesión!</h1>
+              <div class="login__input">
+                <div class="login__input-item">
+                  <input type="text" placeholder="Ingresa tu correo electrónico" />
                 </div>
-                <div class="logintableAndDesktop__input-item">
-                  <label for="">Ingresa tu contraseña</label>
-                  <input type="password" placeholder="Confirmar Contraseña"/>
-                </div>
-                <div class="logintableAndDesktop__input-checkbox">
-                  <div class="logintableAndDesktop__input-checkbox-input" >
-                      <input type="checkbox" id="forgot-password" name="forgot-password" class="custom-checkbox"/>
-                      <label for="forgot-password">Recordarme</label>
-                  </div>
-                  <span>Olvidaste tu contraseña ?</span>
+                <div class="login__input-item">
+                  <input type="password" placeholder="Ingresa tu contraseña" />
                 </div>
               </div>
-              <div class="logintabletAndDesktop__sesion">
-                <h3>¿No tienes una cuenta?</h3>
-                <a href="/users/register">Regístrate</a>
-              </div>
-              <div class="logintableAndDesktop__button">
-                <button>Iniciar sesión </button>
+              <h5 class="login__text-recuperar">¿Olvidaste tu contraseña?</h5>
+              <div class="login__button">
+                <button>Iniciar sesión</button>
               </div>
             </form>
-               </div>
-               <div class="login__tableAndDesktop-contain-2">
-                 <img class="logologin" src="/img/login/logo-login.png" />
-               </div>
-           
-         </div> 
-      </div>
-      <%- include('partials/footer')%>
+            <div class="login__footer">
+              <h4>
+                <span> inicia sesión con</span>
+              </h4>
+              <div class="login__footer-redes">
+                <span>
+                  <img src="/images/facebook_ic.svg" />
+                </span>
+                <span>
+                  <img src="/images/google_ic.svg" />
+                </span>
+                <span>
+                  <img src="/images/Vector.png" />
+                </span>
+              </div>
+            </div>
+            <div class="login__sesion">
+              <h3>¿No tienes una cuenta?</h3>
+              <a>Iniciar sesión </a>
+            </div>
+          </div>
+
+          <!-- TABLET/DESKTOP VIEW -->
+
+          <div class="login__tableAndDesktop">
+            <div class="login__tableAndDesktop-contain-1">
+              <h2>Iniciar sesión</h2>
+              <form>
+                <p>Lorem Ipsum is simply dummy text of the printing and</br> typesetting industry.</p>
+                <div class="logintableAndDesktop__input">
+                  <div class="logintableAndDesktop__input-item">
+                    <label for="email">Ingresa tu correo electrónico</label>
+                    <input type="email" id="email" placeholder="Correo electrónico" name="email"/>
+                  </div>
+                  <div class="logintableAndDesktop__input-item">
+                    <label for="password">Ingresa tu contraseña</label>
+                    <input type="password" id="password" placeholder="Introducir Contraseña" name="password"/>
+                  </div>
+                  <div class="logintableAndDesktop__input-checkbox">
+                    <div class="logintableAndDesktop__input-checkbox-input">
+                      <input type="checkbox" id="forgot-password" name="forgot-password" class="custom-checkbox" />
+                      <label for="forgot-password">Recordarme</label>
+                    </div>
+                    <span>Olvidaste tu contraseña ?</span>
+                  </div>
+                </div>
+                <div class="logintabletAndDesktop__sesion">
+                  <h3>¿No tienes una cuenta?</h3>
+                  <a href="/users/register">Regístrate</a>
+                </div>
+                <div class="logintableAndDesktop__button">
+                  <button>Iniciar sesión </button>
+                </div>
+              </form>
+            </div>
+            <div class="login__tableAndDesktop-contain-2">
+              <img class="logologin" src="/img/login/logo-login.png" />
+            </div>
+          </div>
+        </div>
+        <%- include('partials/footer')%>
     </div>
   </body>
+
 </html>
