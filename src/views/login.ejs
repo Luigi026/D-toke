@@ -49,16 +49,18 @@
           <div class="login__tableAndDesktop">
             <div class="login__tableAndDesktop-contain-1">
               <h2>Iniciar sesión</h2>
-              <form>
+              <form action="" method="POST">
                 <p>Lorem Ipsum is simply dummy text of the printing and</br> typesetting industry.</p>
                 <div class="logintableAndDesktop__input">
                   <div class="logintableAndDesktop__input-item">
                     <label for="email">Ingresa tu correo electrónico</label>
-                    <input type="email" id="email" placeholder="Correo electrónico" name="email"/>
+                    <input class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>" type="email" id="email" placeholder="Correo electrónico" name="email"/>
+                    <small class="text-danger ms-2 my-2"><%= locals.errors && (errors.email && errors.email.msg) %></small>
                   </div>
                   <div class="logintableAndDesktop__input-item">
                     <label for="password">Ingresa tu contraseña</label>
-                    <input type="password" id="password" placeholder="Introducir Contraseña" name="password"/>
+                    <input class="form-control <%= locals.errors && (errors.password && 'is-invalid') %>" type="password" id="password" placeholder="Introducir Contraseña" name="password"/>
+                    <small class="text-danger ms-2 my-2"><%= locals.errors && (errors.password && errors.password.msg) %></small>
                   </div>
                   <div class="logintableAndDesktop__input-checkbox">
                     <div class="logintableAndDesktop__input-checkbox-input">
