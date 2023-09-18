@@ -18,15 +18,27 @@
         <div class="register__input">
           <div class="register__input-item">
             <input type="text" placeholder="Nombre de usuario" name="name"/>
+            <% if (errors.name) { %>
+              <div class="text-danger"><%= errors.name.msg %></div>
+            <% } %>
           </div>
           <div class="register__input-item">
             <input type="text" placeholder="Email" name="email"/>
+            <% if (errors.email) { %>
+              <div class="text-danger"><%= errors.email.msg %></div>
+            <% } %>
           </div>
           <div class="register__input-item">
             <input type="password" placeholder="Contraseña" name="password"/>
+            <% if (errors.password) { %>
+              <div class="text-danger"><%= errors.password.msg %></div>
+            <% } %>
           </div>
           <div class="register__input-item">
             <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword"/>
+            <% if (errors.confirmPassword) { %>
+              <div class="text-danger"><%= errors.confirmPassword.msg %></div>
+            <% } %>
           </div>
         </div>
         <div class="register__button">
@@ -63,18 +75,30 @@
                   <div class="registertableAndDesktop__input-item">
                     <label for="">Nombre de usuario</label>
                     <input type="text" placeholder="Nombre de usuario" name="name"/>
+                    <% if (errors.name) { %>
+                      <div class="text-danger"><%= errors.name.msg %></div>
+                    <% } %>
                   </div>
                   <div class="registertableAndDesktop__input-item">
                       <label for="">Correo electrónico</label>
                       <input type="text" placeholder="Email" name="email"/>
+                      <% if (errors.email) { %>
+                        <div class="text-danger"><%= errors.email.msg %></div>
+                      <% } %>
                   </div>
                   <div class="registertableAndDesktop__input-item">
                     <label for="">Contraseña</label>
                     <input type="password" placeholder="Contraseña" name="password"/>
+                    <% if (errors.password) { %>
+                      <div class="text-danger"><%= errors.password.msg %></div>
+                    <% } %>
                   </div>
                   <div class="registertableAndDesktop__input-item">
                     <label for="">Confirmación de contraseña</label>
                     <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword"/>
+                    <% if (errors.confirmPassword) { %>
+                      <div class="text-danger"><%= errors.confirmPassword.msg %></div>
+                    <% } %>
                   </div>
                 </div>
                 <div class="registertabletAndDesktop__sesion">

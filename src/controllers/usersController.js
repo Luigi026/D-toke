@@ -1,5 +1,5 @@
 const { validationResult } = require("express-validator")
-const { readJSON } = require("../data");
+const { readJSON, writeJSON } = require("../data");
 const User = require("../model/userModal");
 
 
@@ -33,13 +33,27 @@ module.exports = {
 
   },
   register: (req, res) => {
-    return res.render('register');
+    const errors = validationResult(req);
+    return res.render('register', {errors: errors.mapped()});
   },
   registerNewUser: (req, res) => {
-    const users = readJSON('users.json');
-    const user = new User(req.body);
-    users.push(user);
-    writeJSON(users, 'users.json')
+
+    const errors = validationResult(req);
+    console.log("es",errors.mapped());
+
+    if (errors.isEmpty()) {
+      console.log("errrores");
+      const users = readJSON('users.json');
+      const user = new User(req.body);
+      users.push(user);
+      writeJSON(users, 'users.json')
+      return res.redirect('login')
+    } else {
+    
+      return res.render('register', { errors: errors.mapped()});
+     
+    }
+
   },
   productCart: (req, res) => {
     return res.render('productCart');
