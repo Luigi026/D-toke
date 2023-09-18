@@ -147,6 +147,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 35px 20px 90px 20px;
   }
   .login {
     display: none;
