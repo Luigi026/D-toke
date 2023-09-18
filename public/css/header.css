@@ -256,8 +256,8 @@ hacer click en el button hamburguesa */
   .home__header__nav__div1 {
     display: flex;
     width: 55%;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-around;
   }
 
   .home__header__nav__div2 {

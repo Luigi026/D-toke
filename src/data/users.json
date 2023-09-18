@@ -110,5 +110,13 @@
       "role": "user",
       "password": "$2a$10$7qQ0i6TherSHRZT5Oqv2v.h7CdTZu40EIKZtqsm7h3I5OPK.T3hpG",
       "createAt": "2023-09-18T14:30:55.632Z"
+   },
+   {
+      "id": "cdb7361f-230d-4007-910b-5d29c89bce88",
+      "name": "moncho",
+      "email": "moncho@gmail.com",
+      "role": "user",
+      "password": "$2a$10$vk/r26Ep6JoERW0RiLI/H.FOUifPZNC/KjjbPCeHy4C5TUgtpic6G",
+      "createAt": "2023-09-18T14:39:45.873Z"
    }
 ]
