@@ -14,23 +14,23 @@
         </span>
       </header>
       <h1>Hola! Regístrese para continuar</h1>
-      <form>
+      <form action="" method="POST">
         <div class="register__input">
           <div class="register__input-item">
-            <input type="text" placeholder="Nombre de usuario" />
+            <input type="text" placeholder="Nombre de usuario" name="name"/>
           </div>
           <div class="register__input-item">
-            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Email" name="email"/>
           </div>
           <div class="register__input-item">
-            <input type="password" placeholder="Contraseña" />
+            <input type="password" placeholder="Contraseña" name="password"/>
           </div>
           <div class="register__input-item">
-            <input type="password" placeholder="Confirmar Contraseña" />
+            <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword"/>
           </div>
         </div>
         <div class="register__button">
-          <button>Registrese</button>
+          <button type="submit">Registrese</button>
         </div>
       </form>
       <div class="register__footer">
@@ -58,23 +58,23 @@
       <h2>Regístrate!</h2>
       <div class="register__tableAndDesktop-content">
           <div class="register__tableAndDesktop-contain-1">
-            <form>
+            <form action="" method="POST">
                 <div class="registertableAndDesktop__input">
                   <div class="registertableAndDesktop__input-item">
                     <label for="">Nombre de usuario</label>
-                    <input type="text" placeholder="Nombre de usuario" />
+                    <input type="text" placeholder="Nombre de usuario" name="name"/>
                   </div>
                   <div class="registertableAndDesktop__input-item">
                       <label for="">Correo electrónico</label>
-                      <input type="text" placeholder="Email" />
+                      <input type="text" placeholder="Email" name="email"/>
                   </div>
                   <div class="registertableAndDesktop__input-item">
                     <label for="">Contraseña</label>
-                    <input type="password" placeholder="Contraseña" />
+                    <input type="password" placeholder="Contraseña" name="password"/>
                   </div>
                   <div class="registertableAndDesktop__input-item">
                     <label for="">Confirmación de contraseña</label>
-                    <input type="password" placeholder="Confirmar Contraseña" />
+                    <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword"/>
                   </div>
                 </div>
                 <div class="registertabletAndDesktop__sesion">
@@ -82,7 +82,7 @@
                     <a href="/users/login"> Inicia sesión</a>
                   </div>
                 <div class="registertableAndDesktop__button">
-                  <button>Registrese</button>
+                  <button type="submit">Registrese</button>
                 </div>
               </form>
           </div>

@@ -34,7 +34,7 @@ module.exports = {
     return res.render('register');
   },
   registerNewUser:(req, res)=>{
-
+console.log(req.body);
   },
   productCart: (req, res) => {
     return res.render('productCart');
