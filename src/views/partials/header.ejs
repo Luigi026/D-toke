@@ -1,7 +1,8 @@
 <header class="home__header">
     <div class="home__header__div1">
         <div class="home__header__div1--bars-logo">
-            <a onclick="document.querySelector('.home__header__nav__div1').classList.toggle('showMenu')"><i class="fa-sharp fa-solid fa-bars"></i></a>
+            <a onclick="document.querySelector('.home__header__nav__div1').classList.toggle('showMenu')"><i
+                    class="fa-sharp fa-solid fa-bars"></i></a>
             <div class="home__header--logo rotate-in-center">
                 <a href="/"><img src="/images/logoIsra.png" alt="logo-d-toke"></a>
             </div>
@@ -23,26 +24,47 @@
     </div>
     <nav class="home__header__nav">
         <div class="home__header__nav__div">
-            <div class="home__header__nav--logo rotate-in-center">  
+            <div class="home__header__nav--logo rotate-in-center">
                 <a href="/"><img src="/images/logoIsra.png" alt=""></a>
             </div>
-            <div class="home__header__nav__div1">  
-                <a class="nav-item" href="/admin">Dashboard ADM</a>
+            <div class="home__header__nav__div1">
+
                 <a class="nav-item" href="">hombres</a>
                 <a class="nav-item" href="">niños</a>
                 <a class="nav-item" href="">deporte</a>
-                <a class="nav-item" href="">tendencia</a>   
+                <a class="nav-item" href="">tendencia</a>
+                <% if (locals.userLogin) { %>
+                    <% if (userLogin.role==="admin" ) { %>
+                        <a class="nav-item" href="/admin">Dashboard ADM</a>
+                    <% } %>
+
+                <% }else{ %>
+                    <a href="/users/register">registro</a>
+                    <a href="/users/login">ingresar</a>
+                <% } %>
+
             </div>
             <div class="home__header__nav__div2">
                 <form class="d-flex" role="search" action="/search" method="GET">
-                    <input class="form-control me-2" type="text" name="keywords" placeholder="Buscar zapatilla..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
+                    <input class="form-control me-2" type="text" name="keywords" placeholder="Buscar zapatilla..."
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><a href=""><i
+                                class="fa-solid fa-magnifying-glass"></i></a></button>
                 </form>
-                
+
                 <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
                 <a href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
-                <button class="home__header--button"><a href="/users/login">ingresar</a></button>
-            </div> 
-        </div> 
-    </nav>    
+                <% if (locals.userLogin) { %>
+                    <div class="home__header__nav__div1">
+                        <a class="nav-item" href="/users/profile">Hola <%= userLogin.name %>!</a>
+                        <a class="nav-item" href="/users/logout">salir</a>
+                    </div>
+
+                    <% }else{ %>
+                        <button class="home__header--button"><a href="/users/login">ingresar</a></button>
+                        <% } %>
+
+            </div>
+        </div>
+    </nav>
 </header>

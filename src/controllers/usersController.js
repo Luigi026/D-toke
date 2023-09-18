@@ -1,47 +1,94 @@
-const { validationResult } = require("express-validator")
-const { readJSON } = require("../data");
+const { validationResult } = require("express-validator");
+const { readJSON, writeJSON } = require("../data");
 const User = require("../model/userModal");
-
+let users = readJSON("./products.json");
 
 module.exports = {
   login: (req, res) => {
-    return res.render('login');
+    return res.render("login");
   },
   loginProcess: (req, res) => {
     const errors = validationResult(req);
 
-
     if (errors.isEmpty()) {
-      const users = readJSON('users.json')
-      const { id, name, role } = users.find(user => user.email === req.body.email)
+      const users = readJSON("users.json");
+      const { id, name, role } = users.find(
+        (user) => user.email === req.body.email
+      );
 
-      /* req.session.usuario = {
+      req.session.userLogin = {
         id,
         name,
-        role
-      } */
+        role,
+      };
 
-      return res.redirect('/')
+      req.body.remember !== undefined &&
+        res.cookie("dtokeUser", req.session.userLogin, {
+          maxAge: 1000 * 60,
+        });
 
+      return res.redirect("/");
     } else {
-
-      return res.render('login', {
+      return res.render("login", {
         errors: errors.mapped(),
-        old: req.body
-      })
+        old: req.body,
+      });
     }
-
   },
   register: (req, res) => {
-    return res.render('register');
+    const errors = validationResult(req);
+    return res.render('register', {errors: errors.mapped()});
   },
   registerNewUser: (req, res) => {
-    const users = readJSON('users.json');
-    const user = new User(req.body);
-    users.push(user);
-    writeJSON(users, 'users.json')
+    const errors = validationResult(req);
+
+    if (errors.isEmpty()) {
+      const users = readJSON("users.json");
+      const user = new User(req.body);
+
+      users.push(user);
+      writeJSON(users, "users.json");
+
+      return res.redirect("login");
+    } else {
+      return res.render('register', { errors: errors.mapped()});
+    }
   },
-  productCart: (req, res) => {
-    return res.render('productCart');
+  profile: (req, res) => {
+    const users = readJSON("users.json");
+    const user = users.find((user) => user.id === req.session.userLogin.id);
+
+    return res.render("profile", {
+      ...user,
+    });
+  },
+  update: (req, res) => {
+    
+    module.exports = (req,res) => {
+      return res.send(req.body)
   }
-}
+  
+    // const {name} = req.body;
+		// const usersModify = users.map(user => {
+		// 	if(user.id === +req.params.id){
+		// 		user.name = name.trim();
+    //   }
+		// 	return users
+		// })
+		// writeJSON(usersModify, "./users.json")
+		// res.redirect('/login')
+
+  },
+
+  productCart: (req, res) => {
+    return res.render("productCart");
+  },
+  logout : (req,res) => {
+    req.session.destroy();
+    res.cookie('dtokeUser', null,{
+        maxAge : -1
+    })
+    
+    return res.redirect('/')
+},
+};
