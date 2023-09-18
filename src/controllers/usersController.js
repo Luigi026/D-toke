@@ -33,6 +33,9 @@ module.exports = {
   register: (req, res) => {
     return res.render('register');
   },
+  registerNewUser:(req, res)=>{
+
+  },
   productCart: (req, res) => {
     return res.render('productCart');
   }
