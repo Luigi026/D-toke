@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
 const { readJSON, writeJSON } = require("../data");
 const User = require("../model/userModal");
-let users = readJSON("./products.json");
+let users = readJSON("users.json");
 
 module.exports = {
   login: (req, res) => {
@@ -55,8 +55,7 @@ module.exports = {
     }
   },
   profile: (req, res) => {
-    const users = readJSON("users.json");
-    const user = users.find((user) => user.id === req.session.userLogin.id);
+    const user = users.find(user => user.id === req.session.userLogin.id);
 
     return res.render("profile", {
       ...user,
@@ -64,19 +63,17 @@ module.exports = {
   },
   update: (req, res) => {
     
-    module.exports = (req,res) => {
-      return res.send(req.body)
-  }
-  
-    // const {name} = req.body;
-		// const usersModify = users.map(user => {
-		// 	if(user.id === +req.params.id){
-		// 		user.name = name.trim();
-    //   }
-		// 	return users
-		// })
-		// writeJSON(usersModify, "./users.json")
-		// res.redirect('/login')
+    const {name} = req.body;
+    
+     console.log(req.body.email);
+		const usersModify = users.map(user => {
+			if(user.email === req.body.email){
+				user.name = name.trim();
+      }
+			return user
+		})
+		writeJSON(usersModify, "users.json")
+		res.redirect('/')
 
   },
 
