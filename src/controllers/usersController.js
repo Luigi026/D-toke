@@ -39,19 +39,15 @@ module.exports = {
   registerNewUser: (req, res) => {
 
     const errors = validationResult(req);
-    console.log("es",errors.mapped());
 
     if (errors.isEmpty()) {
-      console.log("errrores");
       const users = readJSON('users.json');
       const user = new User(req.body);
       users.push(user);
       writeJSON(users, 'users.json')
       return res.redirect('login')
     } else {
-    
       return res.render('register', { errors: errors.mapped()});
-     
     }
 
   },

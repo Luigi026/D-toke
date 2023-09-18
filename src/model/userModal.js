@@ -7,6 +7,7 @@ const User = function ({name, email, password}) {
     this.name = name.trim();
     this.email = email.trim();
     this.password = hashSync(password,10);
+    this.role = "user";
     this.createAt = new Date;
 }
 
