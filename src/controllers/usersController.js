@@ -24,7 +24,7 @@ module.exports = {
 
       req.body.remember !== undefined &&
         res.cookie("dtokeUser", req.session.userLogin, {
-          maxAge: 1000 * 60,
+          maxAge: 1000 * 60 * 5,
         });
 
       return res.redirect("/");

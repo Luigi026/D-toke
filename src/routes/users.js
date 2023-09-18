@@ -12,7 +12,7 @@ router.post('/login', loginValidator ,loginProcess);
 router.get('/register',notUserCheck,register);
 router.post('/register',registerValidator,registerNewUser);
 router.get('/profile',userCheck, profile);
-router.put('/update', update);
+router.put('/update',userCheck, update);
 router.get('/logout',logout);
 
 module.exports = router;
