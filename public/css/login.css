@@ -250,7 +250,7 @@ a {
 }
 @media (min-width: 1024px) {
   .login__tableAndDesktop {
-    max-height: 550px;
+    max-height: 650px;
   }
   .login__tableAndDesktop h2 {
     font-size: var(--font-subtitle-desktop);
