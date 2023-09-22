@@ -51,7 +51,7 @@ module.exports = {
 
       return res.redirect("login");
     } else {
-      return res.render('register', { errors: errors.mapped()});
+      return res.render('register', { errors: errors.mapped(), old: req.body});
     }
   },
   profile: (req, res) => {

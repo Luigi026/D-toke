@@ -6,5 +6,13 @@
       "role": "admin",
       "password": "$2a$10$xIv6npWZ2gma4XG62PavBu6CItYXfW3jSFzQmEe9myvgnGbU6eaou",
       "createAt": "2023-09-18T18:11:24.491Z"
+   },
+   {
+      "id": "fb4d7581-1f67-4874-b144-7168345be30b",
+      "name": "MatiasADM",
+      "email": "matias@gmail.com",
+      "role": "admin",
+      "password": "$2a$10$wOAe3eYsPXtv55m1Wm8nb.dW2BfNeDB9dMKEaHwOjPqDjsGCtxa9a",
+      "createAt": "2023-09-22T04:54:27.941Z"
    }
 ]

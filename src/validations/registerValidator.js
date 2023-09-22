@@ -25,10 +25,12 @@ module.exports = [
       return true;
     })
     .withMessage("El email ya se encuentra registrado"),
-  check("password").isLength({
+  check("password")
+  .isLength({
     min: 6,
     max: 12,
-  }),
+  })
+  .withMessage('La contraseña debe ser entre 6 y 12 caracteres'),
   body('confirmPassword')
     .custom((value,{req}) => {
         if(value !== req.body.password){

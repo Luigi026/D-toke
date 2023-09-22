@@ -6,8 +6,19 @@ module.exports = [
     check('email')
     .notEmpty()
     .withMessage('El correo electronico es obligatorio')
-    .isEmail(),
+    .isEmail()
+    .custom((value, {req}) => {
+        const users = readJSON('users.json');
+        const user = users.find(user => user.email === req.body.email);
+
+        if(!user){
+            return false
+        }
+            return true 
+    }).withMessage('Este correo no se encuentra registrado'),
     check('password')
+    .notEmpty()
+    .withMessage('La contraseña es obligatoria')
     .custom((value, {req}) => {
         const users = readJSON('users.json');
         const user = users.find(user => user.email === req.body.email);
@@ -16,5 +27,5 @@ module.exports = [
             return false
         }
             return true 
-    }).withMessage('Credenciales inválidas')
+    }).withMessage('Credencial inválida')
 ]
