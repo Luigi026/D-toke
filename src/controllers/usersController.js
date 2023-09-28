@@ -62,18 +62,39 @@ module.exports = {
     });
   },
   update: (req, res) => {
+  
+    const errors = validationResult(req);
     
+    if (errors.isEmpty()) {
+    
+     
     const {name} = req.body;
     
-     console.log(req.body.email);
 		const usersModify = users.map(user => {
+		
 			if(user.email === req.body.email){
 				user.name = name.trim();
       }
 			return user
 		})
-		writeJSON(usersModify, "users.json")
+
+		writeJSON(usersModify, "users.json");
+		
+
+		
 		res.redirect('/')
+    
+    }else {
+    
+      return res.render("profile", {
+        name : "",
+        errors: errors.mapped(),
+      });
+    
+    }
+  
+  
+   
 
   },
 
