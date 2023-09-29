@@ -464,6 +464,7 @@ article.tablet2 {
     padding-left: 38px;
   }
 }
+/*----------------------- desktop ----------------------- */
 @media (min-width: 1180px) {
   .home__main__section__bottom__box-img {
     display: none;

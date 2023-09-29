@@ -300,20 +300,12 @@
    },
    {
       "id": 18,
-      "name": "vapormax",
+      "name": "vapormax negra pipa dorada",
       "description": "negra pipa dorada",
       "image": "1693323639833_products_.jpg",
       "category": "Nike",
       "colors": null,
-      "price": 47000
-   },
-   {
-      "id": 19,
-      "name": "vapormax",
-      "description": "celeste pipa rosa",
-      "image": "1693323664323_products_.jpg",
-      "category": "Nike",
-      "colors": null,
-      "price": 47000
+      "price": 47000,
+      "gender": "Nike"
    }
 ]
