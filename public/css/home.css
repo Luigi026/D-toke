@@ -423,6 +423,7 @@ article.tablet2 {
     border-radius: 10px;
     font-size: 1rem;
     height: 30px;
+    padding: 10px;
   }
   .home__main__section__bottom__box-input-i {
     position: absolute;
@@ -768,17 +769,17 @@ article.tablet2 {
     font-size: 1.2rem;
     font-weight: 700;
     font-stretch: 200%;
-    animation: desplazamiento 8s infinite linear;
+    animation: desplazamiento 13s infinite linear;
     position: relative;
     display: inline-block;
   }
 
   @keyframes desplazamiento {
     0% {
-      transform: translateX(-150%);
+      transform: translateX(-200%);
     }
     100%{
-      transform: translateX(150%);
+      transform: translateX(175%);
     }
   }
 
@@ -799,9 +800,16 @@ article.tablet2 {
   .home__main__section__cards-product {
     display: flex;
     width: 270px;
-    border: solid 1px;
-    border-radius: 5px;
+   /*  border: solid 1px;
+    border-radius: 5px; */
     position: relative;
+    /*  */
+ /*    width: 190px; */
+    height: 334px;
+    background: #dcdbdb;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
   }
   .home__main__section__cards-img {
     /* display: flex; */
@@ -810,7 +818,8 @@ article.tablet2 {
     /* border-radius: 51px; */
     /* flex-direction: column; */
     align-items: center;
-    margin-bottom: 14px;
+    /* margin-bottom: 14px; */
+    margin: 20px 0;
   }
   .home__main__section__card-product-heart i {
     font-size: 2rem;
@@ -841,7 +850,9 @@ article.tablet2 {
 
   .home__main__section__card-product-heart {
     position: absolute;
-    text-align: end;
+    /* text-align: end; */
+    right: 10px;
+    top: 5px;
     z-index: 1;
   }
   .home__main__angle-L {
