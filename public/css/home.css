@@ -308,6 +308,7 @@ article.tablet2 {
     height: 34px;
     justify-content: center;
     align-items: center;
+    transition: all .3s ease;
   }
   .buy-container-violeta a {
     color: #ffffff;
@@ -357,9 +358,10 @@ article.tablet2 {
     align-items: center;
   }
 
-  .tablet1 {
-    /* display: block; */
-  }
+  /* .tablet1 {
+    display: block; 
+  } */
+  
   .home__main__section__cards-product {
     display: flex;
     width: 30%;
@@ -758,14 +760,26 @@ article.tablet2 {
     height: 74px;
     align-items: center;
     justify-content: center;
+    overflow: hidden; 
   }
   .home__main__special-offers-button a {
     color: #ffffff;
-    width: 80%;
     font-family: "Montserrat";
     font-size: 1.2rem;
     font-weight: 700;
     font-stretch: 200%;
+    animation: desplazamiento 8s infinite linear;
+    position: relative;
+    display: inline-block;
+  }
+
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(-150%);
+    }
+    100%{
+      transform: translateX(150%);
+    }
   }
 
   .home__main__section-cards {
