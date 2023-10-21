@@ -74,7 +74,7 @@
                 <div class="registertableAndDesktop__input">
                   <div class="registertableAndDesktop__input-item">
                     <label for="">Nombre de usuario</label>
-                    <input type="text" placeholder="Nombre de usuario" name="name"/>
+                    <input type="text" placeholder="Nombre de usuario" name="name" value="<%= locals.old && (old.name && old.name ) %>"/>
                     <% if (errors.name) { %>
                       <div class="text-danger"><%= errors.name.msg %></div>
                     <% } %>

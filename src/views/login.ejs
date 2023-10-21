@@ -55,7 +55,7 @@
                 <div class="logintableAndDesktop__input">
                   <div class="logintableAndDesktop__input-item">
                     <label for="email">Ingresa tu correo electrónico</label>
-                    <input class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>" type="email" id="email" placeholder="Correo electrónico" name="email"/>
+                    <input class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>" type="email" id="email" placeholder="Correo electrónico" name="email" value="<%= locals.old && (old.email && old.email ) %>"/>
                     <small class="text-danger ms-2 my-2"><%= locals.errors && (errors.email && errors.email.msg) %></small>
                   </div>
                   <div class="logintableAndDesktop__input-item">

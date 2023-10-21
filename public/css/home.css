@@ -308,6 +308,7 @@ article.tablet2 {
     height: 34px;
     justify-content: center;
     align-items: center;
+    transition: all .3s ease;
   }
   .buy-container-violeta a {
     color: #ffffff;
@@ -357,9 +358,10 @@ article.tablet2 {
     align-items: center;
   }
 
-  .tablet1 {
-    /* display: block; */
-  }
+  /* .tablet1 {
+    display: block; 
+  } */
+  
   .home__main__section__cards-product {
     display: flex;
     width: 30%;
@@ -421,6 +423,7 @@ article.tablet2 {
     border-radius: 10px;
     font-size: 1rem;
     height: 30px;
+    padding: 10px;
   }
   .home__main__section__bottom__box-input-i {
     position: absolute;
@@ -464,6 +467,7 @@ article.tablet2 {
     padding-left: 38px;
   }
 }
+/*----------------------- desktop ----------------------- */
 @media (min-width: 1180px) {
   .home__main__section__bottom__box-img {
     display: none;
@@ -758,14 +762,26 @@ article.tablet2 {
     height: 74px;
     align-items: center;
     justify-content: center;
+    overflow: hidden; 
   }
   .home__main__special-offers-button a {
     color: #ffffff;
-    width: 80%;
     font-family: "Montserrat";
     font-size: 1.2rem;
     font-weight: 700;
     font-stretch: 200%;
+    animation: desplazamiento 13s infinite linear;
+    position: relative;
+    display: inline-block;
+  }
+
+  @keyframes desplazamiento {
+    0% {
+      transform: translateX(-200%);
+    }
+    100%{
+      transform: translateX(175%);
+    }
   }
 
   .home__main__section-cards {
@@ -785,9 +801,16 @@ article.tablet2 {
   .home__main__section__cards-product {
     display: flex;
     width: 270px;
-    border: solid 1px;
-    border-radius: 5px;
+   /*  border: solid 1px;
+    border-radius: 5px; */
     position: relative;
+    /*  */
+ /*    width: 190px; */
+    height: 334px;
+    background: #dcdbdb;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
   }
   .home__main__section__cards-img {
     /* display: flex; */
@@ -796,7 +819,8 @@ article.tablet2 {
     /* border-radius: 51px; */
     /* flex-direction: column; */
     align-items: center;
-    margin-bottom: 14px;
+    /* margin-bottom: 14px; */
+    margin: 20px 0;
   }
   .home__main__section__card-product-heart i {
     font-size: 2rem;
@@ -827,7 +851,9 @@ article.tablet2 {
 
   .home__main__section__card-product-heart {
     position: absolute;
-    text-align: end;
+    /* text-align: end; */
+    right: 10px;
+    top: 5px;
     z-index: 1;
   }
   .home__main__angle-L {
