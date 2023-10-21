@@ -1,11 +1,12 @@
 const { validationResult } = require("express-validator");
 const { readJSON, writeJSON } = require("../data");
-const User = require("../model/userModal");
+const User = require("../database/models/userModal");
 let users = readJSON("users.json");
 
 module.exports = {
+  
   login: (req, res) => {
-    return res.render("login");
+    return res.render('login');
   },
   loginProcess: (req, res) => {
     const errors = validationResult(req);

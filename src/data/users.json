@@ -6,5 +6,13 @@
       "role": "admin",
       "password": "$2a$10$xIv6npWZ2gma4XG62PavBu6CItYXfW3jSFzQmEe9myvgnGbU6eaou",
       "createAt": "2023-09-18T18:11:24.491Z"
+   },
+   {
+      "id": "3507c90d-820f-425f-9447-f2c0afbda4ea",
+      "name": "luigi123",
+      "email": "luigi@navarro.com",
+      "role": "user",
+      "password": "$2a$10$gfpOcRd2mmPHFM1xqRNoSelPKvdHKSUiTBfEKI9EZnWCMOX0155kK",
+      "createAt": "2023-09-19T23:02:10.252Z"
    }
 ]
