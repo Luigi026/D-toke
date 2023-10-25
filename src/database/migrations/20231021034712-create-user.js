@@ -12,16 +12,15 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      
       surname: {
         type: Sequelize.STRING
       },
-      email: {
-        type: Sequelize.STRING
-      },
+
       password: {
         type: Sequelize.STRING
       },
-      roleId: {
+      roles_id: {
         type: Sequelize.INTEGER,
         references : {
           model : {

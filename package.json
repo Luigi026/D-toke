@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./src/bin/www",
-    "dev": "nodemon ./src/bin/www"
+    "dev": "nodemon ./src/bin/www",
+    "db:create": "sequelize db:drop & sequelize db:create & sequelize db:migrate & sequelize db:seed:all",
+    "db:reset": "sequelize db:migrate:undo:all & sequelize db:migrate & sequelize db:seed:all"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
@@ -14,6 +16,7 @@
     "dotenv": "^16.3.1",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-paginate": "^1.0.2",
     "express-session": "^1.17.3",
     "express-validator": "^7.0.1",
     "http-errors": "~1.6.3",
@@ -24,6 +27,8 @@
     "nodemon": "^3.0.1",
     "override": "^0.0.1",
     "sequelize": "^6.33.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "moment": "^2.29.4",
+    "node-fetch": "^2.7.0"
   }
 }

@@ -8,14 +8,6 @@
       "createAt": "2023-09-18T18:11:24.491Z"
    },
    {
-<<<<<<< HEAD
-      "id": "3507c90d-820f-425f-9447-f2c0afbda4ea",
-      "name": "luigi123",
-      "email": "luigi@navarro.com",
-      "role": "user",
-      "password": "$2a$10$gfpOcRd2mmPHFM1xqRNoSelPKvdHKSUiTBfEKI9EZnWCMOX0155kK",
-      "createAt": "2023-09-19T23:02:10.252Z"
-=======
       "id": "fb4d7581-1f67-4874-b144-7168345be30b",
       "name": "MatiasADM",
       "email": "matias@gmail.com",
@@ -30,6 +22,5 @@
       "role": "user",
       "password": "$2a$10$N2T2utakiuAZf9jeLEZVy.Mr3FrdWRFWBLfUc2T.TQDsMNR3HVAtq",
       "createAt": "2023-09-28T20:00:59.091Z"
->>>>>>> eb1fb0888147115f0850f90ea36d575ab436e7a9
    }
 ]

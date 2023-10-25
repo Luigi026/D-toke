@@ -1,6 +1,6 @@
 const { validationResult } = require("express-validator");
 const { readJSON, writeJSON } = require("../data");
-const User = require("../database/models/userModal");
+const User = require("../model/userModal");
 let users = readJSON("users.json");
 
 module.exports = {
