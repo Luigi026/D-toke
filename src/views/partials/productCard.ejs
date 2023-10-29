@@ -1,0 +1,70 @@
+<article class="productDetail__main__section__article">
+    <div class="productDetail__main__section--main-container">
+        <div class="productDetail__main__section__article--box-img">
+            <div class="productDetail__main__section__article-container--image2">
+                <img src="/images/products/<%= image || 'image-default.png'%>" alt="" class="productDetail__main__section__article-img">
+            </div>
+        </div>
+        <div class="productDetail__main__section--data-container">
+            <div class="productDetail__main__section__article--datos-producto">
+                <h3><%= category %></h3>
+                <p><%= name %></p>
+                <h2>$<%= price %></h2>
+            </div>
+            <div class="productDetail__main__section__article--title-talles">
+                <p>Seleccionar talle (ARG)</p>
+                <div class="productDetail__main__section__article--select-talles">
+                    <ul class="productDetail__main__section__article--select-talles-row">
+                        <li><a href="#">35</a></li>
+                        <li><a href="#">36</a></li>
+                        <li><a href="#">37</a></li>
+                        <li><a href="#">38</a></li>
+                        <li><a href="#">39</a></li>
+                    </ul>
+                    <ul class="productDetail__main__section__article--select-talles-row">
+                        <li><a href="#">40</a></li>
+                        <li><a href="#">41</a></li>
+                        <li><a href="#">42</a></li>
+                        <li><a href="#">43</a></li>
+                        <li><a href="#">44</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form action="" class="productDetail__main__section__article-buttons">
+                <button type="submit" class="productDetail__main__section__article--button">Comprar
+                    ahora</button>
+                <button type="submit"
+                    class="productDetail__main__section__article--button productDetail__main__section__article--button-add">Agregar
+                    al carrito de compra</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="productDetail__main__section__article-container1-description">
+        <div class="productDetail__main__section__article-description ">
+            <h4 >Descripcion del producto</h4>
+            <p><%= description %>
+            </p>
+
+            <ul>
+                <li>Color : <%= colors %></li>
+                <li>Estilo : AQ9129-500</li>
+            </ul>
+        </div>
+        <div class="productDetail__main__section__article-container2-description ">
+            <div class="productDetail__main__section__article-description-others">
+                <h4>Devoluciones y envios</h4>
+                <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+            <div class="productDetail__main__section__article-description-others">
+                <h4>Metodos de pago</h4>
+                <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+            <div class="productDetail__main__section__article-description-others">
+                <h4>Comparte</h4>
+                <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </div>
+
+</article>

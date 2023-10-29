@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {title: 'Product Detail' }) %>
+
+    <body class="productDetail">
+        <div class="home-box">
+
+            <%- include('partials/header') %>
+
+        </div>
+
+        <main class="productDetail__main">
+        
+            <%- include('partials/productCard',{
+                ...product
+            }) %>
+
+                <article class="productDetail__main__section__article-recomendation">
+                    <div>
+                        <h4>Tambien podria interesarte</h4>
+                        <div>
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
+                        <div>
+                            <img src="" alt="">
+                            <h4></h4>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </article>
+                <article class="productDetail__main__section__article2-adds">
+                    <div class="productDetail__main__section__article2-box-img">
+                        <img src="/img/home-main/anuncio.png" alt="Add nike" class="nike-add">
+                    </div>
+                    <form action="" class="productDetail__main__section__article2-contact">
+                        <input type="email" name="email" id="" placeholder="Ingresa tu email...">
+                        <button type="submit"><i class="fa-solid fa-angle-right fa-xl"></i></button>
+                    </form>
+                </article>
+            </section>
+        </main>
+
+        <%- include('partials/footer') %>
+
+            <!-- AOS -->
+            <script>
+                AOS.init();
+            </script>
+
+    </body>
+
+</html>

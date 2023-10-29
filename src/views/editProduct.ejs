@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('partials/head', {title: 'Editando: ' + name}) %>
+  <body class="editProduct__container-product">
+    <div class="editProduct__container-product-content">
+      <%- include('partials/header')%>
+      <div class="editProduct__container">
+        <h1 class="editProduct__container-title">Editar un Producto</h1>
+        <form class="editProduct__product-form" action="/products/editProduct/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
+          <div class="editProduct__product-form-contentNamePrice">
+            <div class="editProduct__form-group">
+              <label class="editProduct__form-group__label" for="name"
+                >Nombre del producto:</label
+              >
+              <input
+                value="<%= name %>"
+                class="editProduct__form-group__input"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="editProduct__form-group">
+              <label class="editProduct__form-group__label" for="price">Precio:</label>
+              <input
+                value="<%= price %>"
+                class="editProduct__form-group__input"
+                type="number"
+                id="price"
+                name="price"
+                step="0.01"
+                required
+              />
+            </div>
+          </div>
+          <div class="editProduct__product-form-contentNamePrice">
+            <div class="editProduct__form-group">
+              <label class="editProduct__form-group__label" for="image">Imagen:</label>
+              <input
+                class="editProduct__form-group__input"
+                type="file"
+                id="image"
+                name="image"
+              />
+                <img class= "image-detail" src="/images/products/<%= image %>?_method=PUT" method="POST" alt="">
+            </div>
+            
+            <div class="editProduct__form-group">
+              <label class="editProduct__form-group__label">Categoria:</label>
+              <select
+                class="editProduct__form-group__input"
+                name="gender"
+                id="gender"
+                selected
+              >
+              <option value="Nike" <%= category === "Nike" && 'selected' %>>Nike</option>
+              <option value="Adidas" <%= category === "Adidas" && 'selected' %>>Adidas</option>
+              <option value="Puma" <%= category === "Puma" && 'selected' %>>Puma</option>
+              <option value="Reebok" <%= category === "Reebok" && 'selected' %>>Reebok</option>
+
+              </select>
+            </div>
+          </div>
+          <div class="editProduct__form-group">
+            <label class="editProduct__form-group__label" for="description"
+              >Descripción :</label
+            >
+            <textarea
+              class="editProduct__form-group__input"
+              id="description"
+              name="description"
+              required
+            ><%= description %></textarea>
+          </div>
+          <div class="editProduct__form-group-checkbox">
+            <label class="editProduct__form-group__label" for="size">Talles:</label>
+            <div class="editProduct__content-checkbox">
+              <label><input type="checkbox" name="size" value="38" /> 35</label>
+              <label><input type="checkbox" name="size" value="39" /> 36</label>
+              <label><input type="checkbox" name="size" value="40" /> 37</label>
+              <label><input type="checkbox" name="size" value="38" /> 38</label>
+              <label><input type="checkbox" name="size" value="39" /> 39</label>
+              <label><input type="checkbox" name="size" value="40" /> 40</label>
+              <label><input type="checkbox" name="size" value="40" /> 41</label>
+              <label><input type="checkbox" name="size" value="40" /> 42</label>
+              <label><input type="checkbox" name="size" value="40" /> 43</label>
+              <label><input type="checkbox" name="size" value="40" /> 44</label>
+            </div>
+          </div>
+          <button class="editProduct__form-button" type="submit">Guardar cambios</button>
+        </form>
+      </div>
+      <%- include('partials/footer')%>
+    </div>
+  </body>
+</html>

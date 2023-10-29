@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {title: 'Cart'}) %>
+
+<body>
+  
+  <%- include('partials/header') %>
+
+    <main class="mainCart">
+      <h1>mi carrito</h1>
+      <p>1 productos</p>
+      <section class="main__section">
+        <article class="main__section__article1" data-aos="zoom-in-right">
+          <div class="main__section__article1__div1">
+            <div class="main__section__article1__div1--box1" >
+              <a href="productDetail"><img src="/images/zapanike.jpg" alt="images zapanike"></a>
+            </div>
+            <div class="main__section__article1__div1--box2">
+              <p>zapatilla Nike Air Max Excee</p>
+              <p>talle: 36/36.5</p>
+              <p>item No: NICD5432-003_6.5_1</p>
+              <p>Editar Producto</p>
+            </div>
+          </div>
+          <div class="main__section__article1__div2">
+            <div class="main__section__article1__div2--box1">
+              <p><b>cantidad</b></p>
+              <button><a href=""></a>1<i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div class="main__section__article__div2--h1">
+              <h1>$57.499</h1>
+            </div>
+          </div>
+        </article>
+        <article class="main__section__article2" data-aos="zoom-in-left">
+          <p>¿tenés un código de promoción?</p>
+          <div class="main__section__article2__div1">
+            <input type="text" placeholder="Ingresá tu Código"></input>
+            <button><a href="">validar</a></button>
+          </div>
+          <p>calculá el costo de envío</p>
+          <div class="main__section__article2__div2">
+            <input type="text" placeholder="Código Postal"></input>
+            <button><a href="">calcular</a></button>
+          </div>
+          <div class="main__section__article2__div3">
+            <div class="main__section__article2__div3--p">
+              <div>
+                <p>costo de Envio Regular</p>
+              </div>  
+              <div>
+                <p>$1</p>
+              </div>
+            </div>
+            <div class="main__section__article2__div3--p">
+              <div>
+                <p>subtotal</p>
+              </div>
+              <div>
+                <p>$114.998</p>
+              </div>
+            </div>
+            <div class="main__section__article2__div3--p">
+              <div>
+                <p>envío desde</p>
+              </div>
+              <div>
+                <p>$1</p>
+              </div>
+            </div> 
+            <div class="main__section__article2__div3--p"> 
+              <div>
+                <p>promición Envio</p>
+              </div>
+              <div>
+                <p>$1</p>
+              </div>
+            </div>
+            <div class="main__section__article2__div3--p">
+              <div>
+                <p>total</p>
+              </div>
+              <div>
+                <p>$114.998</p>
+              </div>
+            </div>
+          </div>    
+              <div class="main__section__article2__div3">
+                <button><a href="">comprar</a></button>
+              </div>
+            </div>
+        </article>
+      </section>  
+      <div class="productDetail__main__section__article-description-others">
+        <h4>Devoluciones y envios</h4>
+        <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+    </div>
+    <div class="productDetail__main__section__article-description-others">
+        <h4>Metodos de pago</h4>
+        <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+    </div>
+    <div class="productDetail__main__section__article-description-others">
+        <h4>Comparte</h4>
+        <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+    </div>
+    </main>
+    <%- include('partials/footer') %>
+    
+  <!-- AOS -->
+  <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>
