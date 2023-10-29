@@ -12,9 +12,9 @@
         <h2>Resultados de la búsqueda: <%= keywords %></h2>
         </div>
         <% if (results.length) { %>
-            <% results.forEach(product=> { %>
+            <% results.forEach(product => { %>
             <%- include('partials/productCard',{ 
-            ...product, 
+            ...product.dataValues,
             toThousand 
             }) %>
                     </div>

@@ -53,37 +53,30 @@ module.exports = {
   },
   admin: (req, res) => {
   
-    const productsList = db.Products.findAll({
+    const productsList = db.Product.findAll({
+      include : ['category'],
       order: ['model'],
   })
+  const categories = db.Category.findAll();
 
-  Promise.all([productsList])
-  .then(([productsList,genres,top]) => {
+  Promise.all([productsList, categories])
+  .then(([productsList, categories]) => {
     res.render("admin", {
     productsList,
-    genres,
-    moment,
-    top 
+    categories,
     });
   })
   .catch((error) => console.log(error));
   
-  
-  
-  
-  
-    // const products = readJSON('products.json');
-    // return res.render('admin', {
-    //   products,
-    // })
   },
   search: (req, res) => {
 
     db.Product.findAll({
+     include : ['category'],
       where : {
           [Op.or] : [
               {
-                  name : {
+                  model : {
                     [Op.substring] : req.query.keywords
                   }
               },
@@ -91,7 +84,8 @@ module.exports = {
                   description : {
                     [Op.substring] : req.query.keywords
                   }
-            },
+              }
+              
           ]
       }
   })

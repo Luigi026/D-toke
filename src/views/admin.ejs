@@ -31,18 +31,24 @@
                         </tr>
                     </thead>
                     <tbody class="admin__tbody">
-                        <% products.forEach(({id, name,category, price,discount, image, description},index)=> { %>
+                    
+                    
+                        <% categories.forEach(category => { %>
+                            <h1 class="text-danger"><%= category.brand %></h1>
+                           <% }) %>
+                           
+                        <% productsList.forEach(({id, model, category , price, image, description },index)=> { %>
                             <tr>
                                 <th class="bg-dark text-white" scope="row">
                                     <%= index + 1 %>
                                 </th>
 
                                 <td class="bg-dark text-white">
-                                    <%= category || 'Sin especificar' %>
+                                    <%= category?.brand || 'Sin especificar' %>
                                 </td>
 
                                 <td class="bg-dark text-white">
-                                    <%= name %>
+                                    <%= model %>
                                 </td>
 
                                 <td class="bg-dark text-white">
@@ -64,7 +70,7 @@
                                                 <div class="modal-content bg-dark admin__modal__container__content">
                                                     <div class="modal-header admin__modal__container__header">
                                                         <h5 class="modal-title" id="detailProduct<%= id %>Label">
-                                                            <%= category %> | <%= name %>
+                                                            <%= category?.brand %> | <%= model %>
                                                         </h5>
                                                         <button type="button" class="btn-close admin__btn__close"
                                                             data-bs-dismiss="modal" aria-label="Close"><i
@@ -120,7 +126,7 @@
                                                         <p>Esta seguro que desea eliminar el siguiente producto?
                                                             <hr>
                                                             <b>
-                                                                <%= category %> | <%= name %> | $<%= price %>
+                                                                <%= category?.brand %> | <%= model %> | $<%= price %>
                                                             </b>
                                                         </p>
                                                         <div class="col-md-6 admin__modalbody__card__containerImagen">

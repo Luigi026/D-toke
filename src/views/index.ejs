@@ -136,7 +136,10 @@
                         <a href="/products/detail">No te pierdas las ofertas especiales que tenemos en los calzados deportivos más conocidos que tenemos cada fin de semana!!!</a>
                     </div>
                 </div>
-                <h3 id="nike" class="text-center text-uppercase fs-3 text-black mt-3">NIKE</h3>
+               
+                  <h3 id="nike" class="text-center text-uppercase fs-3 text-black mt-3">NIKE</h3>
+               
+               
                 <section class="home__main__section-cards">
                     <div class="home__main__section__cards-container-desktop">
                         <% productsNike.forEach(product=> { %>
@@ -167,6 +170,7 @@
                             <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
                     </div>
+            
                 </section>
                 <div class="home__main__section__bottomBanner">
                     <div class="home__main__section__bottomBanner-box1">
