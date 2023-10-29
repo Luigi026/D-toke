@@ -1,6 +1,6 @@
 'use strict';
 
-const categoriasArray = ['Nike', 'Adidas', 'Puma']
+const categoriasArray = ['Nike', 'Adidas', 'Puma','Reebok']
 const categoriasDB  = categoriasArray.map(categoria => {
   return {
     name : categoria,

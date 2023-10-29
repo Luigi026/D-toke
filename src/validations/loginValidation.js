@@ -1,5 +1,5 @@
 const {check} = require('express-validator');
-const { readJSON } = require("../data");
+const db = require('../database/models')
 const { compareSync } = require("bcryptjs");
 
 module.exports = [
@@ -8,7 +8,14 @@ module.exports = [
     .withMessage('El correo electronico es obligatorio')
     .isEmail()
     .custom((value, {req}) => {
-        const users = readJSON('users.json');
+    
+        return db.User.findOne({
+        
+            where : {
+                email : req.body.email
+            }
+        
+        })
         const user = users.find(user => user.email === req.body.email);
 
         if(!user){
