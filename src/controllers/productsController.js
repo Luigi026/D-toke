@@ -2,7 +2,8 @@ const db = require("../database/models");
 const moment = require("moment");
 
 const { readJSON, writeJSON } = require("../data");
-const { existsSync, unlinkSync } = require('fs')
+const { existsSync, unlinkSync } = require('fs');
+const deleteImage = require("../../utils/deleteImage");
 
 let products = readJSON("./products.json");
 
@@ -95,6 +96,11 @@ module.exports = {
   remove: (req, res) => {
 
     const productId = req.params.id;
+
+    db.Product.findByPk(productId)
+      .then((product) => {
+        deleteImage(product.image)
+      })
 
     db.Product.destroy({
       where: { id: productId }
