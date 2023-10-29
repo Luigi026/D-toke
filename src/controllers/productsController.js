@@ -2,7 +2,7 @@ const db = require("../database/models");
 const moment = require("moment");
 
 const { readJSON, writeJSON } = require("../data");
-const {existsSync, unlinkSync} = require('fs')
+const { existsSync, unlinkSync } = require('fs')
 
 let products = readJSON("./products.json");
 
@@ -15,13 +15,13 @@ module.exports = {
   },
   detail: (req, res) => {
 
-		const product = products.find(product => product.id === +req.params.id)
-		
-		return res.render('productDetail',{
-			product,
-			toThousand
-			
-		})
+    const product = products.find(product => product.id === +req.params.id)
+
+    return res.render('productDetail', {
+      product,
+      toThousand
+
+    })
   },
   addProduct: (req, res) => {
     return res.render("addProduct");
@@ -32,60 +32,80 @@ module.exports = {
       ...product
     });
   },
-  update: (req,res) => {
+  update: (req, res) => {
     /* console.log(req.body)
   console.log(req.file) */
 
-    const {name, price, gender, description} = req.body;
-		const productsModify = products.map(product => {//map:me crea un nuevo array 
-			if(product.id === +req.params.id){
-				product.name = name.trim();
-				product.price = +price;
-				product.gender = gender;
-				product.description = description.trim();
+    const { name, price, gender, description } = req.body;
+    const productsModify = products.map(product => {//map:me crea un nuevo array 
+      if (product.id === +req.params.id) {
+        product.name = name.trim();
+        product.price = +price;
+        product.gender = gender;
+        product.description = description.trim();
         req.file &&
-        existsSync(`./public/images/products/${product.image}`) && 
-        unlinkSync(`./public/images/products/${product.image}`);
+          existsSync(`./public/images/products/${product.image}`) &&
+          unlinkSync(`./public/images/products/${product.image}`);
         product.image = req.file ? req.file.filename : product.image;
       }
-			return product
-		})
-		writeJSON(productsModify, "./products.json")//que y donde lo guardo
-		res.redirect('/admin')
+      return product
+    })
+    writeJSON(productsModify, "./products.json")//que y donde lo guardo
+    res.redirect('/admin')
 
   },
   store: (req, res) => {
     const { name, price, gender, description, size } = req.body;
 
-    let newProduct = {
-      id: products[products.length - 1].id + 1,
-      name: name,
-      description: description.trim(),
-      image: req.file ? req.file.filename : null,
-      category: gender,
-      colors: null,
-      price: +price,
-      tallas: size,
+    let category = null;
+
+    if (gender == "Adidas") {
+      category = 2;
+    }
+    if (gender == "Puma") {
+      category = 3;
+    }
+    if (gender == "Nike") {
+      category = 1;
+    }
+    if (gender == "Reebok") {
+      category = 4;
+    }
+
+    const newProduct = {
+      model: name,
+      description: description,
+      image: req.file.filename,
+      price: price,
+      category_id: category,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     };
 
-    products.push(newProduct);
-
-    writeJSON(products, "./products.json");
-    return res.redirect("/admin");
+    db.Product.create(newProduct)
+      .then((product) => {
+        console.log("Product created", product);
+        return res.redirect("/admin");
+      })
+      .catch((error) => {
+        console.error("Error creating product", error);
+        return res.status(500).send("Error al crear el producto");
+      });
   },
-  remove: (req,res) => {
+  remove: (req, res) => {
 
-    const productsModify = products.filter((product) => {
-      if (product.id === +req.params.id) {
-          existsSync(`./public/images/products/${product.image}`) &&
-          unlinkSync(`./public/images/products/${product.image}`);
-      }
+    const productId = req.params.id;
 
-      return product.id !== +req.params.id;
-    });
-
-    writeJSON(productsModify, "products.json");
-
-    return res.redirect("/admin");
+    db.Product.destroy({
+      where: { id: productId }
+    })
+      .then(() => {
+        console.log('Producto eliminado exitosamente');
+        res.redirect('/admin');
+      })
+      .catch((error) => {
+        console.error('Error al eliminar el producto:', error);
+        res.status(500).send('Error al eliminar el producto');
+      });
   }
 };
