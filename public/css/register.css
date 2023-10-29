@@ -169,7 +169,7 @@ a {
   .registertableAndDesktop__input-item {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    margin: 0px 0;
   }
   .registertableAndDesktop__input-item label {
     margin-bottom: 10px;
@@ -235,7 +235,7 @@ a {
     font-size: 35px;
   }
   .registertableAndDesktop__input-item input {
-    padding: 20px 15px;
+    padding: 6px 11px;
     margin-bottom: 10px;
   }
   .registertableAndDesktop__input-item input:focus {

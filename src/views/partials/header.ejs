@@ -34,7 +34,7 @@
                 <a class="nav-item" href="">deporte</a>
                 <a class="nav-item" href="">tendencia</a>
                 <% if (locals.userLogin) { %>
-                    <% if (userLogin.role==="admin" ) { %>
+                    <% if (userLogin.role === 1 ) { %>
                         <a class="nav-item" href="/admin">Dashboard ADM</a>
                     <% } %>
 

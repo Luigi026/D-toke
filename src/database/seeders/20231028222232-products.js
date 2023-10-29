@@ -6,7 +6,7 @@ module.exports = {
 
     await queryInterface.bulkInsert('Products', [
     {
-      name: "Superstar",
+      model: "Superstar",
       description: "Zapatillas clásicas con el icónico diseño de las tres rayas.",
       image: "Adidas_Superstar.jpeg",
       category_id: 2,
@@ -15,7 +15,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Cali",
+      model: "Cali",
       description: "Zapatillas con estilo vintage y suela gruesa.",
       image: "Puma_Cali.webp",
       category_id: 3,
@@ -24,7 +24,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Air Zoom",
+      model: "Air Zoom",
       description: "Zapatillas ligeras con tecnología Air Zoom para una mayor respuesta en la pisada.",
       image: "Nike_Air-Zoom.jpg",
       category_id: 1,
@@ -33,7 +33,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Classic Leather",
+      model: "Classic Leather",
       description: "Zapatillas de cuero clásicas con diseño retro.",
       image: "Reebok_Classic-Leather.jpg",
       category_id: 4,
@@ -42,7 +42,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Air Max 97",
+      model: "Air Max 97",
       description: "Zapatillas deportivas con tecnología de amortiguación Air Max.",
       image: "Nike_AirMax_97.jpg",
       category_id: 1,
@@ -51,7 +51,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "React Infinity Run",
+      model: "React Infinity Run",
       description: "Zapatillas de running con amortiguación React para una experiencia suave.",
       image: "Nike_React-Infinity-Run.jpeg",
       category_id: 1,
@@ -60,7 +60,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Joyride Run",
+      model: "Joyride Run",
       description: "Zapatillas con sistema de amortiguación Joyride para una pisada suave y cómoda.",
       image: "Nike_Joyride-Run.png",
       category_id: 1,
@@ -69,7 +69,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Ultraboost",
+      model: "Ultraboost",
       description: "Zapatillas de running con tecnología Ultraboost para mayor comodidad y retorno de energía.",
       image: "Adidas_Ultraboost.jpg",
       category_id: 2,
@@ -78,7 +78,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Stan Smith",
+      model: "Stan Smith",
       description: "Zapatillas de estilo retro con diseño icónico y suela de goma.",
       image: "Adidas_Stan-Smith.webp",
       category_id: 2,
@@ -87,7 +87,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Gazelle",
+      model: "Gazelle",
       description: "Zapatillas clásicas de ante con detalles en contraste.",
       image: "Adidas_Gazelle.jpg",
       category_id: 2,
@@ -96,7 +96,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Nano X",
+      model: "Nano X",
       description: "Zapatillas de entrenamiento versátiles y resistentes para cualquier actividad.",
       image: "Reebok_Nano-X.jpg",
       category_id: 4,
@@ -105,7 +105,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Club C",
+      model: "Club C",
       description: "Zapatillas de estilo clásico con diseño limpio y detalles en contraste.",
       image: "Reebok_Club-C.jpg",
       category_id: 4,
@@ -114,7 +114,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Flexagon",
+      model: "Flexagon",
       description: "Zapatillas versátiles ideales para entrenamiento con un diseño ligero y cómodo.",
       image: "Reebok_Flexagon.jpg",
       category_id: 4,
@@ -123,7 +123,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "RS-X",
+      model: "RS-X",
       description: "Zapatillas de estilo retro con tecnología de amortiguación RS.",
       image: "Puma_RS-X.webp",
       category_id: 3,
@@ -132,7 +132,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "Future Rider",
+      model: "Future Rider",
       description: "Zapatillas inspiradas en los estilos de los años 80 con un toque moderno.",
       image: "Puma_Future-Rider.webp",
       category_id: 3,
@@ -141,7 +141,7 @@ module.exports = {
       updatedAt : new Date,
     },
     {
-      name: "RS-2K",
+      model: "RS-2K",
       description: "Zapatillas con diseño futurista y detalles audaces.",
       image: "Puma_RS-2K.jpg",
       category_id: 3,

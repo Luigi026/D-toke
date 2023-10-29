@@ -140,7 +140,7 @@
                 <section class="home__main__section-cards">
                     <div class="home__main__section__cards-container-desktop">
                         <% productsNike.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product, toThousand }) %>
+                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
                     </div>
                 </section>
@@ -148,7 +148,7 @@
                 <section class="home__main__section-cards">
                     <div class="home__main__section__cards-container-desktop">
                         <% productsAdidas.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product, toThousand }) %>
+                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
                     </div>
                 </section>
@@ -156,7 +156,7 @@
                 <section class="home__main__section-cards">
                     <div class="home__main__section__cards-container-desktop">
                         <% productsReebok.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product, toThousand }) %>
+                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
                     </div>
                 </section>
@@ -164,7 +164,7 @@
                 <section class="home__main__section-cards">
                     <div class="home__main__section__cards-container-desktop">
                         <% productsPuma.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product, toThousand }) %>
+                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
                     </div>
                 </section>
@@ -298,19 +298,19 @@
             <section class="home__main__section-cards">
                 <div class="home__main__section__cards-container">
                     <% productsNike.forEach(product=> { %>
-                        <%- include('partials/productCardHome',{ ...product, toThousand }) %>
+                        <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                             <% }) %>
                 </div>
                 <div class="home__main__section__cards-container tablet1">
                     <% productsAdidas.forEach(product=> { %>
-                        <%- include('partials/productCardHome',{ ...product, toThousand }) %>
+                        <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                             <% }) %>
                 </div>
 
 
                 <div class="home__main__section__cards-container tablet2">
                     <% productsReebok.forEach(product=> { %>
-                        <%- include('partials/productCardHome',{ ...product, toThousand }) %>
+                        <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                             <% }) %>
                 </div>
 
