@@ -28,10 +28,29 @@ module.exports = {
     return res.render("addProduct");
   },
   editProduct: (req, res) => {
-    const product = products.find((product) => product.id === +req.params.id)
-    return res.render("editProduct", {
-      ...product
-    });
+    const id = req.params.id
+
+    const product = db.Product.findByPk(id, {
+      include : {
+        all : true
+    }
+    })
+
+    const categories = db.Category.findAll()
+    
+    Promise.all([product, categories])
+        .then(([product, categories]) => {
+            return res.render('editProduct',{
+                categories,
+                ...product?.dataValues
+            })
+        })
+        .catch(error => console.log(error))
+
+    // const product = products.find((product) => product.id === +req.params.id)
+    // return res.render("editProduct", {
+    //   ...product
+    // });
   },
   update: (req, res) => {
     /* console.log(req.body)

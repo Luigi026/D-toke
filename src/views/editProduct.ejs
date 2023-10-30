@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('partials/head', {title: 'Editando: ' + name}) %>
+  <%- include('partials/head', {title: 'Editando: ' + model}) %>
   <body class="editProduct__container-product">
     <div class="editProduct__container-product-content">
       <%- include('partials/header')%>
@@ -13,11 +13,11 @@
                 >Nombre del producto:</label
               >
               <input
-                value="<%= name %>"
+                value="<%= model %>"
                 class="editProduct__form-group__input"
                 type="text"
                 id="name"
-                name="name"
+                model="name"
                 required
               />
             </div>
@@ -28,7 +28,7 @@
                 class="editProduct__form-group__input"
                 type="number"
                 id="price"
-                name="price"
+                model="price"
                 step="0.01"
                 required
               />
@@ -54,11 +54,9 @@
                 id="gender"
                 selected
               >
-              <option value="Nike" <%= category === "Nike" && 'selected' %>>Nike</option>
-              <option value="Adidas" <%= category === "Adidas" && 'selected' %>>Adidas</option>
-              <option value="Puma" <%= category === "Puma" && 'selected' %>>Puma</option>
-              <option value="Reebok" <%= category === "Reebok" && 'selected' %>>Reebok</option>
-
+              <% categories.forEach(category => { %>
+                <option value="<%= category.id %>" <%= category_id == category.id && 'selected' %>><%= category.brand %></option>
+              <% }) %>
               </select>
             </div>
           </div>
