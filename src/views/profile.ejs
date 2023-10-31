@@ -15,9 +15,13 @@
                   </div>
                   <div class="card-body">
                     <form action="/users/update?_method=PUT" method="POST" class="row">
-                        <div class="col-12 col-md-6 mb-3">
+                        <div class="col-12 col-md-6 mb-3 ">
                             <label for="name" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="name" placeholder="Tu nombre" name="name" value="<%= name %>">
+                        </div>
+                        <div class="col-12 col-md-6 mb-3 ">
+                          <label for="surname" class="form-label">Apellido</label>
+                          <input type="text" class="form-control" id="surname" placeholder="Tu Apellido" name="surname" value="<%= surname %>">
                         </div>
                         <small class="text-danger ms-2 my-2"><%= locals.errors && (errors.name && errors.name.msg) %></small>
                         <div class="d-flex justify-content-end">

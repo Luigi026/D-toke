@@ -78,20 +78,53 @@ module.exports = {
   },
   // ************************* --- profile --- ************************
   profile: (req, res) => {
-    const user = users.find((user) => user.id === req.session.userLogin.id);
-
-    return res.render("profile", {
+    /* const user = users.find((user) => user.id === req.session.userLogin.id); */
+    /*  return res.render("profile", {
       ...user,
-    });
+     }); */
+    
+    const sessionId = req.session.userLogin.id;
+
+    db.User.findByPk(sessionId)
+    .then(user => {
+      return res.render('profile',{
+        ...user.dataValues
+      })
+    })
+    .catch(error => console.log(error))
+
   },
   // ************************* --- update --- ************************
   update: (req, res) => {
     const errors = validationResult(req);
+    const sessionId = req.session.userLogin.id;
 
     if (errors.isEmpty()) {
-      const { name } = req.body;
 
-      const usersModify = users.map((user) => {
+      const { name, surname } = req.body;
+      db.User.update(
+        {
+          name: name.trim(),
+          surname: surname.trim()
+        },
+        {
+          where: {
+            id: sessionId
+          }
+        }
+      )
+      .then(response => {
+        console.log(response)
+        req.session.userLogin.name = name;
+        res.locals.userLogin.name = name;
+
+        if(req.cookies.dtokeUser){
+          res.cookie("dtokeUser", req.session.userLogin);
+      }
+      return res.redirect('/')
+      })
+
+      /* const usersModify = users.map((user) => {
         if (user.email === req.body.email) {
           user.name = name.trim();
         }
@@ -100,13 +133,26 @@ module.exports = {
 
       writeJSON(usersModify, "users.json");
 
-      res.redirect("/");
-    } else {
+      res.redirect("/"); */
+    /* } else {
       return res.render("profile", {
         name: "",
         errors: errors.mapped(),
-      });
-    }
+      }); */
+    } else {
+      db.User.findByPk(sessionId)
+      .then(user => {
+          return res.render('profile',{
+              ...user.dataValues,
+              errors : errors.mapped(),
+              old : req.body
+          })
+      })
+      .catch(error => console.log(error))
+  }
+////////////////////////////////////////////////////////
+
+    
   },
 
   productCart: (req, res) => {
