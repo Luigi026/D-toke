@@ -83,13 +83,22 @@ body.productDetail {
 }
 
 .container__detailProduct {
-display: flex;
-padding: 0px 43px 34px 0px;
-align-items: center;
+
+display: flex;
+
+padding: 0px 43px 34px 0px;
+
+align-items: center;
 }
 .imagen__description {}
 .btn__comprar {
-padding: 50px;
+
+padding: 50px;
+}
+.productDetail__box__product {
+padding: 0;
+margin: 0;
+display: flex;
 }
 
 .productDetail__main__section__article-buttons {
