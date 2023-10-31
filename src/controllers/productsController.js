@@ -55,11 +55,11 @@ module.exports = {
   update: (req, res) => {
     /* console.log(req.body)
   console.log(req.file) */
-
+    const id = req.params.id;
     const { name, price, gender, description } = req.body;
-    const productsModify = products.map(product => {//map:me crea un nuevo array 
+/*     const productsModify = products.map(product => {//map:me crea un nuevo array 
       if (product.id === +req.params.id) {
-        product.name = name.trim();
+        product.model = name.trim();
         product.price = +price;
         product.gender = gender;
         product.description = description.trim();
@@ -71,7 +71,29 @@ module.exports = {
       return product
     })
     writeJSON(productsModify, "./products.json")//que y donde lo guardo
-    res.redirect('/admin')
+    res.redirect('/admin') */
+    ///////////////////////////////////////////////
+
+  db.Product.findByPk(id)
+  .then(() => {
+    
+    db.Product.update(
+    {
+      model: name.trim(),
+      price,
+      gender,
+      description: description.trim()
+    },
+    {
+      where: {
+        id: id
+      }
+    })
+    .catch((error) => console.log(error))
+    .finally(() => {
+      return res.redirect("/admin")
+    })
+  })
 
   },
   store: (req, res) => {
