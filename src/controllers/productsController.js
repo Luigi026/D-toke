@@ -17,12 +17,12 @@ module.exports = {
   detail: (req, res) => {
 
     db.Product.findByPk(req.params.id, {
-      include : ['category']
-  })
+      include: ['category']
+    })
       .then(product => {
-          return res.render('productDetail', {
-              ...product.dataValues
-          })
+        return res.render('productDetail', {
+          ...product.dataValues
+        })
       })
       .catch(error => console.log(error))
 
@@ -34,21 +34,21 @@ module.exports = {
     const id = req.params.id
 
     const product = db.Product.findByPk(id, {
-      include : {
-        all : true
-    }
+      include: {
+        all: true
+      }
     })
 
     const categories = db.Category.findAll()
-    
+
     Promise.all([product, categories])
-        .then(([product, categories]) => {
-            return res.render('editProduct',{
-                categories,
-                ...product?.dataValues
-            })
+      .then(([product, categories]) => {
+        return res.render('editProduct', {
+          categories,
+          ...product?.dataValues
         })
-        .catch(error => console.log(error))
+      })
+      .catch(error => console.log(error))
 
     // const product = products.find((product) => product.id === +req.params.id)
     // return res.render("editProduct", {
@@ -60,43 +60,49 @@ module.exports = {
   console.log(req.file) */
     const id = req.params.id;
     const { name, price, gender, description } = req.body;
-/*     const productsModify = products.map(product => {//map:me crea un nuevo array 
-      if (product.id === +req.params.id) {
-        product.model = name.trim();
-        product.price = +price;
-        product.gender = gender;
-        product.description = description.trim();
-        req.file &&
-          existsSync(`./public/images/products/${product.image}`) &&
-          unlinkSync(`./public/images/products/${product.image}`);
-        product.image = req.file ? req.file.filename : product.image;
-      }
-      return product
-    })
-    writeJSON(productsModify, "./products.json")//que y donde lo guardo
-    res.redirect('/admin') */
+    /*     const productsModify = products.map(product => {//map:me crea un nuevo array 
+          if (product.id === +req.params.id) {
+            product.model = name.trim();
+            product.price = +price;
+            product.gender = gender;
+            product.description = description.trim();
+            req.file &&
+              existsSync(`./public/images/products/${product.image}`) &&
+              unlinkSync(`./public/images/products/${product.image}`);
+            product.image = req.file ? req.file.filename : product.image;
+          }
+          return product
+        })
+        writeJSON(productsModify, "./products.json")//que y donde lo guardo
+        res.redirect('/admin') */
     ///////////////////////////////////////////////
 
-  db.Product.findByPk(id)
-  .then(() => {
-    
-    db.Product.update(
-    {
-      model: name.trim(),
-      price,
-      gender,
-      description: description.trim()
-    },
-    {
-      where: {
-        id: id
-      }
-    })
-    .catch((error) => console.log(error))
-    .finally(() => {
-      return res.redirect("/admin")
-    })
-  })
+    db.Product.findByPk(id)
+      .then((product) => {
+        deleteImage(product.image)
+      })
+
+    db.Product.findByPk(id)
+      .then(() => {
+
+        db.Product.update(
+          {
+            model: name.trim(),
+            price,
+            gender,
+            image: req.file.filename,
+            description: description.trim()
+          },
+          {
+            where: {
+              id: id
+            }
+          })
+          .catch((error) => console.log(error))
+          .finally(() => {
+            return res.redirect("/admin")
+          })
+      })
 
   },
   store: (req, res) => {
