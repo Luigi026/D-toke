@@ -16,13 +16,16 @@ module.exports = {
   },
   detail: (req, res) => {
 
-    const product = products.find(product => product.id === +req.params.id)
+    db.Product.findByPk(req.params.id, {
+      include : ['category']
+  })
+      .then(product => {
+          return res.render('productDetail', {
+              ...product.dataValues
+          })
+      })
+      .catch(error => console.log(error))
 
-    return res.render('productDetail', {
-      product,
-      toThousand
-
-    })
   },
   addProduct: (req, res) => {
     return res.render("addProduct");

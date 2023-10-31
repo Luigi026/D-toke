@@ -12,38 +12,40 @@
 
         <main class="productDetail__main">
         
-            <%- include('partials/productCard',{
-                ...product
-            }) %>
+            <main class="detalle__main">
+                <div class="row">
+                    <div class="col-6 col-md-6 col-lg-8 mx-auto mt-5">
+                        <div class="d-flex justify-content-center">
+                            <div class="row">
+                                <div class="container__detailProduct gap-3">
+                                    <div class="d-flex flex-column gap-1 container__detailProduct">
+                                        <img id="main-image" src="/images/products/<%= image %>" class="img-fluid  animate__animated animate__flipInX" alt="...">
 
-                <article class="productDetail__main__section__article-recomendation">
-                    <div>
-                        <h4>Tambien podria interesarte</h4>
-                        <div>
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                        </div>
-                        <div>
-                            <img src="" alt="">
-                            <h4></h4>
-                            <img src="" alt="">
+                                          
+                                        </div>
+                                    </div>
+        
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <div class="card-body imagen__description">
+                                        <h2 class="card-title"><%= model %></h2>
+                                        <hr>
+                                        <p class="fs-4 card-text"><%= description %></p>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <small class="fs-4">$<%= price %></small>
+                                         
+                                        </div>
+                                        
+                                        <div class="d-flex justify-content-center gap-1 btn__comprar">
+                                            <button class="btn btn-dark">Comprar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </article>
-                <article class="productDetail__main__section__article2-adds">
-                    <div class="productDetail__main__section__article2-box-img">
-                        <img src="/img/home-main/anuncio.png" alt="Add nike" class="nike-add">
-                    </div>
-                    <form action="" class="productDetail__main__section__article2-contact">
-                        <input type="email" name="email" id="" placeholder="Ingresa tu email...">
-                        <button type="submit"><i class="fa-solid fa-angle-right fa-xl"></i></button>
-                    </form>
-                </article>
-            </section>
-        </main>
+                </div>
+            </main>
 
         <%- include('partials/footer') %>
 
