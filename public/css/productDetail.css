@@ -4,6 +4,14 @@
 }
 
 /* MAIN */
+.productDetail__main__section--main-container {
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px  0px 0px;
+}
+.productDetail__main__section__article {
+    padding: 0px 10px 0px 10px;
+    margin: 0px 0px  0px 0px;
+}
 
 body.productDetail {
     margin: 0;
@@ -15,7 +23,7 @@ body.productDetail {
 .productDetail__main {background-color: #1491ed17;}
 
 .productDetail__main__section__article--box-img {
-    margin-top: 20px;
+    padding: 20px;
     width: 100%;
 }
 

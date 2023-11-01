@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="home__header__div1--glass-truck">
-            <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
         </div>
     </div>
@@ -19,7 +19,14 @@
         </div>
         <div class="home__header__div2--heartru">
             <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
-            <a href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+            
+            <% if (locals.userLogin) { %>
+                <a class="onlyFor_mobile-tablet" href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+                </div>
+
+                <% }else{ %>
+                    <a class="onlyFor_mobile-tablet" href="/users/login"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+                    <% } %>
         </div>
     </div>
     <nav class="home__header__nav">
@@ -28,31 +35,48 @@
                 <a href="/"><img src="/images/logoIsra.png" alt=""></a>
             </div>
             <div class="home__header__nav__div1">
-
-                <a class="nav-item" href="">hombres</a>
-                <a class="nav-item" href="">niños</a>
-                <a class="nav-item" href="">deporte</a>
+                <a class="nav-item" href="/products/productsList">Productos</a>
+                <a class="nav-item onlyFor_mobile-tablet" href="/">Inicio</a>
+                
                 <a class="nav-item" href="">tendencia</a>
                 <% if (locals.userLogin) { %>
-                    <% if (userLogin.role === 1 ) { %>
-                        <a class="nav-item" href="/admin">Dashboard ADM</a>
-                    <% } %>
+                   
+                        <a class="nav-item login__mobile" href="/users/profile">Hola <%= userLogin.name %>!</a>
+                        <a class="nav-item login__mobile" href="/users/logout">salir</a>
+           
 
-                <% }else{ %>
+                    <% }else{ %>
+                        <a class="login__mobile nav-item" href="/users/login">ingresar</a>
+                        <% } %>
+                            <% if (locals.userLogin) { %>
+                                <% if (userLogin.role===1 ) { %>
+                                    <a class="nav-item" href="/admin">Dashboard ADM</a>
+                                    <a class="login__mobile nav-item" href="/products/cart">Carrito</a>
+                                    <% } %>
 
-                <% } %>
+                                        <% }else{ %>
+
+                                            <% } %>
 
             </div>
             <div class="home__header__nav__div2">
                 <form class="d-flex" role="search" action="/search" method="GET">
                     <input class="form-control me-2" type="text" name="keywords" placeholder="Buscar zapatilla..."
                         aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><a href=""><i
-                                class="fa-solid fa-magnifying-glass"></i></a></button>
+                    <button class="btn btn-outline-success" type="submit">
+                        <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </button>
                 </form>
 
                 <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
-                <a href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+                
+                <% if (locals.userLogin) { %>
+                    <a class="onlyFor_desktop" href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+
+                    <% }else{ %>
+                        <a class="onlyFor_desktop" href="/users/login"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+                        <% } %>
+        
                 <% if (locals.userLogin) { %>
                     <div class="home__header__nav__div1">
                         <a class="nav-item" href="/users/profile">Hola <%= userLogin.name %>!</a>

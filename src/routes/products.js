@@ -5,6 +5,7 @@ const upload = require('../middlewares/upload');
 
 /* GET users listing. */
 
+router.get('/productsList', productsController.list);
 router.get('/cart', productsController.cart);
 router.get('/detail/:id', productsController.detail);
 

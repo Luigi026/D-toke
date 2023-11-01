@@ -11,6 +11,25 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 module.exports = {
+
+  list: (req, res) => {
+
+    const productsList = db.Product.findAll({
+      include : ['category'],
+      order: ['model'],
+  })
+  const categories = db.Category.findAll();
+
+  Promise.all([productsList, categories])
+  .then(([productsList, categories]) => {
+    res.render("productsList", {
+    productsList,
+    categories,
+    toThousand
+    });
+  })
+
+  },
   cart: (req, res) => {
     return res.render("productCart");
   },

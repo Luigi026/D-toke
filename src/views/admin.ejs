@@ -32,11 +32,6 @@
                     </thead>
                     <tbody class="admin__tbody">
                     
-                    
-                        <% categories.forEach(category => { %>
-                            <h1 class="text-danger"><%= category.brand %></h1>
-                           <% }) %>
-                           
                         <% productsList.forEach(({id, model, category , price, image, description },index)=> { %>
                             <tr>
                                 <th class="bg-dark text-white" scope="row">

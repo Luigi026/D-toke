@@ -1,0 +1,19 @@
+<article class="home__main__section__cards-product">
+    <div class="home__main__section__cards-img">
+        <a href="/products/detail/<%= id %>">
+            <img src="/images/products/<%= image || 'image-default.png'%>" alt="imagen de producto cualquiera">
+        </a>
+
+    </div>
+    <div class="home__main__section__cards-text">
+        <h5 class="home__main__section__cards-description">
+            <%= category.brand %>
+         </h5>
+        <h5 class="home__main__section__cards-description">
+           <%= model %>
+        </h5>
+        <p class="home__main__section__cards-price">
+            $<%= price %>
+        </p>
+    </div>
+</article>

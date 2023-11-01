@@ -20,11 +20,11 @@ li {
   display: flex;
   /* width: 95%; */
   width: 100%;
-  align-items: center;
   justify-content: space-between;
   /* margin: 10px; */
-  padding: 10px;
+  padding: 7px 0px 14px 0px;
   position: relative;
+  align-items: center;
 }
 /* quitamos el display none porque oculta todo el contenido
 y solo se necesita ocultar el menu */
@@ -41,6 +41,15 @@ home__header__nav--logo home__header__nav__div2 */
   display: none;
 }
 .home__header__nav__div2 {
+  display: none;
+}
+.login__mobile {
+  display: block;
+}
+.onlyFor_mobile-tablet {
+  display: block;
+}
+.onlyFor_desktop {
   display: none;
 }
 
@@ -116,6 +125,16 @@ hacer click en el button hamburguesa */
 
 @media (min-width: 481px) {
   /* H E A D E R */
+  .login__mobile {
+    display: none;
+  }
+  .onlyFor_mobile-tablet {
+    display: block;
+  }
+  .onlyFor_desktop {
+    display: none;
+  }
+  
 
   .home__header__div1--glass-truck {
     display: none;
@@ -177,14 +196,45 @@ hacer click en el button hamburguesa */
     width: 98%;
     align-items: center;
   }
-
+  .home__header {
+    background-color: #ffffff;
+    display: flex;
+    /* width: 95%; */
+    width: 100%;
+    justify-content: space-between;
+    /* margin: 10px; */
+     padding: 10px 0px 14px 0px; 
+    position: relative;
+    align-items: center;
+  }
+}
   /* T A B L E T */
 
   /* H E A D E R */
-}
+
 
 @media (min-width: 1024px) {
   /* vuelve a la normalidad el menu inicio*/
+  .login__mobile {
+    display: none;
+  }
+  .onlyFor_mobile-tablet {
+    display: none;
+  }
+  .onlyFor_desktop {
+    display: block;
+  }
+  .home__header {
+    background-color: #ffffff;
+    display: flex;
+    /* width: 95%; */
+    width: 100%;
+    justify-content: space-between;
+    /* margin: 10px; */
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    align-items: center;
+  }
   .home__header__nav__div1 {
     position: static;
     background-color: transparent;
@@ -246,18 +296,24 @@ hacer click en el button hamburguesa */
   .home__header__nav {
     display: flex;
     width: 100%;
+    padding: 10px 0px 10px 0px;
+    background-color: white;
   }
 
   .home__header__nav__div {
     display: flex;
-    width: 100%;
+    width: 99%;
+    justify-content: flex-end;
+    flex-direction: row;
   }
 
   .home__header__nav__div1 {
     display: flex;
     width: 55%;
     align-items: center;
+    flex-direction: row;
     justify-content: center;
+    flex-wrap: nowrap;
   }
 
   .home__header__nav__div2 {
@@ -270,6 +326,7 @@ hacer click en el button hamburguesa */
   .home__header__nav__div2 i {
     padding: 5px;
     font-size: 23px;
+    color: black;
   }
 
   .home__header__nav__div1 a {
