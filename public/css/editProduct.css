@@ -9,7 +9,7 @@
     background-color: #111421;
   }
   .editProduct__container-product-content {
-    height: 100%;
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -10,7 +10,11 @@
 }
 .conten-login {
   height: 100%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile__conten-login{
   display: flex;
   flex-direction: column;
   justify-content: space-between;

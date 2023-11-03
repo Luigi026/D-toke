@@ -76,12 +76,15 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center gap-1 btn__comprar">
-                                    <button class="btn btn-dark"><a href="/products/cart">Comprar</a></button>
-                                    <button class="btn btn-dark"><a href="#">Agregar al carrito</a></button>
+                                    <button class="btn btn-dark"><a class="text-light" href="/products/cart">Comprar</a></button>
+                                    <button class="btn btn-dark"><a class="text-light" href="#">Agregar al carrito</a></button>
                                 </div>
                             </div>
 
                         </div>
+                        
+                        <!-- ************************* -- ACCORDION -- ******************************** -->
+                        
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
@@ -129,6 +132,7 @@
                                 </div>
                             </div>
                         </div>
+                         <!-- ************************* -- END ACCORDION -- ******************************** -->
                     </div>
                 </div>
 
@@ -137,10 +141,13 @@
 
             <%- include('partials/footer') %>
 
-                <!-- AOS -->
-                <script>
-                    AOS.init();
-                </script>
+            <!-- AOS -->
+            <script>
+                AOS.init();
+            </script>
+            <!-- Swiper JS -->
+            <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
 
     </body>
 

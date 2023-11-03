@@ -65,7 +65,7 @@ module.exports = {
           db.Address.create({
             users_id: user.id,
           }).then(() => {
-            return res.redirect("/login");
+            return res.redirect("login");
           });
         })
         .catch((error) => console.log(error));

@@ -9,38 +9,29 @@
             <%- include('partials/header') %>
 
         </div>
-        <h2>Resultados de la búsqueda: <%= keywords %></h2>
-        </div>
-        <% if (results.length) { %>
-            <% results.forEach(product => { %>
-            <%- include('partials/productCard',{ 
-            ...product.dataValues,
-            toThousand 
-            }) %>
-                    </div>
-                    <% }) %>
-                        <% }else{ %>
-                            <div class="col-12">
-                                <h2 class="products-title">No hay productos que coincidan con
-                                    esa
-                                    búsqueda</h2>
-                            </div>
-                            <% } %>
-                                </div>
-                                </div>
+        <h2 class="text-center">Resultados de la búsqueda: <%= keywords %></h2>
+        
+        
+        <% if (products.length) { %>
+            <% products.forEach(product => { %>
+                <%- include('partials/productCard',{ 
+                        ...product.dataValues,
+                        toThousand 
+                    }) %>
+            <% }) %>
+        <% }else{ %>
+            <div class="col-12">
+                <h2 class="products-title">No hay productos que coincidan con esa búsqueda</h2>
+            </div>
+            <% } %>
+        
+        <%- include('partials/footer') %>
 
-                                </main>
-                                <%- include('partials/footer') %>
+            <!-- AOS -->
+            <script>
+                AOS.init();
+            </script>
 
-                                    <!-- AOS -->
-                                    <script>
-                                        AOS.init();
-                                    </script>
-                                    <!-- boostrap -->
-                                    <script
-                                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-                                        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-                                        crossorigin="anonymous"></script>
 
     </body>
 

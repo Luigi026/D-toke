@@ -71,8 +71,8 @@ module.exports = {
   },
   search: (req, res) => {
 
-    db.Product.findAll({
-     include : ['category'],
+    const products = db.Product.findAll({
+      include : ['category'],
       where : {
           [Op.or] : [
               {
@@ -84,15 +84,35 @@ module.exports = {
                   description : {
                     [Op.substring] : req.query.keywords
                   }
+              },
+              {
+                  description : {
+                    [Op.substring] : req.query.keywords
+                  }
               }
+              
               
           ]
       }
   })
-  
-  .then(results => {
+  const category = db.Category.findAll({
+
+     where : {
+         [Op.or] : [
+             {
+                 brand : {
+                   [Op.substring] : req.query.keywords
+                 }
+             }
+             
+         ]
+     }
+ })
+ Promise.all([products, category])
+  .then(([products, category]) => {
   return res.render("results", {
-    results,
+    products,
+    category,
     toThousand,
     keywords: req.query.keywords
     })
