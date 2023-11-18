@@ -8,7 +8,7 @@ module.exports = [
         .withMessage('El correo electronico es obligatorio')
         .isEmail()
         .withMessage('Formato invalido'),
-   body('password')
+    body('password')
         .notEmpty()
         .withMessage('La contraseña es obligatoria')
         .custom((value, {req}) => {
