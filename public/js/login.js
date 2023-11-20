@@ -1,7 +1,8 @@
 const $ = (id) => document.getElementById(id);
 
 window.onload = function () {
-    console.log("vinculado exitosamente!!");
+
+    /************************* EMAIL VALIDATIONS **************************/
 
     $("email").addEventListener("blur", function (e) {
         switch (true) {
@@ -16,7 +17,7 @@ window.onload = function () {
             default:
                 $("msgError-email").innerHTML = null;
                 this.classList.remove("is-invalid");
-                /* this.classList.add("is-valid"); */
+                //this.classList.add("is-valid");
                 break;
         }
     });
@@ -26,53 +27,52 @@ window.onload = function () {
         this.classList.remove("is-invalid");
     });
 
-
-    $('email').addEventListener('change', async function(e){
+    $("email").addEventListener("change", async function (e) {
         try {
-            const response = await fetch(`/api/check-email?email=${this.value}`)
-            const result =  await response.json();
+            const response = await fetch(`/api/check-email?email=${this.value}`);
+            const result = await response.json();
 
             if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value)) {
                 if (!result.data) {
-                    $('msgError-email').innerHTML = "El email no se encuentra registrado";
-                    this.classList.add('is-invalid')
+                    $("msgError-email").innerHTML = "El email no se encuentra registrado";
+                    this.classList.add("is-invalid");
                 }
             }
         } catch (error) {
-            console.error()
+            console.error();
         }
-    })
+    });
 
-    $('password').addEventListener('blur', function(){
+    /************************* PASSWORD VALIDATIONS **************************/
+
+    $("password").addEventListener("blur", function () {
         if (!this.value.trim()) {
-            $('msgError-password').innerHTML = "La contraseña es obligatoria"
-            this.classList.add('is-invalid')
+            $("msgError-password").innerHTML = "La contraseña es obligatoria";
+            this.classList.add("is-invalid");
         }
-    })
+    });
 
-    $('password').addEventListener('focus', function(){
-        $('msgError-password').innerHTML = null
-        this.classList.remove('is-invalid')
-    })
+    $("password").addEventListener("focus", function () {
+        $("msgError-password").innerHTML = null;
+        this.classList.remove("is-invalid");
+    });
 
-    $('formLogin').addEventListener('submit', function(e){
+    /************************* FORM VALIDATIONS **************************/
+
+    $("formLogin").addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const elementsForm = $('formLogin').elements;
-        let error = false
+        const elementsForm = $("formLogin").elements;
+        let error = false;
 
         for (let i = 0; i < elementsForm.length - 1; i++) {
             
             if(!elementsForm[i].value.trim() || elementsForm[i].classList.contains('is-invalid')){
-                elementsForm[i].classList.add('is-invalid')
-                error = true
+                elementsForm[i].classList.add("is-invalid");
+                error = true;
             }
         }
 
-        !error && this.submit()
-    
-
-    })
-
-
+        !error && this.submit();
+    });
 };

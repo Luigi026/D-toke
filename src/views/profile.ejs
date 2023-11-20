@@ -14,14 +14,18 @@
                     Perfil usuario
                   </div>
                   <div class="card-body">
-                    <form action="/users/update?_method=PUT" method="POST" class="row">
+                    <form action="/users/update?_method=PUT" method="POST" class="row" id="formProfile">
                         <div class="col-12 col-md-6 mb-3 ">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" placeholder="Tu nombre" name="name" value="<%= name %>">
+                            <input spellcheck="false" type="text" class="form-control" id="name" placeholder="Tu nombre" name="name" value="<%= name %>">
+                            <small class="text-danger ms-2" id="msgError-name">
+                            </small>
                         </div>
                         <div class="col-12 col-md-6 mb-3 ">
                           <label for="surname" class="form-label">Apellido</label>
-                          <input type="text" class="form-control" id="surname" placeholder="Tu Apellido" name="surname" value="<%= surname %>">
+                          <input spellcheck="false" type="text" class="form-control" id="surname" placeholder="Tu Apellido" name="surname" value="<%= surname %>">
+                          <small class="text-danger ms-2" id="msgError-surname">
+                          </small>
                         </div>
                         <small class="text-danger ms-2 my-2"><%= locals.errors && (errors.name && errors.name.msg) %></small>
                         <div class="d-flex justify-content-end">
@@ -35,6 +39,7 @@
     </main>
         <%- include('partials/footer')%>
     </div>
+    <script src="/js/profile.js"></script>
   </body>
 
 </html>
