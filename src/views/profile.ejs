@@ -6,30 +6,59 @@
     <div class="profile__conten-login">
       <%- include('partials/header')%>
 
-      <main class="detalle__main">
+      <main class="detalle__main vh-100 mb-5">
         <div class="row">
             <div class="col-12 col-md-10 col-lg-8 mx-auto mt-5">
                 <div class="card mb-3 shadow-lg">
-                  <div class="card-header">
-                    Perfil usuario
-                  </div>
                   <div class="card-body">
-                    <form action="/users/update?_method=PUT" method="POST" class="row" id="formProfile">
-                        <div class="col-12 col-md-6 mb-3 ">
+                    <div class="card-title">
+                      <h2 style="letter-spacing: .3px;">Perfil</h2>
+                    </div>
+                    <form action="/users/update?_method=PUT" method="POST" class="row form_profile" id="formProfile">
+                      <p class="text-secondary my-2">Cambia tu foto de perfil y edita tu información personal</p>
+                        <div class="col-12 mb-3 d-flex justify-content-center flex-column align-items-center gap-3">
+                          <img class="rounded-circle" src="/images/adidas1.jpeg" alt="" width="120px" height="120px">
+                          <input type="file" name="profileImg" id="profileImg" class="" hidden>
+                          <label for="profileImg" class="btn btn-sm btn-purple">Cambiar imagen</label>
+                        </div>
+                        <div class="col-12 mb-3 ">
                             <label for="name" class="form-label">Nombre</label>
-                            <input spellcheck="false" type="text" class="form-control" id="name" placeholder="Tu nombre" name="name" value="<%= name %>">
+                            <input spellcheck="false" type="text" class="form-control input-purple" id="name" placeholder="Tu nombre" name="name" value="<%= name %>">
                             <small class="text-danger ms-2" id="msgError-name">
                             </small>
                         </div>
-                        <div class="col-12 col-md-6 mb-3 ">
+                        <div class="col-12 mb-3 ">
                           <label for="surname" class="form-label">Apellido</label>
                           <input spellcheck="false" type="text" class="form-control" id="surname" placeholder="Tu Apellido" name="surname" value="<%= surname %>">
                           <small class="text-danger ms-2" id="msgError-surname">
                           </small>
                         </div>
+                        <div class="col-12 mb-3">
+                          <label for="birthday" class="form-label">Cumpleaños</label>
+                          <input type="date" class="form-control" id="birthday" name="birthday" value="<%= birthday %>">
+                          <small class="text-danger ms-2" id="msgError-birthday">
+                              <%= locals.errors && (errors.birthday && errors.birthday.msg) %>
+                            </small>
+                      </div>
+                      <div class="col-12 mb-3">
+                          <label for="address" class="form-label">Dirección</label>
+                          <input type="text" class="form-control" id="address" placeholder="Domicilio" name="address" value="<%= %>">
+                      </div>
+                      <div class="col-12 mb-3">
+                          <label for="province" class="form-label">Provincia</label>
+                          <select type="text" class="form-select" id="province" name="province">
+                              <option value="" hidden>Seleccione...</option>
+                          </select>
+                      </div>
+                      <div class="col-12 mb-3">
+                          <label for="city" class="form-label">Ciudad</label>
+                          <select type="text" class="form-select" id="city" name="city">
+                              <option value="" hidden>Seleccione...</option>
+                          </select>
+                      </div>
                         <small class="text-danger ms-2 my-2"><%= locals.errors && (errors.name && errors.name.msg) %></small>
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-dark">Guardar cambios</button>
+                            <button type="submit" class="btn btn-purple">Guardar cambios</button>
                         </div>
                     </form>
                   </div>
