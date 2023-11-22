@@ -10,7 +10,7 @@
 
         </div>
         <main class="home__main">
-            
+
             <!-- DESKTOP VIEW -->
             <section class="home__main__section__desktopage">
                 <div class="desktopage__carouselBox">
@@ -67,7 +67,7 @@
                     <div class="home__main__section__desktopage-marcasContainer">
                         <div class="home__main__section__desktopage-marcas-img1">
                             <a href="#adidas">
-                                <img  src="/img/home-main/Marca-transparente-.png" alt="">
+                                <img src="/img/home-main/Marca-transparente-.png" alt="">
                             </a>
                         </div>
                         <div class="home__main__section__desktopage-marcas-img2">
@@ -133,13 +133,16 @@
 
                 <div class="home__main__special-offers">
                     <div class="home__main__special-offers-button">
-                        <a href="/products/productsList">No te pierdas las ofertas especiales que tenemos en los calzados deportivos más conocidos que tenemos cada fin de semana!!!</a>
+                        <a href="/products/productsList">No te pierdas las ofertas especiales que tenemos en los
+                            calzados deportivos más conocidos que tenemos cada fin de semana!!!</a>
                     </div>
                 </div>
-               
-                  <h3 id="nike" class="text-center text-uppercase fs-3 text-black mt-3">NIKE</h3>
-               
-               
+                
+                
+
+
+
+                <h3 id="nike" class="text-center text-uppercase fs-3 text-black mt-3">NIKE</h3>
                 <section class="home__main__section-cards">
                     <div class="home__main__section__cards-container-desktop">
                         <% productsNike.forEach(product=> { %>
@@ -170,7 +173,7 @@
                             <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
                     </div>
-            
+
                 </section>
                 <div class="home__main__section__bottomBanner">
                     <div class="home__main__section__bottomBanner-box1">
@@ -269,7 +272,8 @@
                                 </div>
                             </div>
                             <div class="home__main__cajaTxt-explore">
-                                <a href="/products/productsList">Explorar ahora <i class="fa-solid fa-angle-right"></i></a>
+                                <a href="/products/productsList">Explorar ahora <i
+                                        class="fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -349,12 +353,14 @@
             <script>
                 AOS.init();
             </script>
+           
             <!-- Swiper JS -->
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
             <!-- boostrap -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
                 crossorigin="anonymous"></script>
+          
 
     </body>
 
