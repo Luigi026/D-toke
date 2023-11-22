@@ -30,5 +30,10 @@
     "uuid": "^9.0.0",
     "moment": "^2.29.4",
     "node-fetch": "^2.7.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "public/js/*"
+    ]
   }
 }

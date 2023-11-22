@@ -40,7 +40,7 @@ module.exports = {
     })
       .then(product => {
         return res.render('productDetail', {
-          ...product.dataValues
+          ...product?.dataValues
         })
       })
       .catch(error => console.log(error))
@@ -69,14 +69,10 @@ module.exports = {
       })
       .catch(error => console.log(error))
 
-    // const product = products.find((product) => product.id === +req.params.id)
-    // return res.render("editProduct", {
-    //   ...product
-    // });
   },
   update: (req, res) => {
     const id = req.params.id;
-    const { name, price, gender, description } = req.body;
+    const { model, price, gender, description } = req.body;
   
     db.Product.findByPk(id)
       .then((product) => {
@@ -85,7 +81,7 @@ module.exports = {
   
         return db.Product.update(
           {
-            model: name.trim(),
+            model: model,
             price,
             gender,
             image: newImage,

@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('partials/head', {title: 'Editando: ' + model}) %>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- boostrap-css -->
+    <script src="https://kit.fontawesome.com/e4646141a1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Animated -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- css de los pibe -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>D-toke | <%= model %> </title>
+</head>
 
   <body class="editProduct__container-product">
     <div class="editProduct__container-product-content">
       <%- include('partials/header')%>
         <div class="editProduct__container">
           <h1 class="editProduct__container-title">Editar un Producto</h1>
+          <!-- formulario -->
           <form class="editProduct__product-form" action="/products/editProduct/<%= id %>?_method=PUT" method="POST"
-            enctype="multipart/form-data">
+            enctype="multipart/form-data" id="formulario">
             <div class="editProduct__product-form-contentNamePrice">
+            <!-- model -->
               <div class="editProduct__form-group">
-                <label class="editProduct__form-group__label" for="name">Nombre del producto:</label>
-                <input value="<%= model %>" class="editProduct__form-group__input" type="text" id="name" name="name"
-                  required />
+                <label class="editProduct__form-group__label" for="model">Nombre del Modelo:</label>
+                <input value="<%= model %>" class="editProduct__form-group__input" type="text" id="model" name="model"
+                 />
+                 <small class="text-danger ms-2" id="msgError-model">
+                </small>
               </div>
+              <!-- price -->
               <div class="editProduct__form-group">
                 <label class="editProduct__form-group__label" for="price">Precio:</label>
                 <input value="<%= price %>" class="editProduct__form-group__input" type="number" id="price" name="price"
-                  step="0.01" required />
+                  step="0.01" />
+                  <small class="text-danger ms-2" id="msgError-price">
+                  </small>
               </div>
             </div>
             <div class="editProduct__product-form-contentNamePrice">
@@ -27,9 +52,10 @@
                 <input class="editProduct__form-group__input" type="file" id="image" name="image" />
                 <img class="image-detail" src="/images/products/<%= image %>?_method=PUT" method="POST" alt="">
               </div>
-
+              
+              <!-- brand -->
               <div class="editProduct__form-group">
-                <label class="editProduct__form-group__label">Categoria:</label>
+                <label class="editProduct__form-group__label">Marca:</label>
                 <select class="editProduct__form-group__input" name="gender" id="gender" selected>
                   <% categories.forEach(category=> { %>
                     <option value="<%= category.id %>" <%=category_id==category.id && 'selected' %>><%= category.brand
@@ -39,10 +65,13 @@
                 </select>
               </div>
             </div>
+            <!-- description -->
             <div class="editProduct__form-group">
               <label class="editProduct__form-group__label" for="description">Descripción :</label>
               <textarea class="editProduct__form-group__input" id="description" name="description"
-                required><%= description %></textarea>
+              ><%= description %></textarea>
+              <small class="text-danger ms-2" id="msgError-description">
+              </small>
             </div>
             <div class="editProduct__form-group-checkbox">
               <label class="editProduct__form-group__label" for="size">Talles:</label>
@@ -61,6 +90,7 @@
             </div>
             <button class="editProduct__form-button" type="submit">Guardar cambios</button>
           </form>
+          <!-- ------------------------ -->
         </div>
         <%- include('partials/footer')%>
     </div>
@@ -74,6 +104,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"></script>
+      <script src="/js/editProducts.js"></script>
   </body>
 
 </html>
