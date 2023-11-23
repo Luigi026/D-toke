@@ -21,36 +21,36 @@
                           <input type="file" name="profileImg" id="profileImg" class="" hidden>
                           <label for="profileImg" class="btn btn-sm btn-purple">Cambiar imagen</label>
                         </div>
-                        <div class="col-12 mb-3 ">
+                        <div class="col-12">
                             <label for="name" class="form-label">Nombre</label>
                             <input spellcheck="false" type="text" class="form-control input-purple" id="name" placeholder="Tu nombre" name="name" value="<%= name %>">
                             <small class="text-danger ms-2" id="msgError-name">
                             </small>
                         </div>
-                        <div class="col-12 mb-3 ">
+                        <div class="col-12">
                           <label for="surname" class="form-label">Apellido</label>
                           <input spellcheck="false" type="text" class="form-control" id="surname" placeholder="Tu Apellido" name="surname" value="<%= surname %>">
                           <small class="text-danger ms-2" id="msgError-surname">
                           </small>
                         </div>
-                        <div class="col-12 mb-3">
+                        <div class="col-12">
                           <label for="birthday" class="form-label">Cumpleaños</label>
                           <input type="date" class="form-control" id="birthday" name="birthday" value="<%= birthday %>">
                           <small class="text-danger ms-2" id="msgError-birthday">
                               <%= locals.errors && (errors.birthday && errors.birthday.msg) %>
                             </small>
                       </div>
-                      <div class="col-12 mb-3">
+                      <div class="col-12">
                           <label for="address" class="form-label">Dirección</label>
                           <input type="text" class="form-control" id="address" placeholder="Domicilio" name="address" value="<%= %>">
                       </div>
-                      <div class="col-12 mb-3">
+                      <div class="col-12 my-3">
                           <label for="province" class="form-label">Provincia</label>
                           <select type="text" class="form-select" id="province" name="province">
                               <option value="" hidden>Seleccione...</option>
                           </select>
                       </div>
-                      <div class="col-12 mb-3">
+                      <div class="col-12">
                           <label for="city" class="form-label">Ciudad</label>
                           <select type="text" class="form-select" id="city" name="city">
                               <option value="" hidden>Seleccione...</option>
