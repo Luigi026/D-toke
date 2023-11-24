@@ -1,7 +1,7 @@
 const { check, body } = require("express-validator");
 
 module.exports = [
-  check("title")
+  check("name")
     .notEmpty()
     .withMessage("Es obligatorio")
     .bail()
@@ -10,12 +10,15 @@ module.exports = [
       max: 50,
     })
     .withMessage("Debe tener entre 4 y 20 caracteres"),
-  check("categoryId")
+
+  /* check("categoryId")
     .notEmpty()
     .withMessage("Es requerida"),
+
   check("sectionId")
     .notEmpty()
-    .withMessage("Es requerida"),
+    .withMessage("Es requerida"), */
+
   check("price")
     .notEmpty()
     .withMessage("Es obligatorio")
@@ -23,15 +26,17 @@ module.exports = [
       gt: 1,
     })
     .withMessage("Debe ser positivo"),
-  check("description").isLength({
+    
+ /*  check("description").isLength({
     min: 20,
     max: 500,
   }).withMessage('Debe tener entre 20 y 500 caracteres'),
+
   body('image')
     .custom((value,{req}) => {
       if(req.files.image){
         return true
       }
       return false
-    }).withMessage('Debes subir una imagen principal')
+    }).withMessage('Debes subir una imagen principal') */
 ];

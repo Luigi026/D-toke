@@ -6,27 +6,33 @@
     <div class="container-product-content">
       <%- include('partials/header')%>
         <div class="container">
-          <h1 class="container-title">Ingresar un Producto</h1>
-          <form class="product-form" action="/products/addProduct" method="POST" enctype="multipart/form-data">
+          <form class="product-form shadow card" action="/products/addProduct" method="POST" enctype="multipart/form-data">
+            <h1 class="container-title card-title">Ingresar un Producto</h1>
             <div class="product-form-contentNamePrice">
               <div class="form-group">
                 <label class="form-group__label" for="name">Nombre del producto:</label>
-                <input class="form-group__input" type="text" id="name" name="name" />
+                <input class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" type="text" id="name" name="name" value="<%= locals.old && (old.name && old.name ) %>" />
+                <small class="text-danger ms-2">
+                  <%= locals.errors && (errors.name && errors.name.msg) %>
+                </small>
               </div>
               <div class="form-group">
                 <label class="form-group__label" for="price">Precio:</label>
-                <input class="form-group__input" type="number" id="price" name="price" step="0.01" />
+                <input class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" type="number" id="price" name="price" step="0.01" value="<%= locals.old && (old.price && old.price ) %>"/>
+                <small class="text-danger ms-2">
+                  <%= locals.errors && (errors.price && errors.price.msg) %>
+                </small>
               </div>
             </div>
             <div class="product-form-contentNamePrice">
               <div class="form-group">
-                <label class="form-group__label" for="image">Imagen:</label>
-                <input class="form-group__input" type="file" id="image" name="image" />
+                <label class="form-group__label" for="image">Subir imagenes:</label>
+                <input class="form-group__input form-control form-control-sm" type="file" id="image" name="image" />
               </div>
 
               <div class="form-group">
                 <label class="form-group__label">Categoria:</label>
-                <select class="form-group__input" name="gender" id="gender" selected>
+                <select class="form-select" name="gender" id="gender" selected>
                   <option value="Nike">Nike</option>
                   <option value="Adidas">Adidas</option>
                   <option value="Puma">Puma</option>
@@ -37,18 +43,18 @@
             </div>
             <div class="form-group">
               <label class="form-group__label" for="description">Descripción:</label>
-              <textarea class="form-group__input" id="description" name="description"></textarea>
+              <textarea class="form-control" id="description" name="description" style="height: 100px;"></textarea>
             </div>
             <div class="form-group-checkbox">
               <label class="form-group__label" for="size">Talles:</label>
               <div class="content-checkbox">
-                <label><input type="checkbox" name="size" value="38" /> 38</label>
-                <label><input type="checkbox" name="size" value="39" /> 39</label>
-                <label><input type="checkbox" name="size" value="40" /> 40</label>
+                <label class="form-check-label"><input class="form-check-input" type="checkbox" name="size" value="38" /> 38</label>
+                <label class="form-check-label"><input class="form-check-input" type="checkbox" name="size" value="39" /> 39</label>
+                <label class="form-check-label"><input class="form-check-input" type="checkbox" name="size" value="40" /> 40</label>
               </div>
             </div>
 
-            <button class="form-button" type="submit">Guardar Producto</button>
+            <button class="form-button btn-purple" type="submit">Guardar Producto</button>
           </form>
         </div>
         <%- include('partials/footer')%>

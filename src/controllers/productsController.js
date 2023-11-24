@@ -1,5 +1,6 @@
 const db = require("../database/models");
 const moment = require("moment");
+const {validationResult} = require('express-validator')
 
 const { readJSON, writeJSON } = require("../data");
 const { existsSync, unlinkSync } = require('fs');
@@ -106,8 +107,10 @@ module.exports = {
       });
   },
   store: (req, res) => {
+    const errors = validationResult(req)
     const { name, price, gender, description, size } = req.body;
 
+    if (errors.isEmpty()) {
     let category = null;
 
     if (gender == "Adidas") {
@@ -127,7 +130,7 @@ module.exports = {
       model: name,
       description: description,
       image: req.file.filename,
-      price: price,
+      price,
       category_id: category,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -142,6 +145,12 @@ module.exports = {
         console.error("Error creating product", error);
         return res.status(500).send("Error al crear el producto");
       });
+    } else {
+      return res.render("addProduct", {
+      errors: errors.mapped(),
+      old: req.body
+    });
+    }
   },
   remove: (req, res) => {
 
