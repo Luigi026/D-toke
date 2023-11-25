@@ -1,6 +1,7 @@
 const $ = (id) => document.getElementById(id);
+const urlBase = "https://apis.datos.gob.ar/georef/api";
 
-window.onload = function () {
+window.onload = async function (e) {
     /************************* NAME VALIDATIONS **************************/
 
     $("name").addEventListener("blur", function (e) {
@@ -57,9 +58,68 @@ window.onload = function () {
         this.classList.remove("is-invalid");
     });
 
+    $("birthday").addEventListener("blur", function (e) {
+        const birthDate = moment(this.value);
+        const currentDate = moment();
+        const minDate = moment().subtract(120, "years");
+
+        switch (true) {
+            case !this.value.trim():
+                $("msgError-birthday").innerHTML = "La fecha es obligatoria";
+                this.classList.add("is-invalid");
+                break;
+            case birthDate.isAfter(currentDate):
+                $("msgError-birthday").innerHTML = "Que sos, termitator??";
+                this.classList.add("is-invalid");
+                break;
+            case birthDate.isBefore(minDate):
+                $("msgError-birthday").innerHTML = "Tan viejo/a sos??";
+                this.classList.add("is-invalid");
+                break;
+            default:
+                $("msgError-birthday").innerHTML = null;
+                this.classList.remove("is-invalid");
+                this.classList.add("is-valid");
+                break;
+        }
+    });
+
+
+    try {
+        const response = await fetch(urlBase + "/provincias");
+        const result = await response.json();
+
+        result.provincias
+            .sort((a, b) => (a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0))
+            .forEach(({ nombre }) => {
+                $("province").innerHTML += `<option value="${nombre}">${nombre}</option>`;
+            });
+    } catch (error) {
+        console.error(error);
+    }
+
+
+    $('province').addEventListener('change', async function (e) {
+        try {
+            const response = await fetch(`${urlBase}/localidades?provincia=${this.value}&max=1000`);
+            const result = await response.json();
+
+            $("city").innerHTML = null;
+
+            result.localidades
+                .sort((a, b) => (a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0))
+                .forEach(({ nombre }) => {
+                    $("city").innerHTML += `<option value="${nombre}">${nombre}</option>`;
+                });
+
+        } catch (error) {
+            console.error(error);
+        }
+
+    })
     /************************* FORM VALIDATIONS **************************/
 
-    $("formProfile").addEventListener("submit", function (e) {
+    /* $("formProfile").addEventListener("submit", function (e) {
         e.preventDefault();
 
         const elementsForm = $("formProfile").elements;
@@ -67,12 +127,14 @@ window.onload = function () {
 
         for (let i = 0; i < elementsForm.length; i++) {
             if (
-                !elementsForm[i].value.trim() || elementsForm[i].classList.contains("is-invalid")) {
+                !elementsForm[i].value.trim() ||
+                elementsForm[i].classList.contains("is-invalid")
+            ) {
                 elementsForm[i].classList.add("is-invalid");
                 error = true;
             }
         }
 
         !error && this.submit();
-    });
+    }); */
 };

@@ -7,7 +7,20 @@ module.exports = [
         .notEmpty()
         .withMessage('El correo electronico es obligatorio')
         .isEmail()
-        .withMessage('Formato invalido'),
+        .withMessage('Formato invalido')
+        .custom((value, {req}) => {
+            return db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+            .then(user => {
+                if (!user) {
+                    return Promise.reject()
+                }
+            })
+            .catch(() => Promise.reject('Correo eletronico no registrado'))
+        }),
     body('password')
         .notEmpty()
         .withMessage('La contraseña es obligatoria')

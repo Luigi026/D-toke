@@ -3,6 +3,8 @@ const { hashSync } = require("bcryptjs");
 const { readJSON, writeJSON } = require("../data");
 const db = require("../database/models");
 let users = readJSON("users.json");
+const moment = require('moment');
+
 
 module.exports = {
   login: (req, res) => {
@@ -61,7 +63,6 @@ module.exports = {
         roles_id: 2,
       })
         .then((user) => {
-          console.log(user);
           db.Address.create({
             users_id: user.id,
           }).then(() => {
@@ -85,10 +86,14 @@ module.exports = {
     
     const sessionId = req.session.userLogin.id;
 
-    db.User.findByPk(sessionId)
+    db.User.findByPk(sessionId,{
+      include: ['address']
+    })
     .then(user => {
+      const birthday = new Date(user.birthday).toISOString()
       return res.render('profile',{
-        ...user.dataValues
+        ...user.dataValues,
+        birthday: birthday.split('T')[0]
       })
     })
     .catch(error => console.log(error))
@@ -101,11 +106,12 @@ module.exports = {
 
     if (errors.isEmpty()) {
 
-      const { name, surname } = req.body;
+      const { name, surname, birthday,address, city, province} = req.body;
       db.User.update(
         {
           name: name.trim(),
-          surname: surname.trim()
+          surname: surname.trim(),
+          birthday
         },
         {
           where: {
@@ -113,16 +119,30 @@ module.exports = {
           }
         }
       )
-      .then(response => {
-        console.log(response)
+      .then( async () => {
         req.session.userLogin.name = name;
         res.locals.userLogin.name = name;
 
         if(req.cookies.dtokeUser){
           res.cookie("dtokeUser", req.session.userLogin);
       }
+
+      await db.Address.update(
+        {
+            address: address.trim(),
+            city,
+            province,
+        },
+        {
+            where : {
+                users_id : req.session.userLogin.id
+            }
+        }
+    )
+
       return res.redirect('/')
       })
+      .catch(error => console.log(error))
 
       /* const usersModify = users.map((user) => {
         if (user.email === req.body.email) {

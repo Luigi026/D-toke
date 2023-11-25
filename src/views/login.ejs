@@ -57,7 +57,7 @@
                  <!-- ***** -- email -- *****  -->
                   <div class="logintableAndDesktop__input-item">
                     <label for="email">Ingresa tu correo electrónico</label>
-                    <input class="form-control <%= locals.errors && ((errors.email || errors.password) && 'is-invalid') %>" type="email" id="email" placeholder="Correo electrónico" name="email" value="<%= locals.old && (old.email && old.email ) %>"/>
+                    <input class="form-control <%= locals.errors && ((errors.email && errors.password) && 'is-invalid') %>" type="email" id="email" placeholder="Correo electrónico" name="email" value="<%= locals.old && (old.email && old.email ) %>"/>
                     <small class="text-danger ms-2 my-2" id="msgError-email"><%= locals.errors && (errors.email && errors.email.msg) %></small>
                   </div>
                   <!-- ***** -- contraseña -- *****  -->
