@@ -47,13 +47,13 @@
                       <div class="col-12 my-3">
                           <label for="province" class="form-label">Provincia</label>
                           <select type="text" class="form-select" id="province" name="province">
-                              <option value="" hidden>Seleccione...</option>
+                              <option value="<%= address.province && address.province %>" hidden><%= address.province ? address.province : "Seleccione..." %></option>
                           </select>
                       </div>
                       <div class="col-12">
                           <label for="city" class="form-label">Ciudad</label>
                           <select type="text" class="form-select" id="city" name="city">
-                              <option value="" hidden>Seleccione...</option>
+                              <option value="<%= address.city && address.city %>" hidden><%= address.city ? address.city : "Seleccione..." %></option>
                           </select>
                       </div>
                         <small class="text-danger ms-2 my-2"><%= locals.errors && (errors.name && errors.name.msg) %></small>
