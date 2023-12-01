@@ -61,6 +61,7 @@
             </div>
             <div class="home__header__nav__div2">
             <!-- search -->
+            <small class="text-danger ms-2" id="msgError-search"></small>
                 <form 
                 class="d-flex" 
                 role="search" 
@@ -69,16 +70,16 @@
                 id="formSearch">
                 
                     <input 
-                    class="form-control me-2" 
+                    class="form-control rounded-0 rounded-start" 
                     type="text" 
                     name="keywords"  
                     placeholder="Buscar zapatilla..."
                     aria-label="Search" 
                     id="keywords">
 
-                    <button class="btn btn-outline-success" type="submit" >
-                        <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    </button>
+                    <button class="btn rounded-0 rounded-end" type="submit" style="background-color: var(--colorBanner);">
+                        <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i></a>
+                    </button>   
                    
                 </form>
 
