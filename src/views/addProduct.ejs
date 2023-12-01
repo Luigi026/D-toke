@@ -6,20 +6,20 @@
     <div class="container-product-content">
       <%- include('partials/header')%>
         <div class="container">
-          <form class="product-form shadow card" action="/products/addProduct" method="POST" enctype="multipart/form-data">
+          <form class="product-form shadow card" action="/admin/addProduct" method="POST" enctype="multipart/form-data">
             <h1 class="container-title card-title">Ingresar un Producto</h1>
             <div class="product-form-contentNamePrice">
               <div class="form-group">
                 <label class="form-group__label" for="name">Nombre del producto:</label>
                 <input class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" type="text" id="name" name="name" value="<%= locals.old && (old.name && old.name ) %>" />
-                <small class="text-danger ms-2">
+                <small class="text-danger ms-2" id="msgError-name">
                   <%= locals.errors && (errors.name && errors.name.msg) %>
                 </small>
               </div>
               <div class="form-group">
                 <label class="form-group__label" for="price">Precio:</label>
                 <input class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" type="number" id="price" name="price" step="0.01" value="<%= locals.old && (old.price && old.price ) %>"/>
-                <small class="text-danger ms-2">
+                <small class="text-danger ms-2" id="msgError-price">
                   <%= locals.errors && (errors.price && errors.price.msg) %>
                 </small>
               </div>
@@ -43,7 +43,10 @@
             </div>
             <div class="form-group">
               <label class="form-group__label" for="description">Descripción:</label>
-              <textarea class="form-control" id="description" name="description" style="height: 100px;"></textarea>
+              <textarea class="form-control <%= locals.errors && (errors.description && 'is-invalid') %>" id="description" name="description" style="height: 100px;" value="<%= locals.old && (old.price && old.description ) %>"></textarea>
+              <small class="text-danger ms-2" id="msgError-description">
+                <%= locals.errors && (errors.description && errors.description.msg) %>
+              </small>
             </div>
             <div class="form-group-checkbox">
               <label class="form-group__label" for="size">Talles:</label>
@@ -69,6 +72,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"></script>
+      <script src="/js/addProdcuts.js"></script>
   </body>
 
 </html>

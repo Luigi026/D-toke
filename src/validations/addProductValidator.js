@@ -1,9 +1,10 @@
 const { check, body } = require("express-validator");
+const { unlinkSync, existsSync } = require("fs");
 
 module.exports = [
   check("name")
     .notEmpty()
-    .withMessage("Es obligatorio")
+    .withMessage("Debes ingresar el modelo")
     .bail()
     .isLength({
       min: 4,
@@ -21,17 +22,17 @@ module.exports = [
 
   check("price")
     .notEmpty()
-    .withMessage("Es obligatorio")
+    .withMessage("El precio es obligatorio")
     .isInt({
       gt: 1,
     })
     .withMessage("Debe ser positivo"),
     
- /*  check("description").isLength({
+   check("description").isLength({
     min: 20,
     max: 500,
   }).withMessage('Debe tener entre 20 y 500 caracteres'),
-
+/*
   body('image')
     .custom((value,{req}) => {
       if(req.files.image){

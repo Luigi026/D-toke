@@ -72,10 +72,16 @@ module.exports = {
 
   },
   update: (req, res) => {
+  
+    const errors = validationResult(req)
+  
     const id = req.params.id;
     const { model, price, gender, description } = req.body;
   
-    db.Product.findByPk(id)
+  
+    if (errors.isEmpty()) {
+    
+      db.Product.findByPk(id)
       .then((product) => {
         const previousImage = product.image; 
         const newImage = req.file ? req.file.filename : previousImage;
@@ -105,6 +111,31 @@ module.exports = {
           return res.status(500).send("Error en la actualización");
         });
       });
+    
+    } else {
+
+      const id = req.params.id
+
+      const product = db.Product.findByPk(id, {
+        include: {
+          all: true
+        }
+      })
+  
+      const categories = db.Category.findAll()
+  
+      Promise.all([product, categories])
+        .then(([product, categories]) => {
+          return res.render('editProduct', {
+            categories,
+            ...product?.dataValues,
+            errors: errors.mapped(),
+            old: req.body
+          })
+        })
+        .catch(error => console.log(error))
+  
+    }  
   },
   store: (req, res) => {
     const errors = validationResult(req)
