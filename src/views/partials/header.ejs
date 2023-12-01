@@ -60,12 +60,26 @@
 
             </div>
             <div class="home__header__nav__div2">
-                <form class="d-flex" role="search" action="/search" method="GET">
-                    <input class="form-control me-2" type="text" name="keywords" placeholder="Buscar zapatilla..."
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">
+            <!-- search -->
+                <form 
+                class="d-flex" 
+                role="search" 
+                action="/search" 
+                method="GET" 
+                id="formSearch">
+                
+                    <input 
+                    class="form-control me-2" 
+                    type="text" 
+                    name="keywords"  
+                    placeholder="Buscar zapatilla..."
+                    aria-label="Search" 
+                    id="keywords">
+
+                    <button class="btn btn-outline-success" type="submit" >
                         <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </button>
+                   
                 </form>
 
                 <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>

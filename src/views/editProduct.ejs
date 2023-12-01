@@ -24,7 +24,7 @@
     <div class="editProduct__container-product-content">
       <%- include('partials/header')%>
       <div class="container">
-        <form class="product-form shadow card" action="/admin/editProduct/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="product-form shadow card" action="/admin/editProduct/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formEdit">
           <h1 class="container-title card-title">Editar producto </h1>
           <div class="product-form-contentNamePrice">
             <div class="form-group">
@@ -81,8 +81,13 @@
             </div>
           </div>
 
+            <h3 class="text-danger text-center" id="msgError-empty"></h3>
+
+
+
           <button class="form-button btn-purple" type="submit">Guardar Producto</button>
         </form>
+
       </div>
         <%- include('partials/footer')%>
     </div>

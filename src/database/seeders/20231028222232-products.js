@@ -7,7 +7,7 @@ module.exports = {
     await queryInterface.bulkInsert('Products', [
     {
       model: "Superstar",
-      description: "Zapatillas clásicas con el icónico diseño de las tres rayas.",
+      description: "Zapatillas Adidas clásicas con el icónico diseño de las tres rayas.",
       image: "Adidas_Superstar.jpeg",
       category_id: 2,
       price: 59000,
@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       model: "Cali",
-      description: "Zapatillas con estilo vintage y suela gruesa.",
+      description: "Zapatillas Puma con estilo vintage y suela gruesa.",
       image: "Puma_Cali.webp",
       category_id: 3,
       price: 39000,
@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       model: "Air Zoom",
-      description: "Zapatillas ligeras con tecnología Air Zoom para una mayor respuesta en la pisada.",
+      description: "Zapatillas Nike ligeras con tecnología Air Zoom para una mayor respuesta en la pisada.",
       image: "Nike_Air-Zoom.jpg",
       category_id: 1,
       price: 69000,
@@ -34,7 +34,7 @@ module.exports = {
     },
     {
       model: "Classic Leather",
-      description: "Zapatillas de cuero clásicas con diseño retro.",
+      description: "Zapatillas Reebok de cuero clásicas con diseño retro.",
       image: "Reebok_Classic-Leather.jpg",
       category_id: 4,
       price: 59000,
@@ -43,7 +43,7 @@ module.exports = {
     },
     {
       model: "Air Max 97",
-      description: "Zapatillas deportivas con tecnología de amortiguación Air Max.",
+      description: "Zapatillas Nike deportivas con tecnología de amortiguación Air Max.",
       image: "Nike_AirMax_97.jpg",
       category_id: 1,
       price: 70000,
@@ -52,7 +52,7 @@ module.exports = {
     },
     {
       model: "React Infinity Run",
-      description: "Zapatillas de running con amortiguación React para una experiencia suave.",
+      description: "Zapatillas Nike de running con amortiguación React para una experiencia suave.",
       image: "Nike_React-Infinity-Run.jpeg",
       category_id: 1,
       price: 72000,
@@ -61,7 +61,7 @@ module.exports = {
     },
     {
       model: "Joyride Run",
-      description: "Zapatillas con sistema de amortiguación Joyride para una pisada suave y cómoda.",
+      description: "Zapatillas Nike con sistema de amortiguación Joyride para una pisada suave y cómoda.",
       image: "Nike_Joyride-Run.png",
       category_id: 1,
       price: 72000,
@@ -70,7 +70,7 @@ module.exports = {
     },
     {
       model: "Ultraboost",
-      description: "Zapatillas de running con tecnología Ultraboost para mayor comodidad y retorno de energía.",
+      description: "Zapatillas Adidas de running con tecnología Ultraboost para mayor comodidad y retorno de energía.",
       image: "Adidas_Ultraboost.jpg",
       category_id: 2,
       price: 68000,
@@ -79,7 +79,7 @@ module.exports = {
     },
     {
       model: "Stan Smith",
-      description: "Zapatillas de estilo retro con diseño icónico y suela de goma.",
+      description: "Zapatillas Adidas de estilo retro con diseño icónico y suela de goma.",
       image: "Adidas_Stan-Smith.webp",
       category_id: 2,
       price: 66000,
@@ -88,7 +88,7 @@ module.exports = {
     },
     {
       model: "Gazelle",
-      description: "Zapatillas clásicas de ante con detalles en contraste.",
+      description: "Zapatillas Adidas clásicas de ante con detalles en contraste.",
       image: "Adidas_Gazelle.jpg",
       category_id: 2,
       price: 75000,
@@ -97,7 +97,7 @@ module.exports = {
     },
     {
       model: "Nano X",
-      description: "Zapatillas de entrenamiento versátiles y resistentes para cualquier actividad.",
+      description: "Zapatillas Reebok de entrenamiento versátiles y resistentes para cualquier actividad.",
       image: "Reebok_Nano-X.jpg",
       category_id: 4,
       price: 71000,
@@ -106,7 +106,7 @@ module.exports = {
     },
     {
       model: "Club C",
-      description: "Zapatillas de estilo clásico con diseño limpio y detalles en contraste.",
+      description: "Zapatillas Reebok de estilo clásico con diseño limpio y detalles en contraste.",
       image: "Reebok_Club-C.jpg",
       category_id: 4,
       price: 68000,
@@ -115,7 +115,7 @@ module.exports = {
     },
     {
       model: "Flexagon",
-      description: "Zapatillas versátiles ideales para entrenamiento con un diseño ligero y cómodo.",
+      description: "Zapatillas Reebok versátiles ideales para entrenamiento con un diseño ligero y cómodo.",
       image: "Reebok_Flexagon.jpg",
       category_id: 4,
       price: 76000,
@@ -124,7 +124,7 @@ module.exports = {
     },
     {
       model: "RS-X",
-      description: "Zapatillas de estilo retro con tecnología de amortiguación RS.",
+      description: "Zapatillas Puma de estilo retro con tecnología de amortiguación RS.",
       image: "Puma_RS-X.webp",
       category_id: 3,
       price: 71000,
@@ -133,7 +133,7 @@ module.exports = {
     },
     {
       model: "Future Rider",
-      description: "Zapatillas inspiradas en los estilos de los años 80 con un toque moderno.",
+      description: "Zapatillas Puma inspiradas en los estilos de los años 80 con un toque moderno.",
       image: "Puma_Future-Rider.webp",
       category_id: 3,
       price: 70000,
@@ -142,7 +142,7 @@ module.exports = {
     },
     {
       model: "RS-2K",
-      description: "Zapatillas con diseño futurista y detalles audaces.",
+      description: "Zapatillas Puma con diseño futurista y detalles audaces.",
       image: "Puma_RS-2K.jpg",
       category_id: 3,
       price: 74000,

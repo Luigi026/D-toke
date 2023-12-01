@@ -76,3 +76,18 @@ window.onload = function () {
     this.classList.remove("is-invalid");
   });
 };
+    /************************* FORM VALIDATIONS **************************/
+
+  //   $("formEdit").addEventListener("submit", function (e) {
+  //     e.preventDefault();
+  //     const elementsForm = $("formEdit").elements;
+  //     let error = false;
+  //     for (let i = 0; i < elementsForm.length - 1; i++) {
+  //         if (!elementsForm[i].value.trim() || elementsForm[i].classList.contains('is-invalid')) {
+  //             elementsForm[i].classList.add("is-invalid");
+  //             $('msgError-empty').innerHTML = "Hay errores en la carga de datos"
+  //             error = true;
+  //         }
+  //     }
+  //     !error && this.submit();
+  // });

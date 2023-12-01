@@ -3,7 +3,7 @@ const { check, body } = require("express-validator");
 module.exports = [
   check("name")
     .notEmpty()
-    .withMessage("Es obligatorio")
+    .withMessage("Debes ingresar el modelo")
     .bail()
     .isLength({
       min: 4,
@@ -21,7 +21,7 @@ module.exports = [
 
   check("price")
     .notEmpty()
-    .withMessage("Es obligatorio")
+    .withMessage("Debes ingresar el precio")
     .isInt({
       gt: 1,
     })

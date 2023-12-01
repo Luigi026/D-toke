@@ -6,7 +6,8 @@
     <div class="container-product-content">
       <%- include('partials/header')%>
         <div class="container">
-          <form class="product-form shadow card" action="/admin/addProduct" method="POST" enctype="multipart/form-data">
+          <form class="product-form shadow card" action="/admin/addProduct" method="POST" enctype="multipart/form-data" id="formAdd">
+          
             <h1 class="container-title card-title">Ingresar un Producto</h1>
             <div class="product-form-contentNamePrice">
               <div class="form-group">
@@ -48,6 +49,7 @@
                 <%= locals.errors && (errors.description && errors.description.msg) %>
               </small>
             </div>
+
             <div class="form-group-checkbox">
               <label class="form-group__label" for="size">Talles:</label>
               <div class="content-checkbox">
@@ -56,6 +58,8 @@
                 <label class="form-check-label"><input class="form-check-input" type="checkbox" name="size" value="40" /> 40</label>
               </div>
             </div>
+            
+
 
             <button class="form-button btn-purple" type="submit">Guardar Producto</button>
           </form>
