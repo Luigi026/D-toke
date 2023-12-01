@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <%- include('partials/head', {title: 'Register'}) %>
+<%- include('partials/head', {title: 'Register' }) %>
 
   <body class="body__register">
     <div class="register">
       <header class="register__header">
         <span class="register__header-back">
-          <a href="/"><img src="/images/back.png"/></a>
+          <a href="/"><img src="/images/back.png" /></a>
         </span>
         <span class="register__header-logo rotate-in-center">
           <a href="/"><img src="/images/logoIsra.png" alt="" /></a>
@@ -17,28 +16,36 @@
       <form action="" method="POST">
         <div class="register__input">
           <div class="register__input-item">
-            <input type="text" placeholder="Nombre de usuario" name="name"/>
+            <input type="text" placeholder="Nombre de usuario" name="name" />
             <% if (errors.name) { %>
-              <div class="text-danger"><%= errors.name.msg %></div>
-            <% } %>
+              <div class="text-danger">
+                <%= errors.name.msg %>
+              </div>
+              <% } %>
           </div>
           <div class="register__input-item">
-            <input type="text" placeholder="Email" name="email"/>
+            <input type="text" placeholder="Email" name="email" />
             <% if (errors.email) { %>
-              <div class="text-danger"><%= errors.email.msg %></div>
-            <% } %>
+              <div class="text-danger">
+                <%= errors.email.msg %>
+              </div>
+              <% } %>
           </div>
           <div class="register__input-item">
-            <input type="password" placeholder="Contraseña" name="password"/>
+            <input type="password" placeholder="Contraseña" name="password" />
             <% if (errors.password) { %>
-              <div class="text-danger"><%= errors.password.msg %></div>
-            <% } %>
+              <div class="text-danger">
+                <%= errors.password.msg %>
+              </div>
+              <% } %>
           </div>
           <div class="register__input-item">
-            <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword"/>
+            <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword" />
             <% if (errors.confirmPassword) { %>
-              <div class="text-danger"><%= errors.confirmPassword.msg %></div>
-            <% } %>
+              <div class="text-danger">
+                <%= errors.confirmPassword.msg %>
+              </div>
+              <% } %>
           </div>
         </div>
         <div class="register__button">
@@ -69,70 +76,87 @@
     <div class="register__tableAndDesktop">
       <h2>Regístrate!</h2>
       <div class="register__tableAndDesktop-content">
-          <div class="register__tableAndDesktop-contain-1">
-            <form action="" method="POST">
-                <div class="registertableAndDesktop__input">
-                
-                 <!-- ***** -- nombre -- *****  -->
-                  <div class="registertableAndDesktop__input-item">
-                    <label for="">Nombre</label>
-                    <input type="text" placeholder="Nombre" name="name" value="<%= locals.old && (old.name && old.name ) %>"/>
-                    <% if (errors.name) { %>
-                      <div class="text-danger"><%= errors.name.msg %></div>
-                    <% } %>
+        <div class="register__tableAndDesktop-contain-1">
+          <form action="" method="POST" id="formRegister">
+            <div class="registertableAndDesktop__input">
+              <!-- ***** -- nombre -- *****  -->
+              <div class="registertableAndDesktop__input-item">
+                <label for="name">Nombre</label>
+                <input type="text" placeholder="Nombre" id="name" name="name"
+                  value="<%= locals.old && (old.name && old.name ) %>" class="form-control" />
+                <% if (errors.name) { %>
+                  <div class="text-danger">
+                    <%= errors.name.msg %>
                   </div>
-                  
-                   <!-- ***** -- apellido -- *****  -->
-                   <div class="registertableAndDesktop__input-item">
-                    <label for="">Apellido</label>
-                    <input type="text" placeholder="Apellido" name="surname" value="<%= locals.old && (old.surname && old.surname ) %>"/>
-                    <% if (errors.surname) { %>
-                      <div class="text-danger"><%= errors.surname.msg %></div>
-                    <% } %>
+                  <% } %>
+                    <small class="text-danger ms-2" id="msgError-name"></small>
+              </div>
+              <!-- ***** -- apellido -- *****  -->
+              <div class="registertableAndDesktop__input-item">
+                <label for="surname">Apellido</label>
+                <input type="text" placeholder="Apellido" name="surname"
+                  value="<%= locals.old && (old.surname && old.surname ) %>" id="surname" class="form-control" />
+                <% if (errors.surname) { %>
+                  <div class="text-danger">
+                    <%= errors.surname.msg %>
                   </div>
-                  
-                   <!-- ***** -- email -- *****  -->
-                  <div class="registertableAndDesktop__input-item">
-                      <label for="">Correo electrónico</label>
-                      <input type="text" placeholder="Email" name="email"/>
-                      <% if (errors.email) { %>
-                        <div class="text-danger"><%= errors.email.msg %></div>
-                      <% } %>
-                  </div>
-                  
-                   <!-- ***** -- contraseña -- *****  -->
-                  <div class="registertableAndDesktop__input-item">
-                    <label for="">Contraseña</label>
-                    <input type="password" placeholder="Contraseña" name="password"/>
-                    <% if (errors.password) { %>
-                      <div class="text-danger"><%= errors.password.msg %></div>
-                    <% } %>
-                  </div>
-                  
-                   <!-- ***** -- confirmar contraseña -- *****  -->
-                  <div class="registertableAndDesktop__input-item">
-                    <label for="">Confirmación de contraseña</label>
-                    <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword"/>
-                    <% if (errors.confirmPassword) { %>
-                      <div class="text-danger"><%= errors.confirmPassword.msg %></div>
-                    <% } %>
-                  </div>
-                </div>
-                <div class="registertabletAndDesktop__sesion">
-                    <h3>¿Ya tienes una cuenta?</h3>
-                    <a href="/users/login"> Inicia sesión</a>
-                  </div>
-                <div class="registertableAndDesktop__button">
-                  <button type="submit">Registrese</button>
-                </div>
-              </form>
-          </div>
-          <div class="register__tableAndDesktop-contain-2">
-            <img  class="imageRegister" src="/images/imageRegister.png"/>
-            <img class="logoRegister" src="/images/logoRegister.png"/>
-          </div>
+                  <% } %>
+                    <small class="text-danger ms-2" id="msgError-surname"></small>
+              </div>
 
+              <!-- ***** -- email -- *****  -->
+              <div class="registertableAndDesktop__input-item">
+                <label for="email">Correo electrónico</label>
+                <input type="text" placeholder="Email" name="email" id="email" class="form-control" />
+                <% if (errors.email) { %>
+                  <div class="text-danger">
+                    <%= errors.email.msg %>
+                  </div>
+                  <% } %>
+                    <small class="text-danger ms-2" id="msgError-email"></small>
+              </div>
+
+              <!-- ***** -- contraseña -- *****  -->
+              <div class="registertableAndDesktop__input-item">
+                <label for="password">Contraseña</label>
+                <input type="password" placeholder="Contraseña" name="password" id="password" class="form-control" />
+                <% if (errors.password) { %>
+                  <div class="text-danger">
+                    <%= errors.password.msg %>
+                  </div>
+                  <% } %>
+                    <small class="text-danger ms-2" id="msgError-password"></small>
+              </div>
+
+              <!-- ***** -- confirmar contraseña -- *****  -->
+              <div class="registertableAndDesktop__input-item">
+                <label for="password2">Confirmación de contraseña</label>
+                <input type="password" placeholder="Confirmar Contraseña" name="confirmPassword" id="password2"
+                  class="form-control" />
+                <% if (errors.confirmPassword) { %>
+                  <div class="text-danger">
+                    <%= errors.confirmPassword.msg %>
+                  </div>
+                  <% } %>
+                    <small class="text-danger ms-2" id="msgError-password2"></small>
+              </div>
+            </div>
+            <div class="registertabletAndDesktop__sesion">
+              <h3>¿Ya tienes una cuenta?</h3>
+              <a href="/users/login"> Inicia sesión</a>
+            </div>
+            <div class="registertableAndDesktop__button">
+              <button type="submit">Registrese</button>
+            </div>
+          </form>
+        </div>
+        <div class="register__tableAndDesktop-contain-2">
+          <img class="imageRegister" src="/images/imageRegister.png" />
+          <img class="logoRegister" src="/images/logoRegister.png" />
+        </div>
       </div>
     </div>
+    <script src="/js/register.js"></script>
   </body>
+
 </html>
