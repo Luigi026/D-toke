@@ -54,7 +54,7 @@
             <div class="form-group">
             <!-- brand -->
               <label class="form-group__label">Categoria:</label>
-              <select class="form-select" name="gender" id="gender" selected>
+              <select class="form-select" name="brand" id="gender" selected>
                 <% categories.forEach(category=> { %>
                   <option value="<%= category.id %>" <%=category_id==category.id && 'selected' %>>
                     <%= category.brand %>

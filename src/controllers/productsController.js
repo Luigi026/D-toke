@@ -75,24 +75,28 @@ module.exports = {
   
     const errors = validationResult(req)
   
-    const id = req.params.id;
-    const { model, price, gender, description } = req.body;
-  
-  
     if (errors.isEmpty()) {
+    
+    const id = req.params.id;
+    const { name, price, brand, description } = req.body;
     
       db.Product.findByPk(id)
       .then((product) => {
         const previousImage = product.image; 
         const newImage = req.file ? req.file.filename : previousImage;
-  
+
         return db.Product.update(
           {
-            model: model,
+          
+            model: name,
             price,
-            gender,
+            category_id: brand,
             image: newImage,
             description: description.trim(),
+          
+            createdAt: new Date(),
+            updatedAt: new Date(),
+            
           },
           {
             where: {
