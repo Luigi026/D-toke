@@ -13,44 +13,24 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 module.exports = {
   index: (req, res) => {
-    const productsNike = db.Product.findAll({
-      include : ['category'],
-      where: {
-        category_id: 1,
-      },
+    const categories = db.Category.findAll({
+      include : [
+        {
+          association : 'products',
+          include : ['category'],
+        }
+      ]
     });
 
-    const productsAdidas = db.Product.findAll({
-      include : ['category'],
-      where: {
-        category_id: 2,
-      },
-    });
-    
-    const productsPuma = db.Product.findAll({
-      include : ['category'],
-      where: {
-        category_id: 3,
-      },
-    });
-    
-    const productsReebok = db.Product.findAll({
-      include : ['category'],
-      where: {
-        category_id: 4,
-      },
-    });
+   
     const productsList = db.Product.findAll({
       include : ['category'],
     });
 
-    Promise.all([productsNike, productsAdidas, productsPuma, productsReebok, productsList])
-      .then(([productsNike, productsAdidas, productsPuma, productsReebok, productsList]) => {
+    Promise.all([productsList, categories])
+      .then(([productsList, categories]) => {
         return res.render('index', {
-          productsNike,
-          productsAdidas,
-          productsPuma,
-          productsReebok,
+          categories,
           productsList,
           toThousand,
         })

@@ -65,31 +65,15 @@
                 </div>
                 <div class="home__main__section__desktopage-marcas-box">
                     <div class="home__main__section__desktopage-marcasContainer">
-                        <div class="home__main__section__desktopage-marcas-img1">
-                            <a href="#adidas">
-                                <img src="/img/home-main/Marca-transparente-.png" alt="">
-                            </a>
-                        </div>
-                        <div class="home__main__section__desktopage-marcas-img2">
-                            <a href="#nike">
-                                <img src="/img/home-main/Marca-transparente-.png" alt="">
-                            </a>
-                        </div>
-                        <div class="home__main__section__desktopage-marcas-img3">
-                            <a href="#puma">
-                                <img src="/img/home-main/Marca-transparente-.png" alt="">
-                            </a>
-                        </div>
-                        <div class="home__main__section__desktopage-marcas-img4">
-                            <a href="#fila">
-                                <img src="/img/home-main/Marca-transparente-.png" alt="">
-                            </a>
-                        </div>
-                        <div class="home__main__section__desktopage-marcas-img5">
-                            <a href="#reebok">
-                                <img src="/img/home-main/Marca-transparente-.png" alt="">
-                            </a>
-                        </div>
+                        <% categories.forEach(category => { %>
+                            <div class="home__main__section__desktopage-marcas-img1">
+                                <a href="#adidas">
+                                    <img src="/img/home-main/<%= category.image %>" alt="">
+                                </a>
+                            </div>
+                        <% }) %>
+                      
+                       
                     </div>
                 </div>
 
@@ -139,42 +123,20 @@
                 </div>
                 
                 
+                <% categories.forEach(category => { %>
+                    <h3 id="<%= category.brand %>" class="text-center text-uppercase fs-3 text-black mt-3"><%= category.brand.toUpperCase() %></h3>
+                    <section class="home__main__section-cards">
+                        <div class="home__main__section__cards-container-desktop">
+                            <% category.products.forEach(product=> { %>
+                                <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
+                                    <% }) %>
+                        </div>
+                    </section>
+                <% }) %>
 
 
 
-                <h3 id="nike" class="text-center text-uppercase fs-3 text-black mt-3">NIKE</h3>
-                <section class="home__main__section-cards">
-                    <div class="home__main__section__cards-container-desktop">
-                        <% productsNike.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
-                                <% }) %>
-                    </div>
-                </section>
-                <h3 id="adidas" class="text-center text-uppercase fs-3 text-black mt-3">ADIDAS</h3>
-                <section class="home__main__section-cards">
-                    <div class="home__main__section__cards-container-desktop">
-                        <% productsAdidas.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
-                                <% }) %>
-                    </div>
-                </section>
-                <h3 id="reebok" class="text-center text-uppercase fs-3 text-black mt-3">REEBOK</h3>
-                <section class="home__main__section-cards">
-                    <div class="home__main__section__cards-container-desktop">
-                        <% productsReebok.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
-                                <% }) %>
-                    </div>
-                </section>
-                <h3 id="puma" class="text-center text-uppercase fs-3 text-black mt-3">PUMA</h3>
-                <section class="home__main__section-cards">
-                    <div class="home__main__section__cards-container-desktop">
-                        <% productsPuma.forEach(product=> { %>
-                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
-                                <% }) %>
-                    </div>
-
-                </section>
+            
                 <div class="home__main__section__bottomBanner">
                     <div class="home__main__section__bottomBanner-box1">
                         <img src="/img/home-main/desktopBottom1.jpg" alt="">
@@ -304,23 +266,17 @@
                 </section>
             </section>
             <section class="home__main__section-cards">
-                <div class="home__main__section__cards-container">
-                    <% productsNike.forEach(product=> { %>
-                        <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
-                            <% }) %>
-                </div>
-                <div class="home__main__section__cards-container tablet1">
-                    <% productsAdidas.forEach(product=> { %>
-                        <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
-                            <% }) %>
-                </div>
 
 
-                <div class="home__main__section__cards-container tablet2">
-                    <% productsReebok.forEach(product=> { %>
-                        <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
-                            <% }) %>
-                </div>
+                <% categories.forEach(category => { %>
+                    <h3 id="<%= category.brand %>" class="text-center text-uppercase fs-3 text-black mt-3"><%= category.brand.toUpperCase() %></h3>
+                    <div class="home__main__section__cards-container">
+                        <% category.products.forEach(product=> { %>
+                            <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
+                                <% }) %>
+                    </div>
+                <% }) %>
+
 
             </section>
 
