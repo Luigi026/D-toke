@@ -1,25 +1,35 @@
-'use strict';
+"use strict";
 
-const categoriasArray = ['Nike', 'Adidas', 'Puma','Reebok']
-const categoriasDB  = categoriasArray.map(categoria => {
+const categoriasArray = [
+  {
+    name: "Nike",
+    image: "Marca-2.png",
+  },
+  {
+    name: "Adidas",
+    image: "Marca-1.png",
+  },
+  {
+    name: "Puma",
+    image: "Marca-3.png",
+  },
+  { name: "Reebok", image: "Marca-5.png" },
+];
+const categoriasDB = categoriasArray.map((categoria) => {
   return {
-    brand : categoria,
-    createdAt : new Date,
-    updatedAt : new Date,
-  }
-})
+    brand: categoria.name,
+    image : categoria.image,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
+});
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
-  
-     await queryInterface.bulkInsert('Categories',categoriasDB,
-     {}
-  );
-    
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert("Categories", categoriasDB, {});
   },
 
-  async down (queryInterface, Sequelize) {
-
-     await queryInterface.bulkDelete('Categories', null, {});
-  }
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete("Categories", null, {});
+  },
 };
