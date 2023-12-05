@@ -18,7 +18,7 @@ const categoriasArray = [
 const categoriasDB = categoriasArray.map((categoria) => {
   return {
     brand: categoria.name,
-    image : categoria.image,
+    image: categoria.image,
     createdAt: new Date(),
     updatedAt: new Date(),
   };

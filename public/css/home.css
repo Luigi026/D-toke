@@ -308,7 +308,7 @@ article.tablet2 {
     height: 34px;
     justify-content: center;
     align-items: center;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
   .buy-container-violeta a {
     color: #ffffff;
@@ -361,7 +361,7 @@ article.tablet2 {
   /* .tablet1 {
     display: block; 
   } */
-  
+
   .home__main__section__cards-product {
     display: flex;
     width: 30%;
@@ -526,9 +526,8 @@ article.tablet2 {
   .desktopage__carouselBox__title p:hover {
     font-weight: 400;
     font-size: 2rem;
-
   }
-  
+
   .desktopage__carouselBox__title__container {
     display: flex;
     width: 100%;
@@ -575,12 +574,10 @@ article.tablet2 {
     transition: all 0.5s;
   }
   .buy-container-violeta a:hover {
-
     font-size: 1.5rem;
-
   }
   .home__main__carousel-img1 {
-    background-image: url('/img/home-main/Carousel-desktopIMG-1.png');
+    background-image: url("/img/home-main/Carousel-desktopIMG-1.png");
     height: 602px;
     width: 100vw;
     background-size: contain;
@@ -589,16 +586,16 @@ article.tablet2 {
     background-color: rgb(201, 5, 27);
   }
   .home__main__carousel-img2 {
-    background-image: url('/img/home-main/Carousel-desktopIMG-2.png');
+    background-image: url("/img/home-main/Carousel-desktopIMG-2.png");
     height: 602px;
     width: 100vw;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50%;
-    background-color:#079c39;
+    background-color: #079c39;
   }
   .home__main__carousel-img3 {
-    background-image: url('/img/home-main/Carousel-desktopIMG-3.png');
+    background-image: url("/img/home-main/Carousel-desktopIMG-3.png");
     height: 602px;
     width: 100vw;
     background-size: contain;
@@ -606,76 +603,28 @@ article.tablet2 {
     background-position: 50%;
     background-color: #01aed9;
   }
-  
+
   .home__main__section__desktopage-marcas-box {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .home__main__section__desktopage-marcasContainer {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
-  .home__main__section__desktopage-marcas-img1 {
-    background-image: url("/img/home-main/Marca-1.png");
-    background-size: 116px 110px;
-    background-repeat: no-repeat;
-    background-position: 39px 0px;
-    width: 164px;
-    height: 125.5px;
+  .home__main__section__desktopage-marcas-img {
     margin: 10px;
+    display: flex;
+    /* align-content: center; */
+    flex-direction: row;
   }
-  .home__main__section__desktopage-marcas-img1 img {
-    width: 100%;
-  }
-  .home__main__section__desktopage-marcas-img2 img {
-    width: 100%;
-  }
-  .home__main__section__desktopage-marcas-img3 img {
-    width: 100%;
-  }
-  .home__main__section__desktopage-marcas-img4 img {
-    width: 100%;
-  }
-  .home__main__section__desktopage-marcas-img5 img {
-    width: 100%;
-  }
-  .home__main__section__desktopage-marcas-img2 {
-    background-image: url("/img/home-main/Marca-2.png");
-    background-size: 166px 108px;
-    background-repeat: no-repeat;
-    background-position: 7px 6px;
-    width: 164px;
-    height: 125.5px;
-    margin: 10px;
-  }
-  .home__main__section__desktopage-marcas-img3 {
-    background-image: url("/img/home-main/Marca-3.png");
-    background-size: 146px 110px;
-    background-repeat: no-repeat;
-    background-position: 14px 0px;
-    width: 164px;
-    height: 125.5px;
-    margin: 10px;
-  }
-  .home__main__section__desktopage-marcas-img4 {
-    background-image: url("/img/home-main/Marca-4.png");
-    background-size: 146px 110px;
-    background-repeat: no-repeat;
-    background-position: 10px 0px;
-    width: 164px;
-    height: 125.5px;
-    margin: 10px;
-  }
-  .home__main__section__desktopage-marcas-img5 {
-    background-image: url("/img/home-main/Marca-5.png");
-    background-size: 146px 110px;
-    background-repeat: no-repeat;
-    background-position: 10px 7px;
-    width: 164px;
-    height: 125.5px;
-    margin: 10px;
+  .home__main__section__desktopage-marcas-img img {
+    width: 153px;
+    padding: 15px;
   }
   .home__main__section__desktop__mnh-box {
     display: flex;
@@ -762,7 +711,7 @@ article.tablet2 {
     height: 74px;
     align-items: center;
     justify-content: center;
-    overflow: hidden; 
+    overflow: hidden;
   }
   .home__main__special-offers-button a {
     color: #ffffff;
@@ -779,7 +728,7 @@ article.tablet2 {
     0% {
       transform: translateX(-200%);
     }
-    100%{
+    100% {
       transform: translateX(175%);
     }
   }
@@ -801,11 +750,11 @@ article.tablet2 {
   .home__main__section__cards-product {
     display: flex;
     width: 270px;
-   /*  border: solid 1px;
+    /*  border: solid 1px;
     border-radius: 5px; */
     position: relative;
     /*  */
- /*    width: 190px; */
+    /*    width: 190px; */
     height: 334px;
     background: #dcdbdb;
     border-radius: 10px;

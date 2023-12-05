@@ -55,19 +55,12 @@
                         </div>
                     </div>
                 </div>
-                <div hidden class="Index__Video-container">
-                    <div class="Index__Video-container__box">
-                        <video autoplay muted loop>
-                            <source src="/videos/Nike_AIR-MAX-97.mp4" type="video/mp4" alt="banner en movimineto">
-                        </video>
-                    </div>
-                </div>
                 </div>
                 <div class="home__main__section__desktopage-marcas-box">
                     <div class="home__main__section__desktopage-marcasContainer">
                         <% categories.forEach(category => { %>
-                            <div class="home__main__section__desktopage-marcas-img1">
-                                <a href="#adidas">
+                            <div class="home__main__section__desktopage-marcas-img">
+                                <a href="#<%= category.image %>">
                                     <img src="/img/home-main/<%= category.image %>" alt="">
                                 </a>
                             </div>
