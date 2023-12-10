@@ -1,4 +1,4 @@
-<article class="home__main__section__cards-product">
+<article class="home__main__section__cards-product shadow">
     <div class="home__main__section__cards-img">
         <a href="/products/detail/<%= id %>">
             <img src="/images/products/<%= image || 'image-default.png'%>" alt="imagen de producto cualquiera">
@@ -13,7 +13,7 @@
            <%= model %>
         </h5>
         <p class="home__main__section__cards-price">
-            $<%= price %>
+            $<%= toThousand(price) %>
         </p>
     </div>
 </article>

@@ -97,18 +97,25 @@
         <main class="home__main">
 
             <!-- DESKTOP VIEW -->
-            <section class="home__main__section__desktopage onlyFor_desktop">
+            <section class="home__main__section__desktopage onlyFor_desktop" data-aos="fade-up">
 
-                <form class="d-flex justify-content-start onlyFor_desktop" role="search" action="/search" method="GET">
-                    <input class="form-control me-2" type="text" name="keywords" placeholder="Buscar zapatilla..."
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><a href=""><i
-                                class="fa-solid fa-magnifying-glass"></i></a></button>
+                <form class="d-flex justify-content-start onlyFor_desktop" role="search" action="/search" method="GET" id="formSearch">
+                    <input 
+                    class="form-control rounded-0 rounded-start" 
+                    type="text" 
+                    name="keywords"  
+                    placeholder="Buscar zapatilla..."
+                    aria-label="Search" 
+                    id="keywords">
+
+                    <button class="btn rounded-0 rounded-end" type="submit" style="background-color: var(--colorBanner);">
+                        <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i></a>
+                    </button>   
                 </form>
 
 
                 <section class="home__main__section-cards">
-                    <div class="home__main__section__cards-container-desktop">
+                    <div class="products__section__cards-container-desktop">
                         <% productsList.forEach(product=> { %>
                             <%- include('partials/productsListCards',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
@@ -118,13 +125,20 @@
             </section>
             <!-- ******************* tablet section *********************** -->
 
-            <section class="productsList__section-cards onlyFor_desktop">
-                <form class="d-flex justify-content-start productsList__buscador" role="search" action="/search"
+            <section class="productsList__section-cards onlyFor_desktop" data-aos="fade-up">
+                <form id="formSearch" class="d-flex justify-content-start productsList__buscador" role="search" action="/search"
                     method="GET">
-                    <input class="form-control me-2" type="text" name="keywords" placeholder="Buscar zapatilla..."
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><a href=""><i
-                                class="fa-solid fa-magnifying-glass"></i></a></button>
+                    <input 
+                    class="form-control rounded-0 rounded-start" 
+                    type="text" 
+                    name="keywords"  
+                    placeholder="Buscar zapatilla..."
+                    aria-label="Search" 
+                    id="keywords">
+
+                    <button class="btn rounded-0 rounded-end" type="submit" style="background-color: var(--colorBanner);">
+                        <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i></a>
+                    </button>   
                 </form>
                 <div class="productsList__section__cards-container">
                     <% productsList.forEach(product=> { %>
@@ -146,6 +160,7 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
                 crossorigin="anonymous"></script>
+                <script src="/js/result.js"></script>
 
     </body>
 

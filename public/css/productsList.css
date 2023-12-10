@@ -15,8 +15,16 @@
     justify-content: space-between;
     align-items: center;
   }
-@media (min-width:481px) {
-
+@media (min-width:320px) {
+  .productsList__section__cards-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
 }
 
 @media (min-width:769px) {
@@ -31,10 +39,12 @@
         align-items: stretch;
       }
       .productsList__section__cards-container {
+        width: 90%;
+        margin: 0 auto;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        gap: 1rem;
         align-items: center;
       }
 }
@@ -48,5 +58,14 @@
       }
       .productsList__section__cards-container {
         display: none;
+      }
+
+      .products__section__cards-container-desktop {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
       }
 }

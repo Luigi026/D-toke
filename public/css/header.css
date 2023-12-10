@@ -58,7 +58,7 @@ home__header__nav--logo home__header__nav__div2 */
   position: absolute;
   z-index: 5;
   left: 0;
-  background-color: #b1acac;
+  background-color: var(--colorPopular);
   top: 0;
   display: flex;
   flex-direction: column;
@@ -73,7 +73,9 @@ home__header__nav--logo home__header__nav__div2 */
 
 .home__header__nav__div1 .nav-item {
   color: #000;
-  font-size: 20px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 /* este es el que se mostrara al 
@@ -291,6 +293,13 @@ hacer click en el button hamburguesa */
     display: flex;
     width: 15%;
     justify-content: center;
+  }
+
+  .home__header__nav__div1 .nav-item {
+    color: #000;
+    font-size: 1.2rem;
+    text-transform: none;
+    font-weight: 500;
   }
 
   .home__header__nav {

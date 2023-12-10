@@ -72,7 +72,7 @@
 
                 <div class="home__main__section__desktop__mnh-box">
                     <div class="home__main__section__desktop__mnh-container">
-                        <div class="home__main__section__desktop__mnh-container-div1">
+                        <div class="home__main__section__desktop__mnh-container-div1" data-aos="fade-right">
                             <a href="#" class="home__main__section__desktop__mnh-container-link">
                                 <span class="home__main__section__desktop__mnh-container-txt1">
                                     Mujeres
@@ -83,7 +83,7 @@
                             </a>
 
                         </div>
-                        <div class="home__main__section__desktop__mnh-container-div2">
+                        <div class="home__main__section__desktop__mnh-container-div2" data-aos="fade-up">
                             <a href="#" class="home__main__section__desktop__mnh-container-link">
                                 <span class="home__main__section__desktop__mnh-container-txt1">
                                     Niños
@@ -93,7 +93,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="home__main__section__desktop__mnh-container-div3">
+                        <div class="home__main__section__desktop__mnh-container-div3" data-aos="fade-left">
                             <a href="#" class="home__main__section__desktop__mnh-container-link">
                                 <span class="home__main__section__desktop__mnh-container-txt1">
                                     Hombres
@@ -117,8 +117,8 @@
                 
                 
                 <% categories.forEach(category => { %>
-                    <h3 id="<%= category.brand %>" class="text-center text-uppercase fs-3 text-black mt-3"><%= category.brand.toUpperCase() %></h3>
-                    <section class="home__main__section-cards">
+                    <h3  data-aos="fade-up" id="<%= category.brand %>" class="text-center text-uppercase fs-3 text-black mt-3"><%= category.brand.toUpperCase() %></h3>
+                    <section class="home__main__section-cards"  data-aos="fade-up">
                         <div class="home__main__section__cards-container-desktop">
                             <% category.products.forEach(product=> { %>
                                 <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
@@ -131,7 +131,7 @@
 
             
                 <div class="home__main__section__bottomBanner">
-                    <div class="home__main__section__bottomBanner-box1">
+                    <div class="home__main__section__bottomBanner-box1" data-aos="fade-right">
                         <img src="/img/home-main/desktopBottom1.jpg" alt="">
                         <a href="#" class="home__main__section__bottomBanner-box1-container-link">
                             <span class="home__main__section__desktop__bottomBanner-container-txt">
@@ -146,14 +146,14 @@
                         </a>
                     </div>
                     <div class="home__main__section__bottomBanner-box2">
-                        <div class="home__main__section__bottomBanner-box2-img">
+                        <div class="home__main__section__bottomBanner-box2-img" data-aos="fade-down">
                             <img src="/img/home-main/desktopBottom2.jpg" alt="">
                         </div>
-                        <div class="home__main__section__bottomBanner-box2-img">
+                        <div class="home__main__section__bottomBanner-box2-img" data-aos="fade-up">
                             <img src="/img/home-main/desktopBottom3.jpg" alt="">
                         </div>
                     </div>
-                    <div class="home__main__section__bottomBanner-box3">
+                    <div class="home__main__section__bottomBanner-box3" data-aos="fade-left">
                         <img src="/img/home-main/desktopBottom4.jpg" alt="">
                     </div>
                 </div>
@@ -258,19 +258,16 @@
                     </div>
                 </section>
             </section>
-            <section class="home__main__section-cards">
-
-
+            
+            <section class="home__main__section-cards-tablet">
                 <% categories.forEach(category => { %>
-                    <h3 id="<%= category.brand %>" class="text-center text-uppercase fs-3 text-black mt-3"><%= category.brand.toUpperCase() %></h3>
-                    <div class="home__main__section__cards-container">
+                    <h3 data-aos="fade-up" id="<%= category.brand %>" class="text-center text-uppercase fs-3 text-black mt-3"><%= category.brand.toUpperCase() %></h3>
+                    <div class="home__main__section__cards-container" data-aos="fade-up">
                         <% category.products.forEach(product=> { %>
                             <%- include('partials/productCardHome',{ ...product.dataValues, toThousand }) %>
                                 <% }) %>
                     </div>
                 <% }) %>
-
-
             </section>
 
             <section class="home__main__section__bottom">
