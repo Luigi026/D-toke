@@ -60,7 +60,7 @@
                     <div class="home__main__section__desktopage-marcasContainer">
                         <% categories.forEach(category => { %>
                             <div class="home__main__section__desktopage-marcas-img">
-                                <a href="#<%= category.image %>">
+                                <a href="#<%= category.brand %>">
                                     <img src="/img/home-main/<%= category.image %>" alt="">
                                 </a>
                             </div>
@@ -117,7 +117,14 @@
                 
                 
                 <% categories.forEach(category => { %>
-                    <h3  data-aos="fade-up" id="<%= category.brand %>" class="text-center text-uppercase fs-3 text-black mt-3"><%= category.brand.toUpperCase() %></h3>
+                <div class="home__main__section__desktopage__container__marcas__images" data-aos="fade-up" id="<%= category.brand %>">
+                    <div class="home__main__section__desktopage-marcas__images">
+                        <a href="#<%= category.brand %>">
+                            <img src="/img/home-main/<%= category.image %>" alt="">
+                        </a>
+                    </div>
+               
+
                     <section class="home__main__section-cards"  data-aos="fade-up">
                         <div class="home__main__section__cards-container-desktop">
                             <% category.products.forEach(product=> { %>
@@ -125,6 +132,7 @@
                                     <% }) %>
                         </div>
                     </section>
+                </div>
                 <% }) %>
 
 

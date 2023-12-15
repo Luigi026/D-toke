@@ -1,4 +1,25 @@
 /* -------------||||| MAIN |||||--------------- */
+.home {
+  /* max-width: 1363px; */
+}
+
+.home__main__section__desktopage__container__marcas__images {
+  padding-top: 20px;
+  max-width: 1250px;
+}
+.home__main__section__desktopage-marcas__images {
+  background: #3506cd;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 64% 0% 57% 46% / 56% 35% 56% 0%;
+}
+.home__main__section__desktopage-marcas__images a img {
+  width: 144px;
+  object-fit: cover;
+}
+
 .home__main__section__desktopage {
   display: none;
 }
@@ -201,7 +222,7 @@
 }
 .home__main__section__cards-description {
   font-weight: 600;
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 .home__main__section__cards-price {
@@ -633,7 +654,7 @@ article.tablet2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100vw;
+    width: 90vw;
     justify-content: center;
     flex-wrap: nowrap;
   }
@@ -730,7 +751,7 @@ article.tablet2 {
     }
   }
 
-  .home__main__section-cards-tablet{
+  .home__main__section-cards-tablet {
     display: none;
   }
 
@@ -893,7 +914,7 @@ article.tablet2 {
   .home__main__section__bottomBanner-box2 {
     display: flex;
     flex-direction: column;
-    
+
     /* gap: -1px; */
     /* height: 400px; */
   }
