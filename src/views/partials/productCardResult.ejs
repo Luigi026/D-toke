@@ -1,4 +1,7 @@
-<article class="home__main__section__cards-product shadow">
+<article class="result__section__cards-product shadow">
+    <div class="home__main__section__card-product-heart">
+        <i class="fa-regular fa-heart"></i>
+    </div>
     <div class="home__main__section__cards-img">
         <a href="/products/detail/<%= id %>">
             <img src="/images/products/<%= image || 'image-default.png'%>" alt="imagen de producto cualquiera">
@@ -7,11 +10,11 @@
     </div>
     <div class="home__main__section__cards-text">
         <h5 class="home__main__section__cards-description">
-            <%= category.brand %>
-         </h5>
-        <h5 class="home__main__section__cards-description">
            <%= model %>
         </h5>
+        <h5 class="home__main__section__cards-description">
+            <%= category.brand %>
+         </h5>
         <p class="home__main__section__cards-price">
             $<%= toThousand(price) %>
         </p>

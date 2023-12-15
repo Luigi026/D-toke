@@ -63,9 +63,9 @@
       .products__section__cards-container-desktop {
         width: 90%;
         margin: 0 auto;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-content: center;
         gap: 20px;
-        flex-wrap: wrap;
       }
 }

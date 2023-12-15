@@ -12,19 +12,22 @@
         <h2 class="text-center">Resultados de la búsqueda: <%= keywords %></h2>
         
         
-        <% if (products.length) { %>
-            <% products.forEach(product => { %>
-                <%- include('partials/productCard',{ 
-                        ...product.dataValues,
-                        toThousand 
-                    }) %>
-            <% }) %>
-        <% }else{ %>
-            <div class="col-12">
-                <h2 class="products-title">No hay productos que coincidan con esa búsqueda</h2>
+        <div class="result-container">
+            <div class="result-card">
+                <% if (products.length) { %>
+                    <% products.forEach(product => { %>
+                        <%- include('partials/productCardResult',{
+                                ...product.dataValues,
+                                toThousand
+                            }) %>
+                    <% }) %>
+                <% }else{ %>
+                    <div class="col-12">
+                        <h2 class="products-title text-danger">No hay productos que coincidan con esa búsqueda</h2>
+                    </div>
+                    <% } %>
             </div>
-            <% } %>
-        
+        </div>  
         <%- include('partials/footer') %>
 
             <!-- AOS -->
