@@ -2,16 +2,11 @@
 <html lang="en">
 <%- include('partials/head', {title: 'Register' }) %>
 
+
   <body class="body__register">
+    <%- include('partials/header')%>
     <div class="register">
-      <header class="register__header">
-        <span class="register__header-back">
-          <a href="/"><img src="/images/back.png" /></a>
-        </span>
-        <span class="register__header-logo rotate-in-center">
-          <a href="/"><img src="/images/logoIsra.png" alt="" /></a>
-        </span>
-      </header>
+      
       <h1>Hola! Regístrese para continuar</h1>
       <form action="" method="POST">
         <div class="register__input">
@@ -52,26 +47,6 @@
           <button type="submit">Registrese</button>
         </div>
       </form>
-      <div class="register__footer">
-        <h4>
-          <span>O Registrese con</span>
-        </h4>
-        <div class="register__footer-redes">
-          <span>
-            <img src="/images/facebook_ic.svg" />
-          </span>
-          <span>
-            <img src="/images/google_ic.svg" />
-          </span>
-          <span>
-            <img src="/images/Vector.png" />
-          </span>
-        </div>
-      </div>
-      <div class="register__sesion">
-        <h3>¿Ya tienes una cuenta?</h3>
-        <a> Inicia sesión</a>
-      </div>
     </div>
     <div class="register__tableAndDesktop">
       <h2>Regístrate!</h2>
@@ -155,8 +130,11 @@
           <img class="logoRegister" src="/images/logoRegister.png" />
         </div>
       </div>
+     
     </div>
+    <%- include('partials/footer')%>
     <script src="/js/register.js"></script>
+    
   </body>
 
 </html>

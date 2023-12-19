@@ -26,21 +26,36 @@
   background-color: #d6ccf6;
   height: 100%;
 }
+.registrate__mobile {
+font-size: 16px;
+text-transform: uppercase;
+text-align: center;
+display: block;
+padding-bottom: 15px;
+}
 
 .login h1 {
   font-size: var(--font-subtitle-mobile);
 }
 .login form {
   padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .login form .login__input {
+  display: flex;
   padding: 0 10px;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .login form .login__input .login__input-item {
-  margin: 30px 0;
+  margin: 1px 0;
   display: flex;
+  flex-direction: column;
 }
 .login form .login__input .login__input-item input {
+  display: flex;
   width: 100%;
   border: none;
   padding: 20px 10px;
@@ -57,7 +72,8 @@
   font-size: 14px;
   color: #6a707c;
   text-align: end;
-  margin: 20px 0;
+  margin: 16px 0;
+  text-align: center;
 }
 .login form .login__button {
   display: flex;
@@ -132,6 +148,10 @@ a {
   color: #3506cd;
   border-bottom: 1px solid #3506cd;
   cursor: pointer;
+}
+.logintabletAndDesktop__sesion__h3 {
+font-size: 20px;
+text-align: center;
 }
 
 .login__tableAndDesktop {

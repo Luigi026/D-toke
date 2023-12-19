@@ -1,13 +1,20 @@
 .body__register {
   background-color: #d6ccf6;
   display: flex;
+  align-items: stretch;
+  /* height: 100vh; */
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .register {
-  padding: 20px;
+  display: flex;
+  /* padding: 20px; */
   max-width: 400px;
+  /* margin: 5px; */
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 100%;
 }
 
 .register .register__header {
@@ -27,16 +34,23 @@
 }
 
 .register h1 {
-  font-size: 24px;
-  margin: 40px 0 0 0;
+  /* display: flex; */
+  font-size: 16px;
+  margin: 35px 0px 0px 0px;
+  text-align: center;
 }
 
 .register form .register__input {
+  display: flex;
   padding: 0 10px;
+  flex-direction: column;
+  align-items: center;
   }
 .register form .register__input .register__input-item {
-  margin: 30px 0;
+  margin: 8px 0;
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .register form .register__input .register__input-item input {
   width: 100%;
@@ -54,9 +68,11 @@
 
 .register form .register__button {
   display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 .register form .register__button button {
-  width: 100%;
+  width: 90%;
   padding: 20px 0;
   background-color: #3506cd;
   border: none;

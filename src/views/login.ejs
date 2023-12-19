@@ -7,41 +7,30 @@
       <%- include('partials/header')%>
         <div class="body__login">
           <div class="login">
-            <form>
+            <form action="" method="POST" id="formLogin">
               <h1>¡Bienvenido de nuevo! ¡Inicia sesión!</h1>
               <div class="login__input">
                 <div class="login__input-item">
-                  <input type="text" placeholder="Ingresa tu correo electrónico" />
+                  <input class="form-control <%= locals.errors && ((errors.email && errors.password) && 'is-invalid') %>" type="email" id="email" placeholder="Correo electrónico" name="email" value="<%= locals.old && (old.email && old.email ) %>"/>
+                  <small class="text-danger ms-2 my-2" id="msgError-email"><%= locals.errors && (errors.email && errors.email.msg) %></small>
                 </div>
                 <div class="login__input-item">
-                  <input type="password" placeholder="Ingresa tu contraseña" />
+                  <input class="form-control <%= locals.errors && (errors.password && 'is-invalid') %>" type="password" id="password" placeholder="Introducir Contraseña" name="password"/> 
+                  <small class="text-danger ms-2 my-2" id="msgError-password"><%= locals.errors && (errors.password && errors.password.msg) %></small>
                 </div>
               </div>
-              <h5 class="login__text-recuperar">¿Olvidaste tu contraseña?</h5>
               <div class="login__button">
                 <button>Iniciar sesión</button>
               </div>
             </form>
             <div class="login__footer">
-              <h4>
-                <span> inicia sesión con</span>
-              </h4>
-              <div class="login__footer-redes">
-                <span>
-                  <img src="/images/facebook_ic.svg" />
-                </span>
-                <span>
-                  <img src="/images/google_ic.svg" />
-                </span>
-                <span>
-                  <img src="/images/Vector.png" />
-                </span>
+              <div class="logintabletAndDesktop__sesion">
+                <h3 class="logintabletAndDesktop__sesion__h3">¿No tienes una cuenta?</h3>
+                <a class="registrate__mobile" href="/users/register">Regístrate</a>
               </div>
+             
             </div>
-            <div class="login__sesion">
-              <h3>¿No tienes una cuenta?</h3>
-              <a>Iniciar sesión </a>
-            </div>
+            
           </div>
 
           <!-- TABLET/DESKTOP VIEW -->

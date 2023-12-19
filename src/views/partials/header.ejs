@@ -9,7 +9,22 @@
         </div>
         <div class="home__header__div1--glass-truck">
             <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+            <% if (locals.userLogin) { %>
+                <div class="cart__container">
+                    <a class="onlyFor_mobile-tablet" href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#cart">
+                        <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
+                        <span id="show-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger slide-in-blurred-left" hidden>
+                        </span>
+                    </a>
+                </div>
+                <% }else{ %>
+                    <div class="cart__container">
+                        <a class="onlyFor_mobile-tablet" href="/users/login">
+                            <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
+                        </a>
+                    </div>
+                    <% } %>
         </div>
     </div>
     <div class="home__header__div2">
@@ -19,8 +34,32 @@
         </div>
         <div class="home__header__div2--heartru">
             <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
-
+            <!-- ********** carrito mobile ************* -->
             <% if (locals.userLogin) { %>
+                <div class="cart__container">
+                    <a class="onlyFor_mobile-tablet" href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#cart">
+                        <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
+                        <span id="show-count"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" hidden>
+                        </span>
+                    </a>
+                </div>
+                <% }else{ %>
+                    <div class="cart__container">
+                        <a class="onlyFor_mobile-tablet" href="/users/login">
+                            <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
+                        </a>
+                    </div>
+                    <% } %>
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- <% if (locals.userLogin) { %>
                 <a class="onlyFor_mobile-tablet" href="/products/cart"><i
                         class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
         </div>
@@ -28,7 +67,8 @@
         <% }else{ %>
             <a class="onlyFor_mobile-tablet" href="/users/login"><i
                     class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
-            <% } %>
+            <% } %> -->
+            <!-- ****************************************** -->
     </div>
     </div>
     <nav class="home__header__nav">
@@ -78,8 +118,9 @@
                 </form>
 
                 <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
+                
+                 <!-- carrito desktop -->
                 <% if (locals.userLogin) { %>
-                <!-- carrito desktop -->
                 <div class="cart__container">
                     <a class="onlyFor_desktop" href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#cart">
                         <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
