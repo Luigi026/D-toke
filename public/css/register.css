@@ -1,11 +1,11 @@
 .body__register {
   background-color: #d6ccf6;
   display: flex;
-  align-items: stretch;
   /* height: 100vh; */
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 .register {
   display: flex;
@@ -13,8 +13,8 @@
   max-width: 400px;
   /* margin: 5px; */
   flex-direction: column;
-  /* justify-content: center; */
   width: 100%;
+  align-items: stretch;
 }
 
 .register .register__header {
@@ -164,18 +164,20 @@ a {
   }
   .register__tableAndDesktop-content {
     display: flex;
-    height: 70%;
-    
+    height: 80%;
+    align-items: center;
   }
   /* formulario tablet and desktop */
   .register__tableAndDesktop-contain-1 {
-    width: 45%;
+    width: 55%;
   }
   .register__tableAndDesktop-contain-2 {
     /* border: 1px solid green; */
-    width: 55%;
+    width: 45%;
     height: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
   }
   .register__tableAndDesktop-contain-1 form {
     width: 65%;
