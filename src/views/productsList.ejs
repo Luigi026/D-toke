@@ -21,77 +21,123 @@
                     </div>
                 </div>
                 <div class="home__header__div2">
-
+                    <div class="home__header__div2--box">
+                        <input type="text" placeholder="Buscar...">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
                     <div class="home__header__div2--heartru">
                         <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
-
+                        
                         <% if (locals.userLogin) { %>
-                            <a class="onlyFor_mobile-tablet" href="/products/cart"><i
-                                    class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+                            <a class="onlyFor_mobile-tablet" href="/products/cart"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+                            </div>
+            
+                            <% }else{ %>
+                                <a class="onlyFor_mobile-tablet" href="/users/login"><i class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
+                                <% } %>
                     </div>
-
-                    <% }else{ %>
-                        <a class="onlyFor_mobile-tablet" href="/users/login"><i
-                                class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
-                        <% } %>
                 </div>
-        </div>
-        <nav class="home__header__nav">
-            <div class="home__header__nav__div">
-                <div class="home__header__nav--logo rotate-in-center">
-                    <a href="/"><img src="/images/logoIsra.png" alt=""></a>
-                </div>
-                <div class="home__header__nav__div1">
-                    <a class="nav-item onlyFor_mobile-tablet" href="/">Inicio</a>
-
-                    <a class="nav-item" href="">tendencia</a>
-                    <% if (locals.userLogin) { %>
-
-                        <a class="nav-item login__mobile" href="/users/profile">Hola <%= userLogin.name %>!</a>
-                        <a class="nav-item login__mobile" href="/users/logout">salir</a>
-
-
-                        <% }else{ %>
-                            <a class="login__mobile nav-item" href="/users/login">ingresar</a>
-                            <% } %>
-                                <% if (locals.userLogin) { %>
-                                    <% if (userLogin.role===1 ) { %>
-                                        <a class="nav-item" href="/admin">Dashboard ADM</a>
-                                        <a class="login__mobile nav-item" href="/products/cart">Carrito</a>
-                                        <% } %>
-
-                                            <% }else{ %>
-
+                <nav class="home__header__nav">
+                    <div class="home__header__nav__div">
+                        <div class="home__header__nav--logo rotate-in-center">
+                            <a href="/"><img src="/images/logoIsra.png" alt=""></a>
+                        </div>
+                        <div class="home__header__nav__div1">
+                            <a class="nav-item" href="/products/productsList">Productos</a>
+                            <a class="nav-item onlyFor_mobile-tablet" href="/">Inicio</a>
+            
+                            <a class="nav-item" href="">tendencia</a>
+                            <% if (locals.userLogin) { %>
+                               
+                                    <a class="nav-item login__mobile" href="/users/profile">Hola <%= userLogin.name %>!</a>
+                                    <a class="nav-item login__mobile" href="/users/logout">salir</a>
+                                    
+                                   
+                                <% }else{ %>
+                                    <a class="login__mobile nav-item" href="/users/login">ingresar</a>
+                                    <% } %>
+                                        <% if (locals.userLogin) { %>
+                                            <% if (userLogin.role===1 ) { %>
+                                                <a class="nav-item" href="/admin">Dashboard ADM</a>
+                                                <a class="login__mobile nav-item" href="/products/cart">Carrito</a>
                                                 <% } %>
-
+            
+                                                    <% }else{ %>
+            
+                                                        <% } %>
+            
+                        </div>
+                        <div class="home__header__nav__div2">
+                        <!-- search -->
+                        <small class="text-danger ms-2" id="msgError-search"></small>
+                            <form 
+                            class="d-flex" 
+                            role="search" 
+                            action="/search" 
+                            method="GET" 
+                            id="formSearch">
+                            
+                                <input 
+                                class="form-control rounded-0 rounded-start" 
+                                type="text" 
+                                name="keywords"  
+                                placeholder="Buscar zapatilla..."
+                                aria-label="Search" 
+                                id="keywords">
+            
+                                <button class="btn rounded-0 rounded-end" type="submit" style="background-color: var(--colorBanner);">
+                                    <a href="/products/productsList"><i class="fa-solid fa-magnifying-glass" style="color: #fff;"></i></a>
+                                </button>   
+                               
+                            </form>
+            
+                            <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
+                            
+                                    <a class="onlyFor_desktop" href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#cart">
+                                    <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
+                                    <span id="show-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" hidden>
+                             
+                                    </span>
+                                    
+                                    </a>
+            
+                    
+                            <% if (locals.userLogin) { %>
+                                <div class="home__header__nav__div1">
+                                    <a class="nav-item" href="/users/profile">Hola <%= userLogin.name %>!</a>
+                                    <a class="nav-item" href="/users/logout">salir</a>
+                                </div>
+            
+                                <% }else{ %>
+                                    <button class="home__header--button"><a href="/users/login">ingresar</a></button>
+                                    <% } %>
+            
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-3" id="cartLabel">Carrito de compra</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div id="cart-body">
+                        
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar comprando</button>
+                      <button type="button" id="btn-clearCart" onclick="clearCart()" class="btn btn-danger">Vaciar carrito</button>
+                      <button type="button" class="btn btn-success">Finalizar compra</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="home__header__nav__div2">
-                    <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
-
-                    <% if (locals.userLogin) { %>
-                        <a class="onlyFor_desktop" href="/products/cart"><i
-                                class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
-
-                        <% }else{ %>
-                            <a class="onlyFor_desktop" href="/users/login"><i
-                                    class="fa-solid fa-truck-fast slide-in-blurred-left"></i></a>
-                            <% } %>
-
-                                <% if (locals.userLogin) { %>
-                                    <div class="home__header__nav__div1">
-                                        <a class="nav-item" href="/users/profile">Hola <%= userLogin.name %>!</a>
-                                        <a class="nav-item" href="/users/logout">salir</a>
-                                    </div>
-
-                                    <% }else{ %>
-                                        <button class="home__header--button"><a
-                                                href="/users/login">ingresar</a></button>
-                                        <% } %>
-
-                </div>
-            </div>
-        </nav>
-        </header>
+              </div>
 
         </div>
         <main class="home__main">

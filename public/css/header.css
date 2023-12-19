@@ -375,6 +375,9 @@ hacer click en el button hamburguesa */
     text-decoration: none;
     font-size: 18px;
   }
+  .cart__container {
+    position: relative;
+  }
 }
 
 /* -------------------------------- */

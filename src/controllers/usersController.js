@@ -30,9 +30,59 @@ module.exports = {
             res.cookie("dtokeUser", req.session.userLogin, {
               maxAge: 1000 * 60 * 5,
             });
+            
+            db.Order.findOne({
+              where: {
+                users_id: user.id,
+                statuses_id: 1,
+              },
+              include: [
+                {
+                  association: "items",
+                  include: [
+                    {
+                      association: "product",
+                     
+                    },
+                  ],
+                },
+              ],
+            }).then((order) => {
+              if (order) {
+                req.session.cart = {
+                  orderId: order.id,
+                  total: order.total,
+                  products: order.items.map(
+                    ({ quantity, product: { model, price, image } }) => {
+                      return {
+                        model,
+                        price,
+                        image,
+                        quantity,
+                      };
+                    }
+                  ),
+                };
+                console.log(req.session.cart, '<<<<<<<<<<<<<<<<<');
+                return res.redirect("/");
+              } else {
+                db.Order.create({
+                  total : 0,
+                  users_id : user.id,
+                  statuses_id : 1
+                }).then(order => {
+                  req.session.cart = {
+                    orderId: order.id,
+                    total: order.total,
+                    products: [],
+                  };
+                  console.log(req.session.cart, '<<<<<<<<<<<<<<<<<');
+                  return res.redirect("/");
+                })
+              }
 
-          return res.redirect("/");
         })
+      })
         .catch((error) => console.log(error));
     } else {
       return res.render("login", {
