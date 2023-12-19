@@ -82,16 +82,6 @@ module.exports = {
       msg: req.fileValidatorError.image,
       location : "body"
   });
-
-    if(!req.file){
-      errors.errors.push({
-        type : 'field',
-        value : "",
-        path : 'image',
-        msg: "Se precisa una imágen",
-        location : "body"
-    });
-    }
   
     if (errors.isEmpty()) {
     
