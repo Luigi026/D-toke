@@ -18,7 +18,7 @@ const fileFilter = (req, file, cb) => {
   console.log(file,'<<<<<<');
   if (!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)) {
     req.fileValidatorError = {
-      image: "Solo se permiten imágenes jpg|jpeg|png|gif|webp",
+      image: `Solo se permiten imágenes jpg | jpeg | png | gif | webp`,
     };
 
     return cb(null, false, req.fileValidatorError);
@@ -26,6 +26,7 @@ const fileFilter = (req, file, cb) => {
 
   return cb(null, true);
 };
+
 
 const upload = multer({
   storage,

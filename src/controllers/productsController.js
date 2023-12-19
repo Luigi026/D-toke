@@ -74,6 +74,24 @@ module.exports = {
   update: (req, res) => {
   
     const errors = validationResult(req)
+    
+    req.fileValidatorError && errors.errors.push({
+      type : 'field',
+      value : "",
+      path : 'image',
+      msg: req.fileValidatorError.image,
+      location : "body"
+  });
+
+    if(!req.file){
+      errors.errors.push({
+        type : 'field',
+        value : "",
+        path : 'image',
+        msg: "Se precisa una imágen",
+        location : "body"
+    });
+    }
   
     if (errors.isEmpty()) {
     
@@ -162,10 +180,7 @@ module.exports = {
     });
     }
 
-
-
-
-  return res.send(errors.mapped())
+    // return res.send(errors.mapped())
 
     const { name, price, gender, description, size } = req.body;
 

@@ -35,6 +35,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 
 .form-group__label {
@@ -79,6 +80,7 @@ button:hover {
   .product-form-contentNamePrice {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
   }
 
   .product-form {

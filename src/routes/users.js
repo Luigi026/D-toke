@@ -9,13 +9,14 @@ const userCheck = require('../middlewares/userCheck');
 const notUserCheck = require('../middlewares/notUserCheck');
 
 /* GET users listing. */
-router.get('/login',notUserCheck,login);
-router.post('/login', loginValidator ,loginProcess);
-router.get('/register',notUserCheck,register);
-router.post('/register',registerValidator,registerNewUser);
-router.get('/profile',userCheck, profile);
-router.put('/update',profileValidator, update);
-router.get('/logout',logout);
+router
+    .get('/login',notUserCheck,login)
+    .post('/login', loginValidator ,loginProcess)
+    .get('/register',notUserCheck,register)
+    .post('/register',registerValidator,registerNewUser)
+    .get('/profile',userCheck, profile)
+    .put('/update',profileValidator, update)
+    .get('/logout',logout)
 
 module.exports = router;
 

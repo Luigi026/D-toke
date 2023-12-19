@@ -3,8 +3,7 @@ const { hashSync } = require("bcryptjs");
 const { readJSON, writeJSON } = require("../data");
 const db = require("../database/models");
 let users = readJSON("users.json");
-const moment = require('moment');
-
+const moment = require("moment");
 
 module.exports = {
   login: (req, res) => {
@@ -24,7 +23,7 @@ module.exports = {
           req.session.userLogin = {
             id: user.id,
             name: user.name,
-            role: user.roles_id
+            role: user.roles_id,
           };
 
           req.body.remember !== undefined &&
@@ -45,12 +44,11 @@ module.exports = {
   // ************************* --- register --- ************************
   register: (req, res) => {
     const errors = validationResult(req);
-      return res.render("register", {
-        errors: errors.mapped()
+    return res.render("register", {
+      errors: errors.mapped(),
     });
   },
   registerNewUser: (req, res) => {
-  
     const errors = validationResult(req);
 
     if (errors.isEmpty()) {
@@ -83,96 +81,75 @@ module.exports = {
     /*  return res.render("profile", {
       ...user,
      }); */
-    
+
     const sessionId = req.session.userLogin.id;
 
-    db.User.findByPk(sessionId,{
-      include: ['address']
+    db.User.findByPk(sessionId, {
+      include: ["address"],
     })
-    .then(user => {
-      const birthday = new Date(user.birthday).toISOString()
-      return res.render('profile',{
-        ...user.dataValues,
-        birthday: birthday.split('T')[0]
+      .then((user) => {
+        const birthday = new Date(user.birthday).toISOString();
+        return res.render("profile", {
+          ...user.dataValues,
+          birthday: birthday.split("T")[0],
+        });
       })
-    })
-    .catch(error => console.log(error))
-
+      .catch((error) => console.log(error));
   },
   // ************************* --- update --- ************************
   update: (req, res) => {
-    const errors = validationResult(req);
-    const sessionId = req.session.userLogin.id;
+   
+    const errors = validationResult(req)
 
-    if (errors.isEmpty()) {
-
-      const { name, surname, birthday,address, city, province} = req.body;
-      db.User.update(
-        {
-          name: name.trim(),
-          surname: surname.trim(),
-          birthday
-        },
-        {
-          where: {
-            id: sessionId
-          }
-        }
-      )
-      .then( async () => {
-        req.session.userLogin.name = name;
-        res.locals.userLogin.name = name;
-
-        if(req.cookies.dtokeUser){
-          res.cookie("dtokeUser", req.session.userLogin);
-      }
-
-      await db.Address.update(
-        {
-            address: address.trim(),
-            city,
-            province,
-        },
-        {
-            where : {
-                users_id : req.session.userLogin.id
+    if(errors.isEmpty()){
+        const {name, surname, birthday, address, city, province} = req.body;
+        db.User.update(
+            {
+                name : name.trim(),
+                surname : surname.trim(),
+                birthday
+            },
+            {
+                where : {
+                    id : req.session.userLogin.id
+                }
             }
-        }
-    )
+        )
+            .then( async () => {
+                req.session.userLogin.name = name;
+                res.locals.userLogin.name = name;
 
-      return res.redirect('/')
-      })
-      .catch(error => console.log(error))
+                if(req.cookies.dtokeUser){
+                    res.cookie("dtokeUser", req.session.userLogin);
+                }
 
-      /* const usersModify = users.map((user) => {
-        if (user.email === req.body.email) {
-          user.name = name.trim();
-        }
-        return user;
-      });
+                await db.Address.update(
+                    {
+                        address: address.trim(),
+                        city,
+                        province,
+                    },
+                    {
+                        where : {
+                            users_id: req.session.userLogin.id
+                        }
+                    }
+                )
 
-      writeJSON(usersModify, "users.json");
 
-      res.redirect("/"); */
-    /* } else {
-      return res.render("profile", {
-        name: "",
-        errors: errors.mapped(),
-      }); */
-    } else {
-      db.User.findByPk(sessionId)
-      .then(user => {
-          return res.render('profile',{
-              ...user.dataValues,
-              errors : errors.mapped(),
-              old : req.body
-          })
-      })
-      .catch(error => console.log(error))
-  }
-////////////////////////////////////////////////////////
-
-    
+                return res.redirect('/')
+            })
+            .catch(error => console.log(error))
+    }else {
+        db.User.findByPk(req.session.userLogin.id)
+        .then(user => {
+            return res.render('profile',{
+                ...user.dataValues,
+                errors : errors.mapped()
+            })
+        })
+        .catch(error => console.log(error))
+    }
   },
 
   productCart: (req, res) => {
