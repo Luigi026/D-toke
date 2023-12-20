@@ -52,6 +52,7 @@ module.exports = {
     res.render("admin", {
     productsList,
     categories,
+    toThousand,
     });
   })
   .catch((error) => console.log(error));

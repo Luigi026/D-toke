@@ -3,108 +3,104 @@
 
 <%- include('partials/head', {title: 'Admin' }) %>
 
-    <body class="admin__home bg-dark">
+    <body class="admin__home">
         <div class="home-box">
 
             <%- include('partials/header') %>
 
         </div>
         <main class="admin__main">
-            <div class="row admin__container">
-                <div class="col-12 col-lg-10 mx-auto mt-5">
-
-                    <div class="card-header bg-dark text-white btn__newProduct">
-                        <a class="btn btn-dark btn__newProduct__a" href="/admin/addProduct">Agregar un producto
+            <div class="row admin__container mx-auto">
+                <div class="col-12 col-lg-10 mt-5 mx-auto card p-4">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item text-decoration-underline"><a href="/" style="color: #3506CD;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Admin</li>
+                        </ol>
+                    </nav>
+                    <div class="card-title text-white btn__newProduct">
+                        <a class="btn btn-purple btn__newProduct__a" href="/admin/addProduct">Agregar un producto
                             nuevo</a>
                     </div>
-                    <div class="admin__main__containerTable bg-dark">
+                    <div class="table-responsive card-body">
+                        <div class="admin__main__containerTable">
                         
-                            <table class="table table-dark table-hover admin__table ">
-
-                                <thead class="admin__table__thead">
-                                    <tr>
-                                        <th class="bg-dark text-white" scope="col">#</th>
-
-                                        <th class="bg-dark text-white" scope="col">Marca</th>
-
-                                        <th class="bg-dark text-white" scope="col">Producto</th>
-
-                                        <th class="bg-dark text-white" scope="col">Precio</th>
-
-                                        <th class="bg-dark text-white" scope="col">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="admin__tbody">
-
-                                    <% productsList.forEach(({id, model, category , price, image, description },index)=>
-                                        {
-                                        %>
+                                <table class="table table-hover">
+                                    <thead class="admin__table__thead">
                                         <tr>
-                                            <th class="bg-dark text-white" scope="row">
-                                                <%= index + 1 %>
-                                            </th>
-
-                                            <td class="bg-dark text-white">
-                                                <%= category?.brand || 'Sin especificar' %>
-                                            </td>
-
-                                            <td class="bg-dark text-white">
-                                                <%= model %>
-                                            </td>
-
-                                            <td class="bg-dark text-white">
-                                                $<%= price %>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex gap-1">
-
-                                                    <button type="button" class="btn btn-sm btn-primary"
-                                                        data-bs-toggle="modal" data-bs-target="#detailProduct<%=id%>">
-                                                        <i class="fas fa-eye"></i>
-                                                    </button>
-
-                                                    <div class="modal fade admin__modalContainer"
-                                                        id="detailProduct<%=id%>" tabindex="-1"
-                                                        aria-labelledby="detailProduct<%=id%>Label" aria-hidden="true">
-                                                        <div
-                                                            class="modal-dialog  modal-dialog-centered text-white admin__modal__container">
+                                            <th class=" text-dark" scope="col">#</th>
+                                            <th class=" text-dark" scope="col">Marca</th>
+                                            <th class=" text-dark" scope="col">Producto</th>
+                                            <th class=" text-dark" scope="col">Precio</th>
+                                            <th class=" text-dark" scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="admin__tbody">
+                                        <% productsList.forEach(({id, model, category , price, image, description},index)=>
+                                            {
+                                            %>
+                                            <tr>
+                                                <th class=" text-dark" scope="row">
+                                                    <%= index + 1 %>
+                                                </th>
+                                                <td class=" text-dark">
+                                                    <%= category?.brand || 'Sin especificar' %>
+                                                </td>
+                                                <td class=" text-dark">
+                                                    <%= model %>
+                                                </td>
+                                                <td class=" text-dark">
+                                                    $<%= price %>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex gap-1">
+                                                        <button type="button" class="btn btn-sm btn-primary"
+                                                            data-bs-toggle="modal" data-bs-target="#detailProduct<%=id%>">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                        <div class="modal fade admin__modalContainer"
+                                                            id="detailProduct<%=id%>" tabindex="-1"
+                                                            aria-labelledby="detailProduct<%=id%>Label" aria-hidden="true">
                                                             <div
-                                                                class="modal-content bg-dark admin__modal__container__content">
+                                                                class="modal-dialog  modal-dialog-centered text-dark admin__modal__container">
                                                                 <div
-                                                                    class="modal-header admin__modal__container__header">
-                                                                    <h5 class="modal-title"
-                                                                        id="detailProduct<%= id %>Label">
-                                                                        <%= category?.brand %> | <%= model %>
-                                                                    </h5>
-                                                                    <button type="button"
-                                                                        class="btn-close admin__btn__close"
-                                                                        data-bs-dismiss="modal" aria-label="Close"><i
-                                                                            class="fa-solid fa-xmark"></i></button>
-                                                                </div>
-                                                                <div class="modal-body admin__modalbody">
+                                                                    class="modal-content  admin__modal__container__content">
                                                                     <div
-                                                                        class="card mb-3 bg-dark  admin__modalbody__card">
+                                                                        class="modal-header admin__modal__container__header">
+                                                                        <h5 class="modal-title"
+                                                                            id="detailProduct<%= id %>Label">
+                                                                            <%= category?.brand %> | <%= model %>
+                                                                        </h5>
+                                                                        <button type="button"
+                                                                            class="btn-close admin__btn__close"
+                                                                            data-bs-dismiss="modal" aria-label="Close"><i
+                                                                                class="fa-solid fa-xmark"></i></button>
+                                                                    </div>
+                                                                    <div class="modal-body admin__modalbody">
                                                                         <div
-                                                                            class="row g-0 bg-dark  admin__modalbody__card__container">
+                                                                            class="card mb-3   admin__modalbody__card">
                                                                             <div
-                                                                                class="col-md-6 admin__modalbody__card__containerImagen">
-                                                                                <img class="card-img-top"
-                                                                                    src="/images/products/<%= image || 'image-default.png'%>"
-                                                                                    class="img-fluid rounded-start"
-                                                                                    alt="...">
-                                                                            </div>
-                                                                            <div
-                                                                                class="col-md-6 admin__modalbody__card__container__card">
+                                                                                class="row g-0   admin__modalbody__card__container">
                                                                                 <div
-                                                                                    class="card-body admin__modalbody__card__container__card__txt">
-                                                                                    <h5
-                                                                                        class="card-text bg-dark text-white">
-                                                                                        <%=description%>
-                                                                                    </h5>
-                                                                                    <p
-                                                                                        class="card-text bg-dark text-white">
-                                                                                        $<%= price %>
-                                                                                    </p>
+                                                                                    class="col-md-6 admin__modalbody__card__containerImagen">
+                                                                                    <img class="card-img-top"
+                                                                                        src="/images/products/<%= image || 'image-default.png'%>"
+                                                                                        class="img-fluid rounded-start"
+                                                                                        alt="...">
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-md-6 admin__modalbody__card__container__card">
+                                                                                    <div
+                                                                                        class="card-body admin__modalbody__card__container__card__txt">
+                                                                                        <h5
+                                                                                            class="card-text  text-dark">
+                                                                                            <%=description%>
+                                                                                        </h5>
+                                                                                        <p
+                                                                                            class="card-text  text-dark">
+                                                                                            $<%= price %>
+                                                                                        </p>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -112,65 +108,62 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <a class="btn btn-sm btn-success"
-                                                        href="/admin/editProduct/<%= id %>"><i
-                                                            class="fas fa-edit"></i></a>
-
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-sm btn-danger"
-                                                        data-bs-toggle="modal" data-bs-target="#removeProduct<%= id %>">
-                                                        <i class="fas fa-trash"></i>
-                                                    </button>
-
-                                                    <!-- Modal -->
-                                                    <div class="modal fade" id="removeProduct<%= id %>" tabindex="-1"
-                                                        aria-labelledby="removeProduct<%= id %>Label"
-                                                        aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered">
-                                                            <div class="modal-content bg-dark text-white">
-                                                                <div class="modal-header bg-dark text-white">
-                                                                    <h1 class="modal-title fs-5"
-                                                                        id="removeProduct<%= id %>Label">
-                                                                        ADVERTENCIA</h1>
-                                                                </div>
-                                                                <div class="modal-body bg-dark text-white">
-                                                                    <p>Esta seguro que desea eliminar el siguiente
-                                                                        producto?
-                                                                        <hr>
-                                                                        <b>
-                                                                            <%= category?.brand %> | <%= model %> | $<%=
-                                                                                        price %>
-                                                                        </b>
-                                                                    </p>
-                                                                    <div
-                                                                        class="col-md-6 admin__modalbody__card__containerImagen">
-                                                                        <img class="card-img-top"
-                                                                            src="/images/products/<%= image || 'image-default.png'%>"
-                                                                            class="img-fluid rounded-start" alt="...">
+                                                        <a class="btn btn-sm btn-success"
+                                                            href="/admin/editProduct/<%= id %>"><i
+                                                                class="fas fa-edit"></i></a>
+                                                        <!-- Button trigger modal -->
+                                                        <button type="button" class="btn btn-sm btn-danger"
+                                                            data-bs-toggle="modal" data-bs-target="#removeProduct<%= id %>">
+                                                            <i class="fas fa-trash"></i>
+                                                        </button>
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="removeProduct<%= id %>" tabindex="-1"
+                                                            aria-labelledby="removeProduct<%= id %>Label"
+                                                            aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                <div class="modal-content  text-dark">
+                                                                    <div class="modal-header  text-dark">
+                                                                        <h1 class="modal-title fs-5"
+                                                                            id="removeProduct<%= id %>Label">
+                                                                            ADVERTENCIA</h1>
                                                                     </div>
-                                                                </div>
-                                                                <div class="modal-footer bg-dark text-white">
-                                                                    <button type="button" class="btn btn-secondary"
-                                                                        data-bs-dismiss="modal">Cancelar</button>
-                                                                    <form
-                                                                        action="/admin/delete/<%= id %>?_method=DELETE"
-                                                                        method="POST">
-                                                                        <button type="submit"
-                                                                            class="btn btn-danger">Eliminalo</button>
-                                                                    </form>
-
+                                                                    <div class="modal-body  text-dark">
+                                                                        <p>Esta seguro que desea eliminar el siguiente
+                                                                            producto?
+                                                                            <hr>
+                                                                            <b>
+                                                                                <%= category?.brand %> | <%= model %> | $<%=
+                                                                                            price %>
+                                                                            </b>
+                                                                        </p>
+                                                                        <div
+                                                                            class="col-md-6 admin__modalbody__card__containerImagen">
+                                                                            <img class="card-img-top"
+                                                                                src="/images/products/<%= image || 'image-default.png'%>"
+                                                                                class="img-fluid rounded-start" alt="...">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="modal-footer  text-dark">
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-bs-dismiss="modal">Cancelar</button>
+                                                                        <form
+                                                                            action="/admin/delete/<%= id %>?_method=DELETE"
+                                                                            method="POST">
+                                                                            <button type="submit"
+                                                                                class="btn btn-danger">Eliminalo</button>
+                                                                        </form>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <% }) %>
-                                </tbody>
-                            </table>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+                                    </tbody>
+                                </table>
                         </div>
+                    </div>
 
 
                    

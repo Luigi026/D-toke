@@ -6,9 +6,16 @@
     <div class="container-product-content">
       <%- include('partials/header')%>
         <div class="container">
-          <form class="product-form shadow card" action="/admin/addProduct" method="POST" enctype="multipart/form-data" id="formAdd">
           
-            <h1 class="container-title card-title">Ingresar un Producto</h1>
+          <form class="product-form shadow card" action="/admin/addProduct" method="POST" enctype="multipart/form-data" id="formAdd">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item text-decoration-underline"><a href="/" style="color: #3506CD;">Home</a></li>
+                    <li class="breadcrumb-item text-decoration-underline"><a href="/admin" style="color: #3506CD;">Admin</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Agregar Producto</li>
+                </ol>
+            </nav>
+            <h1 class="container-title card-title fs-1">Ingresar un Producto</h1>
             <div class="product-form-contentNamePrice">
               <div class="form-group">
                 <label class="form-group__label" for="name">Nombre del producto:</label>

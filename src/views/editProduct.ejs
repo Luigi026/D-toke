@@ -20,12 +20,19 @@
     <title>D-toke | <%= model %> </title>
 </head>
 
-  <body class="editProduct__container-product">
+  <body class="editProduct__container-product bg-white">
     <div class="editProduct__container-product-content">
       <%- include('partials/header')%>
       <div class="container">
-        <form class="product-form shadow card" action="/admin/editProduct/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formEdit">
-          <h1 class="container-title card-title">Editar producto </h1>
+        <form class="product-form shadow card col-12" action="/admin/editProduct/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formEdit">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-decoration-underline"><a href="/" style="color: #3506CD;">Home</a></li>
+                <li class="breadcrumb-item text-decoration-underline"><a href="/admin" style="color: #3506CD;">Admin</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Editar Producto</li>
+            </ol>
+        </nav>
+          <h1 class="container-title card-title fs-1">Editar producto </h1>
           <div class="product-form-contentNamePrice">
             <div class="form-group">
             <!-- model -->
