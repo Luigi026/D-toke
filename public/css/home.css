@@ -1,19 +1,14 @@
 /* -------------||||| MAIN |||||--------------- */
-.home {
-  /* max-width: 1363px; */
-}
 
 .home__main__section__desktopage__container__marcas__images {
   padding-top: 20px;
   max-width: 1250px;
 }
 .home__main__section__desktopage-marcas__images {
-  background: #3506cd;
   height: 115px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 64% 0% 57% 46% / 56% 35% 56% 0%;
 }
 .home__main__section__desktopage-marcas__images a img {
   width: 144px;
