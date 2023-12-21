@@ -516,7 +516,14 @@ article.tablet2 {
   .desktopage__carouselBox {
     position: relative;
     display: flex;
-    padding: 0px 0px 0px 0px;
+    height: 850px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100vw;
+    height: 100%;
+    object-fit: contain;
   }
   .desktopage__carouselBox__title {
     display: flex;
@@ -589,7 +596,7 @@ article.tablet2 {
   .buy-container-violeta a:hover {
     font-size: 1.5rem;
   }
-  .home__main__carousel-img1 {
+  /* .home__main__carousel-img1 {
     background-image: url("/img/home-main/Carousel-desktopIMG-1.png");
     height: 602px;
     width: 100vw;
@@ -615,7 +622,7 @@ article.tablet2 {
     background-repeat: no-repeat;
     background-position: 50%;
     background-color: #01aed9;
-  }
+  } */
 
   .home__main__section__desktopage-marcas-box {
     display: flex;
