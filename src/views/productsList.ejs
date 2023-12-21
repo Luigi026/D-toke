@@ -21,10 +21,10 @@
                     </div>
                 </div>
                 <div class="home__header__div2">
-                    <div class="home__header__div2--box">
+                    <!-- <div class="home__header__div2--box">
                         <input type="text" placeholder="Buscar...">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div>
+                    </div> -->
                     <div class="home__header__div2--heartru">
                         <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
                         
@@ -69,7 +69,7 @@
                         </div>
                         <div class="home__header__nav__div2">
                         <!-- search -->
-                        <small class="text-danger ms-2" id="msgError-search"></small>
+                        <!-- <small class="text-danger ms-2" id="msgError-search"></small>
                             <form 
                             class="d-flex" 
                             role="search" 
@@ -91,24 +91,33 @@
                                
                             </form>
             
-                            <a href=""><i class="fa-regular fa-heart heartbeat"></i></a>
+                            <a href=""><i class="fa-regular fa-heart heartbeat"></i></a> -->
                             
-                                    <a class="onlyFor_desktop" href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#cart">
-                                    <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
-                                    <span id="show-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" hidden>
-                             
-                                    </span>
-                                    
-                                    </a>
-            
-                    
+                            
+                            
+                            <!-- carrito desktop -->
+                           
                             <% if (locals.userLogin) { %>
+                                <div class="cart__container">
+                                    <a class="onlyFor_desktop" href="#" id="btn-cart" data-bs-toggle="modal" data-bs-target="#cart">
+                                        <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
+                                        <span id="show-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" hidden>
+                                 
+                                        </span>
+                                        
+                                    </a>
+                                </div>
                                 <div class="home__header__nav__div1">
                                     <a class="nav-item" href="/users/profile">Hola <%= userLogin.name %>!</a>
                                     <a class="nav-item" href="/users/logout">salir</a>
                                 </div>
             
                                 <% }else{ %>
+                                    <div class="cart__container">
+                                        <a class="onlyFor_desktop" href="/users/login">
+                                            <i class="fa-solid fa-truck-fast slide-in-blurred-left"></i>
+                                        </a>
+                                    </div>
                                     <button class="home__header--button"><a href="/users/login">ingresar</a></button>
                                     <% } %>
             
@@ -206,7 +215,7 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
                 crossorigin="anonymous"></script>
-                <script src="/js/result.js"></script>
+                
 
     </body>
 

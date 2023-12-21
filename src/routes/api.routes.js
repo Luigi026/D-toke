@@ -1,7 +1,6 @@
-const express = require("express");
 const { checkEmail } = require("../controllers/APIs/usersApiController");
 const { getCart, addItemToCart, removeItemToCart, deleteItemToCart, clearCart } = require('../controllers/APIs/cartApiController');
-const router = express.Router();
+const router = require("express").Router();
 
 /* API */
 
