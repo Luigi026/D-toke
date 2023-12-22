@@ -3,6 +3,7 @@ import { UseFetch } from "../hooks/UseFetch";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { createProduct, updateProduct } from "../services/product.services";
+import Swal from "sweetalert2";
 
 export const FormProduct = ({
   products,
@@ -42,7 +43,12 @@ export const FormProduct = ({
         formValues.description,
       ].includes("")
     ) {
-      alert("upsss... no envíe vacío el formulario!!!");
+      //alert("upsss... no envíe vacío el formulario!!!");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No envie el formulario vacio!!",
+      });
       return;
     }
 
@@ -131,7 +137,7 @@ export const FormProduct = ({
       </Form.Group>
       <Form.Group className="mb-3 col-12">
         <div className="d-flex justify-content-around">
-          <Button variant="" style={{background:"#000", color: "#fff"}}>Cancelar</Button>
+          <Button variant="" style={{background:"#000", color: "#fff"}} type="reset">Cancelar</Button>
           <Button type="submit" style={{background: "#3506CD", border: 'none'}}>
             Guardar
           </Button>
