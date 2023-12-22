@@ -16,6 +16,7 @@ export const SideBar = () => {
             className="w-100 rounded-circle"
             src="/images/logoRegister.png"
             alt="D-TOKE logo"
+            style={{width: "150px",height:"150px", objectFit: "contain"}}
           />
           </a>
         

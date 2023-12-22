@@ -162,37 +162,32 @@ const updateProduct = async ( id, dataProduct ) => {
 
 const deleteProduct = async (id) => {
     try {
-        if(isNaN(id)){
+        if (isNaN(id)) {
             throw {
-                status : 404,
-                message : 'ID corrupto'
-            
-            }
+                status: 404,
+                message: "ID corrupto",
+            };
         }
-        
+
         const product = await db.Product.findByPk(id)
-        
-        if(!product){
-    
+
+        if (!product) {
             throw {
-                status : 404,
-                message : 'No hay una producto con ese ID'
-            
-            }
-               
+                status: 404,
+                message: "No hay una pelicula con ese ID",
+            };
         }
-    
-        await product.destroy()
-        
-        return null
-        
-        
+
+        await product.destroy();
+
+        return null;
+
     } catch (error) {
+        console.log(error);
         throw {
-            status : error.status || 500,
-            message : error.message || 'ERROR en el servicio'
-        }
-        
+            status: error.status || 500,
+            message: error.message || "error en el servicio",
+        };
     }
 }
 module.exports = {
