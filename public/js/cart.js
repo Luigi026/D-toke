@@ -27,10 +27,10 @@ const showCountProductCart = (products, hidden = false) => {
 const showProductInCart = (products, total) => {
   if($("cart-table")){
     $("cart-table").innerHTML = null;
-    products.forEach(({ id, image, model, brand, price, quantity, }) => {
+    products.forEach(({ id, image, model, price, quantity, }) => {
       $("cart-table").innerHTML += `
     <tr>
-        <th scope="row" class="carrito__items__contain__list__img"><img src="/images/products/${image}" alt="" width=100/></th>
+        <th scope="row" class="carrito__items__contain__list__img"><img src="/images/products/${image || 'image-default.webp'}" alt="" width=100/></th>
         <td>${model}</td>
         <td>${price * quantity}</td>
         <td>

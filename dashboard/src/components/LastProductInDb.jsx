@@ -41,7 +41,7 @@ export const LastProductInDb = () => {
           rel="nofollow"
           href="/"
         >
-          View movie detail
+          View product detail
         </a>
       </div>
     </div>
