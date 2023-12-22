@@ -131,8 +131,8 @@ export const FormProduct = ({
       </Form.Group>
       <Form.Group className="mb-3 col-12">
         <div className="d-flex justify-content-around">
-          <Button variant="outline-secondary">Cancelar</Button>
-          <Button type="submit" variant="danger">
+          <Button variant="" style={{background:"#000", color: "#fff"}}>Cancelar</Button>
+          <Button type="submit" style={{background: "#3506CD", border: 'none'}}>
             Guardar
           </Button>
         </div>

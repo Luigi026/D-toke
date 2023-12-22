@@ -16,7 +16,7 @@ export const CategoriesInDb = ({categories}) => {
             {
             categories.map(({brand}, index) => (
               <div key={index} className="col-lg-6 mb-4">
-                <div className="card bg-dark text-white shadow">
+                <div className="card text-white shadow" style={{background: "#3506CD"}}>
                   <div className="card-body">{brand}</div>
                 </div>
               </div>

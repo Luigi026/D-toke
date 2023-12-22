@@ -8,13 +8,14 @@ export const SideBar = () => {
     <ul
       className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"
       id="accordionSidebar"
+      style={{background: '#3506CD'}}
     >
             <div className="p-4">
           <a href="/">
           <img
             className="w-100 rounded-circle"
-            src="/images/logo.jpg"
-            alt="Digital House"
+            src="/images/logoRegister.png"
+            alt="D-TOKE logo"
           />
           </a>
         
@@ -25,7 +26,7 @@ export const SideBar = () => {
       <li className="nav-item active">
         <Link className="nav-link" to="/">
           <i className="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard - Kitchening</span>
+          <span>Dashboard - D-TOKE</span>
         </Link>
       </li>
 

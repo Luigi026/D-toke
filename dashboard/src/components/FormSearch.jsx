@@ -12,20 +12,6 @@ export const FormSearch = () => {
     });
   };
 
-  /* const getProduct = async (endpoint = "/api/v1/movies") => {
-    try {
-        setLoading(true)
-        const response = await fetch(`http://localhost:3001${endpoint}`)
-        const result = await response.json()
-
-        setLoading(false)
-        setMovies(result.data)
-        setPagination(result.meta)
-    } catch (error) {
-        console.log(error)
-    }PEACOCK
-} */
-
   const handleSubmit = (event) => {
     event.preventDefault();
   };

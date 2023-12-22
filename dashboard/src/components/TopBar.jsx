@@ -43,13 +43,14 @@ export const TopBar = () => {
           id="userDropdown"
         >
           <span className="mr-2 d-none d-lg-inline text-gray-600 small">
-            Jordan Walke
+            AdminMaster
           </span>
           <img
             className="img-profile rounded-circle"
-            src="/images/jordan-walke.png"
+            src="/images/logoRegister.png"
             alt="Jordan Walke - Creador de React"
             width="60"
+            style={{background: '#3506CD'}}
           />
         </a>
       </li>
