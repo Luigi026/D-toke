@@ -13,15 +13,15 @@ export const Metrics = ({totalProducts}) => {
     {
       id: crypto.randomUUID(),
       color: "success",
-      title: "Categorías y secciones",
-      value: 79,
+      title: "Marcas en Total",
+      value: 4,
       icon: "fa-award",
     },
     {
       id: crypto.randomUUID(),
       color: "warning",
       title: "Usuarios registrados",
-      value: 49,
+      value: 2,
       icon: "fa-user",
     },
   ];

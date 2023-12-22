@@ -94,7 +94,7 @@ module.exports = {
 
         return res.status(200).json({
             ok: true,
-            message: "Pelicula eliminada con ÉXITO",
+            message: "Producto eliminado con ÉXITO",
         })
     } catch (error) {
         console.log(error)

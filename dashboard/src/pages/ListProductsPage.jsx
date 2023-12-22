@@ -36,14 +36,14 @@ export const ListProductsPage = () => {
     })
   }
 
-  const handleDeleteProduct = async (id, model) => {
+  const handleDeleteProduct = async (id) => {
     /*  const {msg} = await deleteProduct(id);
      console.log(msg);
      const productsFiltered = products.filter(product => product.id !== id);
  
      setProducts([...productsFiltered]) */
     Swal.fire({
-      title: `¿Esta seguro que desea eliminar el producto "${model}"?`,
+      title: `¿Esta seguro que desea eliminar el producto?`,
       showDenyButton: true,
       confirmButtonText: "Si, eliminalo",
       confirmButtonColor: "red",
