@@ -27,10 +27,10 @@ const showCountProductCart = (products, hidden = false) => {
 const showProductInCart = (products, total) => {
   if($("cart-table")){
     $("cart-table").innerHTML = null;
-    products.forEach(({ id, image, model, price, quantity, }) => {
+    products.forEach(({ id, image, model, brand, price, quantity, }) => {
       $("cart-table").innerHTML += `
     <tr>
-        <th scope="row"><img src="/images/products/${image}" alt="" width=100/></th>
+        <th scope="row" class="carrito__items__contain__list__img"><img src="/images/products/${image}" alt="" width=100/></th>
         <td>${model}</td>
         <td>${price * quantity}</td>
         <td>
@@ -40,8 +40,8 @@ const showProductInCart = (products, total) => {
                 <button class="btn btn-sm btn-success" onclick="addItemToCart(1,${id})"><i class="fa-solid fa-plus"></i></button>
             </div>
         </td>
-        <td>
-        <h3 style="cursor:pointer" onclick="deleteItemToCart(${id})" class="text-danger"><i class="fa fa-trash"></i></h3>
+        <td class="cart--container--trash">
+        <h3 class="cart--iconContainer--trash" style="cursor:pointer" onclick="deleteItemToCart(${id})" class="text-danger"><img class="cart--icon--trash" src="/images/delete-icon-removebg-preview.png" alt=""></i></h3>
         </td>
     </tr>
     `;
@@ -128,7 +128,7 @@ const deleteItemToCart = async (id) => {
       }else {
         showCountProductCart(products)
         $("cart-body").innerHTML =
-        '<div class="alert alert-warning" role="alert">No hay productos agregados al carrito</div>';
+        '<div class="carrito__items__contain__list__text" role="alert">El carrito está vacío!</div>';
       $("btn-clearCart").classList.add('disabled')
       }
     }
@@ -156,7 +156,7 @@ const clearCart = async () => {
       throw new Error(msg);
     } else {
       $("cart-body").innerHTML =
-      '<div class="alert alert-warning" role="alert">No hay productos agregados al carrito</div>';
+      '<div class="carrito__items__contain__list__text" role="alert">El carrito está vacío!</div>';
       showCountProductCart(products, true)
 
     $("btn-clearCart").classList.add('disabled')
@@ -209,9 +209,9 @@ window.onload = function () {
                 <tbody id="cart-table">
                   
                 </tbody>
-                <caption>
-                    <div class="d-flex justify-content-end">
-                        <h5>Total: $<span id="show-total">${total}</span></h5> 
+                <caption class="carrito__total__price__container">
+                    <div class="d-flex justify-content-end carrito__total__price__box">
+                        <h5 class="carrito__total__price__text">Total: $<span id="show-total" class="carrito__total__price__span">${total}</span></h5> 
                     </div>
                  </caption>
             </table>`;
@@ -219,7 +219,7 @@ window.onload = function () {
             $("btn-clearCart").classList.remove('disabled')
           } else {
             $("cart-body").innerHTML =
-              '<div class="alert alert-warning" role="alert">No hay productos agregados al carrito</div>';
+              '<div class="carrito__items__contain__list__text" role="alert">El carrito está vacío!</div>';
             $("btn-clearCart").classList.add('disabled')
           }
         }

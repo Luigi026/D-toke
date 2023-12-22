@@ -119,22 +119,22 @@
 </header>
 
 <!-- Modal -->
-<div class="modal fade" id="cart" tabindex="-1" aria-labelledby="cartLabel" aria-hidden="true">
+<div class="modal fade carrito__container" id="cart" tabindex="-1" aria-labelledby="cartLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-3" id="cartLabel">Carrito de compra</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-content carrito__container__box">
+        <div class="modal-header carrito__container__box__contain">
+          <h1 class="modal-title fs-3 carrito__container__title" id="cartLabel">Carrito de compra <img class="cart--icon animate__animated animate__jackInTheBox" src="/images/cart-icon-removebg-preview-white.png" alt=""></h1>
+          <button type="button" class="btn-close boton__cerrar" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <div id="cart-body">
+        <div class="modal-body carrito__items__contain">
+          <div id="cart-body" class="carrito__items__contain__list">
             
           </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar comprando</button>
-          <button type="button" id="btn-clearCart" onclick="clearCart()" class="btn btn-danger">Vaciar carrito</button>
-          <button type="button" class="btn btn-success">Finalizar compra</button>
+            <button type="button" class="btn btn-secondary carrito__btn__back" data-bs-dismiss="modal">Continuar comprando</button>
+          <button type="button" id="btn-clearCart" onclick="clearCart()" class="btn btn-danger carrito__btn__clear">Vaciar carrito</button>
+          <button type="button" class="btn btn-success carrito__btn__finish">Finalizar compra</button>
         </div>
       </div>
     </div>

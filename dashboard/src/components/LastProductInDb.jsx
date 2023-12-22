@@ -8,14 +8,25 @@ export const LastProductInDb = () => {
         </h5>
       </div>
       <div className="card-body">
-        <div className="text-center">
+        <div className="text-center ">
           <img
             className="img-fluid px-3 px-sm-4 mt-3 mb-4"
             style={{ width: "40rem" }}
-            src="/images/mandalorian.jpg"
+            src="/images/IMG-20220630-WA0009.jpg"
             alt=" Star Wars - Mandalorian "
           />
         </div>
+        <div className="home__main__section__cards-text">
+        <h5 className="home__main__section__cards-description">
+            Nike
+         </h5>
+        <h5 className="home__main__section__cards-description">
+           Jordan
+        </h5>
+        <p className="home__main__section__cards-price">
+            $62000
+        </p>
+    </div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Dolores, consequatur explicabo officia inventore libero

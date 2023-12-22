@@ -1,4 +1,85 @@
 /* -------------||||| MAIN |||||--------------- */
+.carrito__container {
+  font-family: "Roboto";
+}
+.carrito__container__box {
+  background-color: black;
+  border: 4px solid #5527e9;
+  border-radius: 50px;
+}
+.boton__cerrar {
+color: white;
+background-color: #3506cd;
+}
+.carrito__container__box__contain {width: 100%;}
+.carrito__container__title {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.carrito__items__contain {
+  background-color: black;
+}
+.carrito__items__contain__list {
+  background-color: #000;
+  border-radius: 18px;
+  padding-left: 20px;
+}
+.cart__products__container__list {
+
+}
+.carrito__btn__back {
+  background-color: #3506cd;
+}
+.carrito__btn__back:hover {
+  background-color: #6a4bcf;
+}
+.carrito__btn__clear {
+}
+.carrito__btn__finish {
+}
+.carrito__items__contain__list__text {
+  color: white;
+  font-size: 2rem;
+}
+.carrito__total__price__box {
+}
+.carrito__total__price__text {
+  color: white;
+  background-color: #095632;
+  font-size: 2rem;
+  border-radius: 5px;
+}
+.carrito__total__price__container {
+  background: black;
+}
+.carrito__total__price__span {}
+.carrito__items__contain__list__img {
+}
+.carrito__items__contain__list__img img {
+  width: 140px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.cart--icon {
+  width: 55px;
+}
+.cart--container--trash {
+}
+.cart--iconContainer--trash {
+  width: 80px;
+
+}
+.cart--icon--trash {
+  width: 100%;
+  transition: all 0.5s;
+  
+}
+.cart--icon--trash:hover {
+  width: 98px;
+}
 
 .home__main__section__desktopage__container__marcas__images {
   padding-top: 20px;
@@ -781,12 +862,12 @@ article.tablet2 {
     overflow: hidden;
   }
 
-  .add-cart{
+  .add-cart {
     display: block;
     position: absolute;
     bottom: -40px;
     right: 10px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .add-cart > a {
@@ -795,7 +876,7 @@ article.tablet2 {
     padding: 5px 7px;
     color: #fff;
     border-radius: 5px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
 
   .add-cart a:hover {
@@ -836,7 +917,7 @@ article.tablet2 {
     width: 100%;
     height: 156px;
     object-fit: cover;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   .home__main__section__cards-img img:hover {
