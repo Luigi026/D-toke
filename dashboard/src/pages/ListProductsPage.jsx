@@ -8,6 +8,7 @@ import { UseFetch } from "../hooks/UseFetch";
 import ReactPaginate from 'react-paginate'
 import { showMessageSuccess } from "../components/Toast";
 import Swal from "sweetalert2";
+import {motion} from 'framer-motion'
 
 export const ListProductsPage = () => {
   const [products, setProducts] = useState([]);
@@ -96,6 +97,11 @@ export const ListProductsPage = () => {
 
 
   return (
+    <motion.div initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }}
+    transition={{
+      delay: 0.1,
+      ease: [0, 0.71, 0.2, 1.01]
+    }}>
     <Row>
       <Col sm={12} lg={4}>
         <Card className="mb-3">
@@ -152,5 +158,6 @@ export const ListProductsPage = () => {
         </Card>
       </Col>
     </Row>
+    </motion.div>
   );
 };

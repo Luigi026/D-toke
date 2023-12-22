@@ -49,12 +49,12 @@ export const SideBar = () => {
         </Link>
       </li>
 
-      <li className={`nav-item ${pathname === '/users' && 'active'}`}>
+      {/* <li className={`nav-item ${pathname === '/users' && 'active'}`}>
         <Link className="nav-link" to="/users">
           <i className="fas fa-fw fa-users"></i>
           <span>USUARIOS</span>
         </Link>
-      </li>
+      </li> */}
 
       <hr className="sidebar-divider d-none d-md-block" />
     </ul>
