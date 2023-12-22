@@ -1,41 +1,28 @@
 const paginate = require("express-paginate");
 const createError = require("http-errors");
-const {getAllProducts, getProductById, storeProduct, updateProduct, deleteProduct} = require("../../services/products.services");
+const { getProductById, storeProduct, updateProduct, deleteProduct } = require("../../services/products.services");
+const db = require('../../database/models')
 
 module.exports = {
   index: async (req, res) => {
     try {
-      const { count, products } = await getAllProducts(req.query.limit, req.skip);
-      const pagesCount = Math.ceil(count / req.query.limit);
-      const currentPage = req.query.page;
-      const pages = paginate.getArrayPages(req)(
-        pagesCount,
-        pagesCount,
-        req.query.page
-      );
+      const products = await db.Product.findAll({
+        include: [
+          {
+            association: 'category',
+            attributes: ['id', 'brand', 'image']
+          }
+        ],
+      });
 
       return res.status(200).json({
         ok: true,
-        meta: {
-          pagesCount,
-          currentPage,
-          pages,
-        },
-        data: products.map((product) => {
-          return {
-            ...product.dataValues,
-            url: `${req.protocol}://${req.get("host")}/api/products/${
-              product.id
-            }`,
-          };
-        }),
+        data: products,
       });
     } catch (error) {
-      console.log(error);
       return res.status(error.status || 500).json({
         ok: false,
-        data: error.status || 500,
-        error: error.message || "hubo un error",
+        msg: error.message || "Upss, hubo un error",
       });
     }
   },
@@ -104,6 +91,41 @@ module.exports = {
   delete: async (req, res) => {
     try {
       await deleteProduct(req.params.id);
-    } catch (error) {}
+    } catch (error) { }
   },
+
+  totalProductInDB: async (req, res) => {
+    try {
+      const total = await db.Product.count();
+
+      return res.status(200).json({
+        ok: true,
+        data: total,
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Upss, hubo un error",
+      });
+    }
+  },
+
+  getCategories: async (req, res) => {
+    try {
+      const categories = await db.Category.findAll({
+        attributes: ["brand", "id"],
+      });
+
+      return res.status(200).json({
+        ok: true,
+        data: categories,
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Upss, hubo un error",
+      });
+    }
+  }
+
 };

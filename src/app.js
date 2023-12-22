@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
+const cors = require('cors');
 
 
 const indexRouter = require('./routes/index');
@@ -17,6 +18,8 @@ const userSessionCheck = require('./middlewares/userSessionCheck');
 const cookieCheck = require('./middlewares/cookieCheck');
 
 const app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
